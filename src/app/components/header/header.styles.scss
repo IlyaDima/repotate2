@@ -1,0 +1,33 @@
+.header {
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: calc(100% - 60px);
+    padding: 0 30px;
+    margin: 0 auto;
+    max-width: 1260px;
+
+    @include tablet {
+      z-index: 20;
+      margin: 0;
+      padding: 0;
+      height: 110px;
+      width: 100%;
+      justify-content: flex-end;
+
+      .logo-wrapper {
+        z-index: 60;
+        padding-left: 30px;
+        width: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}

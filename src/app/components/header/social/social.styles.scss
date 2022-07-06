@@ -1,0 +1,89 @@
+.social {
+  &-wrapper {
+    height: max-content;
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &-icon {
+    background: transparent;
+    border: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+
+    &:last-of-type {
+      padding: 0;
+    }
+
+    svg {
+      width: 24px;
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        transform: rotateY(360deg);
+        transition: .5s;
+      }
+    }
+
+    &--discord {
+      path {
+        fill: #34BBFF;
+      }
+
+      &:hover,
+      &:focus {
+        path {
+          fill: #FBA41C;
+        }
+      }
+    }
+
+    &--twitter {
+      path {
+        fill: #34BBFF;
+      }
+
+      &:hover,
+      &:focus {
+        path {
+          fill: #FBA41C;
+        }
+      }
+    }
+
+    &--instagram {
+      path {
+        fill: #34BBFF;
+      }
+
+      &:hover,
+      &:focus {
+        path {
+          fill: #FBA41C;
+        }
+      }
+    }
+
+    &--opensea {
+      path {
+        fill: white;
+      }
+
+      &:hover,
+      &:focus {
+        path {
+          fill: #FBA41C;
+        }
+      }
+    }
+  }
+}
