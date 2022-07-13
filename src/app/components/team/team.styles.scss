@@ -1,32 +1,23 @@
 .team {
-  max-width: 1260px;;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
   text-align: center;
-  margin-bottom: 70px;
-  width: calc(100% - 60px);
-  padding: 150px 0 0;
-  margin: 0;
+  width: 100%;
   z-index: 1;
-
-  @include tablet {
-    padding: 110px 30px 0;
-    margin: -10px 0px;
-  }
-
-  @include mobile {
-    margin-bottom: 40px;
-  }
+  background-color: #34BBFF;
+  background-image: url(space.png);
+  padding-bottom: 100px;
 
   &__heading {
-    font-weight: 800;
-    font-size: 36px;
-    line-height: 60px;
+    font-family: 'Gloria Hallelujah';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 111px;
     color: #FFFFFF;
-    margin: 20px 0 50px;
-    text-transform: uppercase;
+    margin: 25px 0 30px;
 
     @include tablet {
       font-size: 32px;
@@ -40,63 +31,86 @@
   }
 
   &__players {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
-    max-width: 1000px;
-
-    @include tablet {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    @include mobile {
-      grid-template-columns: 1fr;
-    }
+    max-width: 1200px;
+    width: calc(100% - 60px);
   }
 
   &__player {
     display: flex;
-    flex-direction: column;
-    width: calc(100% - 20px);
-    height: 400px;
-    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.0001) 100%);
-    padding: 50px 0;
-    margin: 0 10px 10px;
+    height: 300px;
+    background: #1EACF4;
+    padding: 50px;
+
+    &:nth-child(odd) {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+
+    &-expanded {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13.5px;
+      line-height: 25px;
+      color: #FFFFFF;
+      text-align: left;
+      margin: 0 0 15px;
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 50px;
+      justify-content: center;
+    }
 
     @include tablet {
       height: 360px;
-      background: transparent;
     }
 
     @include mobile {
-      margin: 0;
-      height: 320px;
-      padding: 20px 0;
+      
     }
 
     &-img {
       border-radius: 50%;
-      max-width: 150px;
-      margin: 0 auto;
+      max-width: 220px;
+      height: auto;
+      margin: auto;
     }
 
     &-name {
-      margin: 20px 0 10px;
-      font-weight: 800;
+      font-family: 'Gloria Hallelujah';
+      font-style: normal;
+      font-weight: 400;
       font-size: 32px;
-      line-height: 40px;
+      line-height: 63px;
+      text-align: center;
+      margin: 0;
+      color: #FFFFFF;
     }
 
     &-description {
-      font-size: 18px;
-      line-height: 25px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 24px;
+      /* identical to box height, or 150% */
+
+
+      color: #FFFFFF;
       margin: 0;
     }
 
     &-socials {
-      margin-top: auto;
       display: flex;
       justify-content: center;
 
@@ -110,25 +124,20 @@
         height: max-content;
         display: flex;
         align-items: center;
-        padding: 0 10px;
-    
+
+        &:not(:last-of-type) {
+          padding-right: 25px;
+        }
+
         svg {
           width: 24px;
-        }
-    
-        &:hover,
-        &:focus {
-          svg {
-            transform: rotateY(360deg);
-            transition: .5s;
-          }
         }
     
         &--discord {
           &:hover,
           &:focus {
             path {
-              fill: #5865F2;
+              fill: #fff;
             }
           }
         }
@@ -137,7 +146,7 @@
           &:hover,
           &:focus {
             path {
-              fill: #1DA1F2;
+              fill: #fff;
             }
           }
         }
@@ -146,7 +155,7 @@
           &:hover,
           &:focus {
             path {
-              fill: #C13584;
+              fill: #fff;
             }
           }
         }

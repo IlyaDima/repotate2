@@ -3,25 +3,16 @@
   flex-direction: column;
   color: white;
   width: 100%;
-  padding: 150px 0 0;
-  margin: -100px 0 120px;
-
-  @include tablet {
-    padding: 120px 0 0;
-    margin: -70px 0 70px;
-  }
-
-  @include mobile {
-    margin-bottom: 40px;
-  }
+  background-image: url('bg.png');
 
   &__heading {
+    font-family: 'Gloria Hallelujah';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 111px;
     text-align: center;
-    font-weight: 800;
-    font-size: 36px;
-    line-height: 60px;
-    margin: 0 0 50px;
-    text-transform: uppercase;
+    color: #34BBFF;
 
     @include tablet {
       font-size: 32px;
@@ -36,7 +27,7 @@
 
 
   &__list {
-    margin: 0 auto;
+    margin: 0 auto 70px;
     max-width: 50%;
     width: 100%;
 
@@ -52,11 +43,11 @@
 
       
       summary {
-        font-size: 22px;
+        font-size: 20px;
         line-height: 24px;
         padding: 20px 40px 20px 20px;
         position: relative;
-        text-transform: uppercase;
+        font-family: 'Gloria Hallelujah';
 
         @include mobile {
           padding: 20px 60px 20px 40px;
@@ -81,7 +72,7 @@
           height: 0; 
           border-top: 10px solid transparent;
           border-bottom: 10px solid transparent;
-          border-left: 10px solid #AE39FF;
+          border-left: 10px solid #fff;
           position: absolute;
           right: 20px;
           top: 22px;
@@ -118,10 +109,10 @@
         margin-top: 20px;
       }
 
-      background: black;
+      background: #FBA41C;;
 
       &-paragraph {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 25px;
         padding: 0 20px 20px;
         margin: 0;

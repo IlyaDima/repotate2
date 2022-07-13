@@ -3,7 +3,7 @@ import MediaQuery from 'react-responsive'
 
 import './footer.styles.scss';
 
-// import Social from '../header/social/social.component';
+import Social from '../header/social/social.component';
 import Logo from '../header/logo/logo.component';
 import Menu from '../header/menu/menu.component';
 import environment from '../../../environment/environment';
@@ -17,7 +17,7 @@ const Footer = () => {
             <Logo />
             <Menu />
             <div className='footer__socials'>
-              {/* <Social /> */}
+              <Social />
               <a
                 href={environment.discord}
                 className='footer__button'
@@ -43,13 +43,12 @@ const Footer = () => {
             <div className='footer__legal'>
               <Logo />
               <p className='footer__legal-rights'>
-                2022 Larry. All rights reserved
+                2022 Larry, The Adventurer. All rights reserved
               </p>
             </div>
-            {/* <div className='footer__socials'>
-              <h5 className='footer__socials-heading'>Our socials:</h5>
+            <div className='footer__socials'>
               <Social />
-            </div> */}
+            </div>
           </div>
         </footer>
       </MediaQuery>

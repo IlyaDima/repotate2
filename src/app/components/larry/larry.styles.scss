@@ -1,0 +1,68 @@
+.larry {
+  padding: 70px 0;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  background: linear-gradient(135deg, #1EACF4 0%, #1EACF4 56%, #34BBFF 56%, #34BBFF 100%);
+  
+  &__header {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__title {
+    font-family: 'Gloria Hallelujah';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 64px;
+
+    @include avg-desktop {
+      font-size: 24px;
+    }
+
+    color: #FFFFFF;
+  }
+
+  &__pen {
+    width: 120px;
+    height: 120px;
+  }
+
+  &__buklet {
+    width: 152px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 80px;
+  }
+
+  p {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13.5px;
+    line-height: 23px;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 512px;
+  }
+
+  @include tablet {
+
+  }
+
+  @include mobile {
+
+  }
+}

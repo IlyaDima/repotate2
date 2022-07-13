@@ -7,12 +7,12 @@ import './slider.css';
 import Header from '../../components/header/header.component';
 import Welcome from '../../components/welcome/welcome.component';
 import Statistics from '../../components/statistics/statistics.component';
+import Larry from '../../components/larry/larry.component';
 import About from '../../components/about/about.component';
 import Footer from '../../components/footer/footer.component';
-// import Team from '../../components/team/team.component';
+import Team from '../../components/team/team.component';
 // import Roadmap from '../../components/roadmap/roadmap.component';
-// import FAQ from '../../components/faq/faq.component';
-// import Partners from '../../components/partners.component.jsx/partners.component';
+import FAQ from '../../components/faq/faq.component';
 
 const HomePageComponent = ({
   currentAccount,
@@ -32,11 +32,10 @@ const HomePageComponent = ({
       />
       <About />
       <Statistics />
-      {/* <Starfield />
-      <Roadmap />
+      <Larry />
       <Team />
       <FAQ />
-      <Partners /> */}
+      {/* <Roadmap /> */}
       <Footer />
     </section>
   );

@@ -12,7 +12,7 @@ const About = () => {
       <div className='about__texts'>
         <h3 className='about__heading'>About</h3>
         <p>
-          The inspiring story of an unremarkable  person who made his dream come true.
+          The inspiring story of an unremarkable person who made his dream come true.
         </p>
         <p>
           Our NFT series is a lifetime story of a young man who has made a conscious decision not to be a victim of common standards of living but fulfill his cherished dream
