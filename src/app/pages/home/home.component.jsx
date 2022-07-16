@@ -11,7 +11,7 @@ import Larry from '../../components/larry/larry.component';
 import About from '../../components/about/about.component';
 import Footer from '../../components/footer/footer.component';
 import Team from '../../components/team/team.component';
-// import Roadmap from '../../components/roadmap/roadmap.component';
+import Roadmap from '../../components/roadmap/roadmap.component';
 import FAQ from '../../components/faq/faq.component';
 
 const HomePageComponent = ({
@@ -33,9 +33,9 @@ const HomePageComponent = ({
       <About />
       <Statistics />
       <Larry />
+      <Roadmap />
       <Team />
       <FAQ />
-      {/* <Roadmap /> */}
       <Footer />
     </section>
   );
