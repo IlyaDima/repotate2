@@ -12,8 +12,8 @@ const Starfield = () => {
   const settings = {
     infinite: true,
     speed: 400,
-    slidesToShow: (isMobile && 1) || (isTablet && 2) || (isAvgDesktop && 2) || 4,
-    slidesToScroll: (isMobile && 1) || (isTablet && 2) || (isAvgDesktop && 2) || 4,
+    slidesToShow: (isMobile && 1) || (isTablet && 2) || (isAvgDesktop && 3) || 4,
+    slidesToScroll: (isMobile && 1) || (isTablet && 2) || (isAvgDesktop && 3) || 4,
     beforeChange: (_, newIndex) => {
       if (isMobile) {
         setSelectedColonialist(newIndex + 1);

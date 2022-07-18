@@ -66,7 +66,7 @@
 
     @include tablet {
       height: 30px;
-      max-width: none;
+      max-width: 280px;
       margin: 20px 0 0;
     }
   }
@@ -135,13 +135,13 @@
     text-align: center;
     transition: all 0.1s linear;
     margin: 40px auto 0;
-    background: white;
+    background: #FBA41C;
     max-width: 275px;
     text-decoration: none;
-    color: black;
+    color: white;
 
     &:visited {
-      color: black;
+      color: white;
     }
 
     @include tablet {
@@ -152,9 +152,6 @@
     &:hover,
     &:focus {
       cursor: pointer;
-      color: white;
-      background: #9932cc;
-      box-shadow: 0 0 10px 2px rgb(153 50 204);
     }
 
     &-title {

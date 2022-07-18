@@ -4,7 +4,11 @@
   max-width: 1260px;
 
   @include tablet {
-    margin: 0 0 30px;
+    margin: 50px 0 40px;
+  }
+
+  @include mobile {
+    margin: 20px 0;
   }
 
   &__table {
@@ -79,7 +83,7 @@
       line-height: 18px;
     }
 
-    @include mobile {
+    @include mobile {    margin: 20px 0;
       font-size: 16px;
       line-height: 16px;
     }

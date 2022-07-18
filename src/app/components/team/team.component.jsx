@@ -102,7 +102,7 @@ const Team = () => {
           <div className="team__player-wrapper">
             <h5 className='team__player-name'>GL</h5>
             <p className='team__player-description'>System Administrator</p>
-            <p className='team__player-expanded'>Click-click-click….don&apos;t create unnecessary noise, GL works. This guy forgot what sunlight is a long time ago. You&apos;d think he was a vampire, but no, he converts all these crazy people&apos;s ideas into code so he doesn&apos;t have too much time to talk. He came straight off the matrix. With 5+ years of experience in IT he knows how to build and maintain all the different systems in operation</p>
+            <p className='team__player-expanded'>Click-click-click….don&apos;t create unnecessary noise, GL works. This guy forgot what sunlight is a long time ago. You&apos;d think he was a vampire, but no, he converts all these crazy people&apos;s ideas into code so he doesn&apos;t have too much time to talk. He came straight off the matrix. With 5+ years of experience in IT he knows how to build and maintain all the different systems in operation.</p>
             <div className='team__player-socials'>
               <a
                 className='team__player-socials-icon team__player-socials-icon--discord'

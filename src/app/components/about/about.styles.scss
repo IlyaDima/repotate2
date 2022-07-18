@@ -7,14 +7,9 @@
   background: linear-gradient(45deg, #1EACF4 0%, #1EACF4 56%, #34BBFF 56%, #34BBFF 100%);
   padding: 45px 0;
 
-  @include tablet {
-    padding: 120px 0 50px;
-    margin-top: -70px;
-  }
-
   @include mobile {
     flex-direction: column;
-    width: calc(100% - 60px);
+    padding: 0px 0 40px;
   }
 
   &__heading {
@@ -62,6 +57,10 @@
     align-items: center;
     padding-left: 30px;
 
+    @include tablet {
+      min-width: 40%;
+    }
+
     @include mobile {
       display: none;
     }
@@ -92,13 +91,10 @@
     max-width: 660px;
     padding-right: 30px;
 
-    @include tablet {
-      width: 100%;
-    }
-
     @include mobile {
       margin: 0 auto;
-      padding: 0;
+      padding: 0 20px;
+      width: calc(100% - 40px);
     }
   }
 

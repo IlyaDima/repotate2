@@ -5,7 +5,6 @@ import './footer.styles.scss';
 
 import Social from '../header/social/social.component';
 import Logo from '../header/logo/logo.component';
-import Menu from '../header/menu/menu.component';
 import environment from '../../../environment/environment';
 
 const Footer = () => {
@@ -15,7 +14,6 @@ const Footer = () => {
         <footer className='footer'>
           <div className='footer__wrapper'>
             <Logo />
-            <Menu />
             <div className='footer__socials'>
               <Social />
               <a

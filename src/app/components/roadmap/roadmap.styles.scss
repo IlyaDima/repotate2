@@ -59,8 +59,22 @@
       width: 50%;
       border-right: 1px solid #797979;
 
+      @include tablet {
+        z-index: 1;
+        padding-right: 0;
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: 0;
+      }
+
       .roadmap__ava {
         margin: 80px auto 60px;
+
+        @include tablet {
+          margin: 30px auto 50px;
+        }
 
         &:last-of-type {
           margin-bottom: 0;
@@ -94,7 +108,11 @@
     text-align: center;
     
     color: #FBA41C;
-    margin-bottom: 30px;    
+    margin-bottom: 30px;
+
+    @include tablet {
+      margin: 20px 0;
+    }
   }
 
   &__text {

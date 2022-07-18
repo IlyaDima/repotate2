@@ -69,10 +69,15 @@
       align-items: flex-start;
       margin-left: 50px;
       justify-content: center;
+
+      @include tablet {
+        margin-left: 0;
+      }
     }
 
     @include tablet {
-      height: 360px;
+      height: auto;
+      flex-direction: column;
     }
 
     @include mobile {
@@ -84,6 +89,10 @@
       max-width: 220px;
       height: auto;
       margin: auto;
+
+      @include tablet {
+        width: 100%;
+      }
     }
 
     &-name {
