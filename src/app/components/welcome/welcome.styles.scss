@@ -225,9 +225,13 @@
     align-items: center;
     justify-content: center;
 
+    @include tablet {
+      bottom: -20px;
+    }
+
     img {
       width: 100%;
-      max-width: 35vh;
+      max-width: 20vw;
 
       @include mobile {
         max-width: 30vw;
@@ -243,5 +247,9 @@
     z-index: 2;
     position: relative;
     max-width: 60vh;
+
+    @include mobile {
+      width: 100vw;
+    }
   }
 }

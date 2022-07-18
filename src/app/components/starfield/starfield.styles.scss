@@ -90,6 +90,10 @@
       @include tablet {
         max-width: 80vw;
       }
+
+      @include mobile {
+        max-width: 70vw;
+      }
     }
 
     h3 {

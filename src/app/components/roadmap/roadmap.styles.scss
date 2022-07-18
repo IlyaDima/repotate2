@@ -131,6 +131,10 @@
 
   &__ava {
     max-width: 320px;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__larry-1 {
