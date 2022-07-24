@@ -132,6 +132,30 @@
   &__ava {
     max-width: 320px;
 
+    &-l {
+      position: relative;
+      left: -400px;
+      opacity: 0;
+      transition: all 0.5s;
+
+      &.active {
+        left: 0;
+        opacity: 1;
+      }
+    }
+
+    &-r {
+      position: relative;
+      right: -400px;
+      opacity: 0;
+      transition: all 0.5s;
+
+      &.active {
+        right: 0;
+        opacity: 1;
+      }
+    }
+
     @include mobile {
       width: 100%;
     }
@@ -140,9 +164,14 @@
   &__larry-1 {
     position: absolute;
     max-width: 370px;
-    right: 0;
     top: 800px;
     z-index: -1;
+    right: -370px; 
+    transition: right 0.75s;
+
+    &.active {
+      right: 0;
+    }
 
     @media (max-width: 1333px) {
       display: none;
@@ -152,9 +181,15 @@
   &__larry-2 {
     position: absolute;
     max-width: 370px;
-    left: 0;
     top: 1500px;
     z-index: -1;
+
+    left: -370px; 
+    transition: left 0.75s;
+
+    &.active {
+      left: 0;
+    }
 
     @media (max-width: 1333px) {
       display: none;
@@ -164,9 +199,15 @@
   &__larry-3 {
     position: absolute;
     max-width: 370px;
-    right: 0;
     top: 1850px;
     z-index: -1;
+
+    right: -370px; 
+    transition: right 0.75s;
+
+    &.active {
+      right: 0;
+    }
 
     @media (max-width: 1333px) {
       display: none;

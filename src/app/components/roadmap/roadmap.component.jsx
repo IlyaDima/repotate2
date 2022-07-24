@@ -12,7 +12,7 @@ const Roadmap = () => {
             <h3 className='roadmap__heading'>
               Roadmap
             </h3>
-            <img className='roadmap__image-1' src="roadmap1.png" />
+            <img className='roadmap__image-1 reveal' src="roadmap1.png" />
             <div className="roadmap__box">
               <div className="roadmap__box-left">
                 <h4 className="roadmap__title">
@@ -30,7 +30,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -Smart-Contract and Web Development
                 </p>
-                <img src="roadmap6.png" className="roadmap__ava" />
+                <img src="roadmap6.png" className="roadmap__ava roadmap__ava-l reveal" />
                 <h4 className="roadmap__title">
                   Office story
                 </h4>
@@ -46,7 +46,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -1st NFT collection &quot;Larry in the office&quot;
                 </p>
-                <img src="roadmap2.png" className="roadmap__ava" />
+                <img src="roadmap2.png" className="roadmap__ava roadmap__ava-r reveal" />
                 <h4 className="roadmap__title">
                   African trip
                 </h4>
@@ -62,7 +62,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -Release 2nd NFT collection &quot;African Trip&quot;
                 </p>
-                <img src="roadmap5.png" className="roadmap__ava" />
+                <img src="roadmap5.png" className="roadmap__ava roadmap__ava-l reveal" />
                 <h4 className="roadmap__title">
                   European trip
                 </h4>
@@ -78,7 +78,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -Release 3rd NFT collection &quot;European Trip&quot;
                 </p>
-                <img src="roadmap3.png" className="roadmap__ava" />
+                <img src="roadmap3.png" className="roadmap__ava roadmap__ava-r reveal" />
                 <h4 className="roadmap__title">
                   Asian trip
                 </h4>
@@ -94,7 +94,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -Release 4th NFT collection &quot;Asian trip&quot;
                 </p>
-                <img src="roadmap7.png" className="roadmap__ava" />
+                <img src="roadmap7.png" className="roadmap__ava roadmap__ava-l reveal" />
                 <h4 className="roadmap__title">
                   Colonizing Metaverse
                 </h4>
@@ -104,7 +104,7 @@ const Roadmap = () => {
                   -TGE
                   -Disturbing in-game usable NFT`s to our holders
                 </p>
-                <img src="roadmap4.png" className="roadmap__ava" />
+                <img src="roadmap4.png" className="roadmap__ava roadmap__ava-r reveal" />
               </div>
             </div>
             <img className='roadmap__image-1' src="roadmap8.png" />
@@ -117,7 +117,7 @@ const Roadmap = () => {
             <h3 className='roadmap__heading'>
               Roadmap
             </h3>
-            <img className='roadmap__image-1' src="roadmap1.png" />
+            <img className='roadmap__image-1 reveal' src="roadmap1.png" />
             <div className="roadmap__box">
               <div className="roadmap__box-left">
                 <h4 className="roadmap__title">
@@ -135,7 +135,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -Smart-Contract and Web Development
                 </p>
-                <img src="roadmap2.png" className="roadmap__ava" />
+                <img src="roadmap2.png" className="roadmap__ava roadmap__ava-l reveal" />
                 <h4 className="roadmap__title">
                   African trip
                 </h4>
@@ -151,7 +151,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -Release 2nd NFT collection &quot;African Trip&quot;
                 </p>
-                <img src="roadmap3.png" className="roadmap__ava" />
+                <img src="roadmap3.png" className="roadmap__ava roadmap__ava-l reveal" />
                 <h4 className="roadmap__title">
                   Asian trip
                 </h4>
@@ -167,13 +167,13 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -Release 4th NFT collection &quot;Asian trip&quot;
                 </p>
-                <img src="roadmap4.png" className="roadmap__ava" />
+                <img src="roadmap4.png" className="roadmap__ava roadmap__ava-l reveal" />
               </div>
               <div className="roadmap__box-right">
-                <img className="roadmap__larry-1" src="larry1.png" />
-                <img className="roadmap__larry-2" src="larry2.png" />
-                <img className="roadmap__larry-3" src="larry3.png" />
-                <img src="roadmap6.png" className="roadmap__ava" />
+                <img className="roadmap__larry-1 reveal" src="larry1.png" />
+                <img className="roadmap__larry-2 reveal" src="larry2.png" />
+                <img className="roadmap__larry-3 reveal" src="larry3.png" />
+                <img src="roadmap6.png" className="roadmap__ava roadmap__ava-r reveal" />
                 <h4 className="roadmap__title">
                   Office story
                 </h4>
@@ -189,7 +189,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -1st NFT collection &quot;Larry in the office&quot;
                 </p>
-                <img src="roadmap5.png" className="roadmap__ava" />
+                <img src="roadmap5.png" className="roadmap__ava roadmap__ava-r reveal" />
                 <h4 className="roadmap__title">
                   European trip
                 </h4>
@@ -205,7 +205,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -Release 3rd NFT collection &quot;European Trip&quot;
                 </p>
-                <img src="roadmap7.png" className="roadmap__ava" />
+                <img src="roadmap7.png" className="roadmap__ava roadmap__ava-r reveal" />
                 <h4 className="roadmap__title">
                   Colonizing Metaverse
                 </h4>

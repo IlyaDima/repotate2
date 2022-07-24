@@ -21,11 +21,11 @@ const Welcome = ({ isMintShown }) => {
 
   return (
     <div className='welcome'>
-      <img src='welcome-1.png' alt='welcome center image' />
+      <img src='welcome-1.png' alt='welcome center image' className='fade-in' />
       <div className='welcome__img-container'>
-        <img src='welcome-2.png' alt='welcome image 2' />
-        <img src='welcome-3.png' alt='welcome image 3' />
-        <img src='welcome-4.png' alt='welcome image 4' />
+        <img src='welcome-2.png' alt='welcome image 2' className='in-left' />
+        <img src='welcome-3.png' alt='welcome image 3' className='fade-in'/>
+        <img src='welcome-4.png' alt='welcome image 4' className='in-right' />
       </div>
       {
         isMintShown ? (
