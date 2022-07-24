@@ -9,6 +9,7 @@ import './mint.styles.scss';
 import Header from '../../components/header/header.component';
 import { getTotalSupply, mintMod, mintOG, mintPublic, mintRaffle, mintWL } from '../../../contract/ethereum';
 import Wallet from '../../components/header/wallet/wallet.component';
+import Social from '../../components/header/social/social.component';
 
 const MintPageComponent = ({
   currentAccount,
@@ -53,8 +54,8 @@ const MintPageComponent = ({
 
   const getPrice = () => {
     const num = mintType === 'ogPresaleMint'
-      ? 0.14 * selectedCount
-      : 0.15 * selectedCount;
+      ? 0.10 * selectedCount
+      : 0.10 * selectedCount;
 
     const numString = num.toFixed(2).replace('.', ',');
 
@@ -199,31 +200,43 @@ const MintPageComponent = ({
         setCurrentAccount={setCurrentAccount}
       />
       <div className='mint-page__wrapper'>
-        <div className='mint-page__count'>
-          <h3 className='mint-page__name'>{getMintName()}</h3>
-          <h5>MINTED</h5>
-          <p>{mintedCount}/<span>500</span></p>
+        <img className='mint-page__live' src="minlive.png" />
+        <div className="mint-page__box">
+          <img src="kek1.png" className='mint-page__kek1' />
+          <img src="kek3.png" className='mint-page__kek3' />
+          <div className="mint-page__box-left">
+            <img src="kek2.png" className='mint-page__kek2' />
+            <img src='mint1.png' />
+          </div>
+          <div className="mint-page__box-right">
+            <div className='mint-page__count'>
+              <p>{mintedCount}/<span>1000</span></p>
+            </div>
+            {renderRaffleMessage()}
+            {renderActions()}
+            {
+              mintError
+                ? (
+                  <div className='mint-page__error'>
+                    {mintError}
+                  </div>
+                )
+                : null
+            }
+            {
+              successTx
+                ? (
+                  <div className='mint-page__success'>
+                    Transaction in progress! Click <a href={`https://etherscan.io/tx/${successTx}`} target='_blank' rel='noreferrer'>here</a> to view on Etherscan.
+                  </div>
+                )
+                : null
+            }
+          </div>
         </div>
-        {renderRaffleMessage()}
-        {renderActions()}
-        {
-          mintError
-            ? (
-              <div className='mint-page__error'>
-                {mintError}
-              </div>
-            )
-            : null
-        }
-        {
-          successTx
-            ? (
-              <div className='mint-page__success'>
-                Transaction in progress! Click <a href={`https://etherscan.io/tx/${successTx}`} target='_blank' rel='noreferrer'>here</a> to view on Etherscan.
-              </div>
-            )
-            : null
-        }
+        <div className="mint-page__social">
+          <Social />
+        </div>
       </div>
     </section>
   );
