@@ -11,7 +11,7 @@ const Larry = () => {
         <div className="larry__left">
           <div className="larry__header">
             <h3 className='larry__title'>
-              Larry, The Adventurer
+              “Larry In The Office”
             </h3>
             <img className='larry__pen' src="pen.png" />
           </div>
@@ -19,18 +19,20 @@ const Larry = () => {
             The inspiring story of an unremarkable person who made his dream come true.
           </p>
           <p>
-            Our NFT series is a lifetime story  of a young man
-            who has made a conscious decision not to be a victim of common
-            standards of living but  fulfill his cherisheddream since childhood
-            to go on a trip around the world. We invite you to join Larry on his incredible
-            journey around the most beautiful places in Europe , Africa and Asia.
+            First collection “Larry In The Office” tells us about the time when Larry was fully immersed and absorbed by the daily office routine working hard as an ordinary employee and gives us all the reasons how his life has been changed once and forever.
           </p>
           <p>
-            First collection “Larry In The Office” tells us about the time
-            when Larry was fully  immersed and absorbed by the daily
-            office routine working hard as an ordinary employee
-            and gives us all the reasons how  his life has been changed
-            once and forever.
+            Larry in the office supply is 1111 NFT`s:
+          </p>
+          <p className='larry__list '>
+            11 Legendary NFT`s.
+          </p><p className='larry__list '>
+            111 NFT`s of 1# Larry, the adventurer comics.
+          </p><p className='larry__list '>
+            333 NFT`s with Africa/Asia/Europe guide on a table that will make you eligible for getting one of future collections NFT for free.
+          </p>
+          <p className='larry__list '>
+            656 NFT`s Larry in the office daily portraits.
           </p>
           <img className='larry__buklet' src="buklet.png" />
         </div>

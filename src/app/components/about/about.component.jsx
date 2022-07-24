@@ -6,9 +6,9 @@ const About = () => {
   return (
     <div className='about'>
       <span id="about"></span>
-      <img className='about__mobile-img' src='about.png' alt='About mobile' />
+      <img className='about__mobile-img' src='kek.gif' alt='About mobile' />
       <div className='about__colonialist'>
-        <img src='about.png' alt='About colonialist 1' />
+        <img src='kek.gif' alt='About colonialist 1' />
       </div>
       <div className='about__texts'>
         <h3 className='about__heading'>About</h3>
