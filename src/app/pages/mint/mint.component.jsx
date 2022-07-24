@@ -41,7 +41,7 @@ const MintPageComponent = ({
   React.useEffect(() => {
     if (publicActive !== undefined && presaleActive !== undefined && raffleActive !== undefined) {
       if (!publicActive && !presaleActive && !raffleActive) {
-        navigate('/');
+        // navigate('/');
       }
     }
   }, [publicActive, presaleActive, raffleActive]);

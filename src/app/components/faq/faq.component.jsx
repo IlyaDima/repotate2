@@ -4,7 +4,8 @@ import './faq.styles.scss';
 
 const FAQ = () => {
   return (
-    <div className='faq' id='faq'>
+    <div className='faq'>
+      <span id="faq"></span>
       <h3 className='faq__heading'>
         F.A.Q
       </h3>

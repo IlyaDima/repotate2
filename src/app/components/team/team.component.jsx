@@ -4,7 +4,8 @@ import './team.styles.scss';
 
 const Team = () => {
   return (
-    <div className='team' id='team'>
+    <div className='team'>
+      <span id="team"></span>
       <h3 className='team__heading'>Team</h3>
       <div className='team__players'>
         <div className='team__player'>

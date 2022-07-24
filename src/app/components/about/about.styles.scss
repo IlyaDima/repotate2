@@ -6,6 +6,12 @@
   z-index: 3;
   background: linear-gradient(45deg, #1EACF4 0%, #1EACF4 56%, #34BBFF 56%, #34BBFF 100%);
   padding: 45px 0;
+  position: relative;
+
+  & > span {
+    position: absolute;
+    top: -99px;
+  }
 
   @include mobile {
     flex-direction: column;

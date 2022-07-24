@@ -5,6 +5,11 @@
   background-image: url('bg.png');
   position: relative;
 
+  & > span {
+    position: absolute;
+    top: -99px;
+  }
+
   @include tablet {
     
   }

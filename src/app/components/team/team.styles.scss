@@ -9,6 +9,12 @@
   background-color: #34BBFF;
   background-image: url(space.png);
   padding-bottom: 100px;
+  position: relative;
+
+  & > span {
+    position: absolute;
+    top: -99px;
+  }
 
   &__heading {
     font-family: 'Gloria Hallelujah';

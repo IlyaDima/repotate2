@@ -7,7 +7,8 @@ const Roadmap = () => {
   return (
     <>
       <MediaQuery maxWidth={1024}>
-        <div className='roadmap' id='roadmap'>
+        <div className='roadmap'>
+          <span id="roadmap"></span>
           <div className='roadmap__wrapper'>
             <h3 className='roadmap__heading'>
               Roadmap
@@ -112,7 +113,8 @@ const Roadmap = () => {
         </div>
       </MediaQuery>
       <MediaQuery minWidth={1025}>
-        <div className='roadmap' id='roadmap'>
+        <div className='roadmap'>
+          <span id="roadmap"></span>
           <div className='roadmap__wrapper'>
             <h3 className='roadmap__heading'>
               Roadmap
