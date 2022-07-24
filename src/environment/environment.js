@@ -1,5 +1,5 @@
 const environment = {
-  discord: 'https://discord.gg/ySp223qgRu/',
+  discord: 'https://discord.gg/ySp223qgRu',
   twitter: 'https://twitter.com/AdventurerLarry/',
   instagram: 'https://www.instagram.com/nft.larry/',
   opensea: '',

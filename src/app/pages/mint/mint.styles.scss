@@ -8,18 +8,30 @@
     position: absolute;
     left: -252px;
     top: -36px;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__kek2 {
     position: absolute;
     left: -180px;
     top: -296px;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__kek3 {
     position: absolute;
     right: -100px;
     top: -259px;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__box {
@@ -39,11 +51,31 @@
 
     &-left {
       position: relative;
+
+      @include mobile {
+        display: flex;
+        justify-content: center;
+      }
+
+      img {
+        @include mobile {
+          width: 75%;
+        }
+      }
+    }
+
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
     }
   }
 
   &__live {
     margin: 0 auto;
+    
+    @include mobile {
+      width: 50%;
+    }
   }
 
   &__raffle-added {
@@ -192,6 +224,10 @@
     width: 100%;
     display: flex;
     justify-content: center;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__wrapper {
@@ -203,7 +239,7 @@
     top: 80px;
 
     @include tablet {
-      top: 110px;
+      top: 80px;
     }
 
     .wallet-wrapper {
@@ -211,6 +247,14 @@
       max-width: max-content;
       flex-basis: initial;
       margin: 70px auto 0;
+
+      @include tablet {
+        display: flex;
+      }
+
+      @include mobile {
+        margin: 20px auto 0;
+      }
     }
 
     .wallet-wrapper__button {
@@ -280,10 +324,6 @@
         color: white;
       }
     }
-  }
-
-  .header {
-    background: transparent;
   }
 
   &__count {
