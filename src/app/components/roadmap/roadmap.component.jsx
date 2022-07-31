@@ -101,8 +101,14 @@ const Roadmap = () => {
                 </h4>
                 <p className="roadmap__text">
                   -P2E Metaverse &quot;LarryLand&quot; Demo
+                </p>
+                <p className="roadmap__text">
                   -IDO
+                </p>
+                <p className="roadmap__text">
                   -TGE
+                </p>
+                <p className="roadmap__text">
                   -Disturbing in-game usable NFT`s to our holders
                 </p>
                 <img src="roadmap4.png" className="roadmap__ava roadmap__ava-r reveal" />
@@ -213,8 +219,14 @@ const Roadmap = () => {
                 </h4>
                 <p className="roadmap__text">
                   -P2E Metaverse &quot;LarryLand&quot; Demo
+                </p>
+                <p className="roadmap__text">
                   -IDO
+                </p>
+                <p className="roadmap__text">
                   -TGE
+                </p>
+                <p className="roadmap__text">
                   -Disturbing in-game usable NFT`s to our holders
                 </p>
               </div>
