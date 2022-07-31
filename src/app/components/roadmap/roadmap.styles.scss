@@ -15,7 +15,7 @@
   }
 
   @include mobile {
-    
+
   }
 
   &__heading {
@@ -43,6 +43,7 @@
     max-width: 1000px;
     width: calc(100% - 60px);
     margin: 0 auto;
+    overflow: hidden;
   }
 
   &__image {
