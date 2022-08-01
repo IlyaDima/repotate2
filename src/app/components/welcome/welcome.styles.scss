@@ -238,11 +238,6 @@
         
       }
 
-      &:last-of-type {
-        bottom: 15px;
-        position: relative;
-      }
-
       @include mobile {
         max-width: 30vw;
       }

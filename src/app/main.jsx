@@ -24,8 +24,8 @@ import environment from '../environment/environment';
 import Web3Modal, { providers as web3Providers } from 'web3modal'
 import { providers } from 'ethers'
 
-const web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/196d9033022f4453af7bd9117a1759c8'));
-const contractAddress = '0x2be20E65BecFd7494Bf232b1859d556F8a5893fF';
+const web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/2c2e371df87b41e4bed3c5fbd628ed9d'));
+const contractAddress = '0x8cEBCF6620a4B77de67628593Cb5ae67f956CA45';
 // const contractAddress = '0x3b922B37D3746315EED949C3c33b273BBA54B35f';
 const contract = new web3.eth.Contract(abi, contractAddress);
 
@@ -49,7 +49,7 @@ const providerOptions = {
   walletconnect: {
     package: WalletConnectProvider, // required
     options: {
-      infuraId: '196d9033022f4453af7bd9117a1759c8', // required
+      infuraId: '2c2e371df87b41e4bed3c5fbd628ed9d', // required
     },
   },
 };

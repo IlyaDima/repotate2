@@ -210,7 +210,7 @@ const MintPageComponent = ({
           </div>
           <div className="mint-page__box-right">
             <div className='mint-page__count'>
-              <p>{mintedCount}/<span>1000</span></p>
+              <p>{mintedCount}/<span>1111</span></p>
             </div>
             {renderRaffleMessage()}
             {renderActions()}
