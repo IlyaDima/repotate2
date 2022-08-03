@@ -16,9 +16,6 @@ const Larry = () => {
             <img className='larry__pen' src="pen.png" />
           </div>
           <p>
-            The inspiring story of an unremarkable person who made his dream come true.
-          </p>
-          <p>
             First collection “Larry In The Office” tells us about the time when Larry was fully immersed and absorbed by the daily office routine working hard as an ordinary employee and gives us all the reasons how his life has been changed once and forever.
           </p>
           <p>
