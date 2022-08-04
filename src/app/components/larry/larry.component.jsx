@@ -11,7 +11,7 @@ const Larry = () => {
         <div className="larry__left">
           <div className="larry__header">
             <h3 className='larry__title'>
-              “Larry In The Office”
+              Season 1 “Larry In The Office”
             </h3>
             <img className='larry__pen' src="pen.png" />
           </div>

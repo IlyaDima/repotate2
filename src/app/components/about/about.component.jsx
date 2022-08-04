@@ -11,7 +11,7 @@ const About = () => {
         <img src='kek.gif' alt='About colonialist 1' />
       </div>
       <div className='about__texts'>
-        <h3 className='about__heading'>About</h3>
+        <h3 className='about__heading'>Larry, The Adventurer</h3>
         <p>
           The inspiring story of an unremarkable person who made his dream come true.
         </p>
