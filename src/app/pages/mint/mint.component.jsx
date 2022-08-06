@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 import './mint.styles.scss';
 
-import Header from '../../components/header/header.component';
+// import Header from '../../components/header/header.component';
 import { getTotalSupply, mintMod, mintOG, mintPublic, mintRaffle, mintWL } from '../../../contract/ethereum';
 import Wallet from '../../components/header/wallet/wallet.component';
 import Social from '../../components/header/social/social.component';
@@ -195,10 +195,6 @@ const MintPageComponent = ({
 
   return (
     <section className='mint-page'>
-      <Header
-        currentAccount={currentAccount}
-        setCurrentAccount={setCurrentAccount}
-      />
       <div className='mint-page__wrapper'>
         <img className='mint-page__live' src="minlive.png" />
         <div className="mint-page__box">
