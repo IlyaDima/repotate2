@@ -3,9 +3,9 @@ const environment = {
   twitter: 'https://twitter.com/AdventurerLarry/',
   instagram: 'https://www.instagram.com/nft.larry/',
   opensea: '',
-  GET_PRESALE_PROOF_URL: 'https://metacolonialists-api.onrender.com/getPresaleProof',
-  GET_RAFFLE_PROOF_URL: 'https://metacolonialists-api.onrender.com/getRaffleProof',
-  REGISTER_RAFFLE_URL: 'https://metacolonialists-api.onrender.com/registerRaffle'
+  GET_PRESALE_PROOF_URL: 'https://larryland-api.onrender.com/getPresaleProof',
+  GET_RAFFLE_PROOF_URL: 'https://larryland-api.onrender.com/getRaffleProof',
+  REGISTER_RAFFLE_URL: 'https://larryland-api.onrender.com/registerRaffle'
 };
 
 export default environment;
