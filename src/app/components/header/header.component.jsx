@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import './header.styles.scss';
 
 import Logo from './logo/logo.component';
+import BgSound from './bg-sound/bg-sound.component';
 import Menu from './menu/menu.component';
 import Social from './social/social.component';
 import Wallet from './wallet/wallet.component';
@@ -15,6 +16,7 @@ const Header = ({ currentAccount, setCurrentAccount }) => {
     <header className='header'>
       <div className='header__wrapper'>
         <Logo />
+        <BgSound />
         <Menu />
         <Social />
         <Wallet

@@ -1,6 +1,6 @@
 .statistics {
   width: 100%;
-  padding: 50px 0 85px;
+  padding: 50px 0 50px; // 50px 0 85px
   background-image: url(bg.png);
 
   @include tablet {
@@ -36,7 +36,7 @@
     svg {
       height: 60px;
       width: auto;
-      margin-bottom: 32px;
+      margin-bottom: 0; //32px
 
       path {
         fill: #FBA41C;

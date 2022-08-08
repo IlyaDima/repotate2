@@ -1,0 +1,16 @@
+button {
+    appearance: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    svg path {
+        fill: #34BBFF
+    }
+
+    &:hover {
+        svg path {
+            fill: #FBA41C
+        }
+    }
+}

@@ -8,7 +8,7 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-import WalletLink from 'walletlink'
+import WalletLink from 'walletlink';
 
 import 'normalize.css';
 import './main.scss';
@@ -17,14 +17,15 @@ import HomePageComponent from './pages/home/home.component';
 import MintPageComponent from './pages/mint/mint.component';
 
 import createStarfield from './misc/starfield';
-import WalletConnectProvider from '@walletconnect/web3-provider'
+import WalletConnectProvider from '@walletconnect/web3-provider';
 import { getPresaleStatus, getPublicStatus, getRaffleStatus } from '../contract/ethereum';
 
 import environment from '../environment/environment';
-import Web3Modal, { providers as web3Providers } from 'web3modal'
-import { providers } from 'ethers'
+import Web3Modal, { providers as web3Providers } from 'web3modal';
+import { providers } from 'ethers';
 
-const web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/2c2e371df87b41e4bed3c5fbd628ed9d'));
+const web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/4b378f6752a74de997bc156011a8b450'));
+// const web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/2c2e371df87b41e4bed3c5fbd628ed9d'));
 const contractAddress = '0x8cEBCF6620a4B77de67628593Cb5ae67f956CA45';
 // const contractAddress = '0x3b922B37D3746315EED949C3c33b273BBA54B35f';
 const contract = new web3.eth.Contract(abi, contractAddress);
@@ -383,6 +384,7 @@ const App = () => {
             setCurrentAccount={connect}
           />
         } />
+        {/*
         <Route path="mint" exact element={
           <MintPageComponent
             raffleActive={raffleStatus}
@@ -402,6 +404,7 @@ const App = () => {
             callOg={callOg}
           />
         } />
+        */}
       </Routes>
     </Router>
   );

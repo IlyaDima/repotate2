@@ -7,9 +7,11 @@ const Menu = () => {
   return (
     <nav className='menu-wrapper'>
       <ul>
-        {/* <li>
+        {/*
+        <li>
           <Link to="/link">Mint</Link>
-        </li> */}
+        </li>
+        */}
         <li onClick={() => {
           const event = new Event('kek');
           document.dispatchEvent(event);

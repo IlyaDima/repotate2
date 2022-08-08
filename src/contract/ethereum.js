@@ -3,7 +3,8 @@ import Web3 from 'web3';
 import abi from './abi';
 
 // TODO
-const web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/2c2e371df87b41e4bed3c5fbd628ed9d"));
+const web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/4b378f6752a74de997bc156011a8b450"));
+// const web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/2c2e371df87b41e4bed3c5fbd628ed9d"));
 const contractAddress = '0x8cEBCF6620a4B77de67628593Cb5ae67f956CA45';
 // const contractAddress = '0x3b922B37D3746315EED949C3c33b273BBA54B35f';
 const contract = new web3.eth.Contract(abi, contractAddress);

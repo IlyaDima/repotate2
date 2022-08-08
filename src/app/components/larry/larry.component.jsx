@@ -24,7 +24,7 @@ const Larry = () => {
           <p className='larry__list '>
             11 Legendary NFT`s.
           </p><p className='larry__list '>
-            111 NFT`s of 1# Larry, the adventurer comics.
+            111 NFT`s of #1 Larry, the adventurer comics.
           </p><p className='larry__list '>
             333 NFT`s with Africa/Asia/Europe guide on a table that will make you eligible for getting one of future collections NFT for free.
           </p>

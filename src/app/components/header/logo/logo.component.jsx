@@ -5,7 +5,9 @@ import './logo.styles.scss';
 const Logo = () => {
   return (
     <div className='logo-wrapper'>
-      <img src='logo.png' alt='logo larry' />
+      <a href='/'>
+        <img src='logo.png' alt='logo larry' />
+      </a>
     </div>
   );
 };
