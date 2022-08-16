@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './about.styles.scss';
+import environment from '../../../environment/environment';
 
 const About = () => {
   return (
@@ -24,7 +25,7 @@ const About = () => {
           on his incredible journey around the most beautiful places in Europe, Africa and Asia.
         </p>
         <a
-          href="#"
+          href={environment.discord}
           className='about__button'
           target='_blank'
           rel='noreferrer'
