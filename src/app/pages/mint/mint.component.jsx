@@ -202,11 +202,11 @@ const MintPageComponent = ({
       <div className='mint-page__wrapper'>
         <img className='mint-page__live' src="minlive.png" />
         <div className="mint-page__box">
-          <img src="kek1.png" className='mint-page__kek1' />
-          <img src="kek3.png" className='mint-page__kek3' />
+          <img src="kek-1.png" className='mint-page__kek1' />
+          <img src="kek-3.png" className='mint-page__kek3' />
           <div className="mint-page__box-left">
-            <img src="kek2.png" className='mint-page__kek2' />
-            <img src='mint1.png' />
+            <img src="kek-2.png" className='mint-page__kek2' />
+            <img src='mint-1.png' />
           </div>
           <div className="mint-page__box-right">
             <div className='mint-page__count'>

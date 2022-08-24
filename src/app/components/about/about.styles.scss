@@ -58,34 +58,15 @@
   }
 
   &__colonialist {
-    height: auto;
     display: flex;
     align-items: center;
-    padding-left: 30px;
+    justify-content: center;
+    padding: 20px;
+    width: calc(100% - 40px);
 
-    @include tablet {
-      min-width: 40%;
-    }
-
-    @include mobile {
-      display: none;
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-      max-width: 420px;
-    }
-  }
-
-  &__mobile-img {
-    display: none;
-
-    @include mobile {
-      display: block;
-      position: relative;
-      padding: 20px;
-      width: calc(100% - 40px);
+    @media (min-width: 768px) {
+      padding: 0 0 0 30px;
+      width: auto;
     }
   }
 

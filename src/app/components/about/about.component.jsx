@@ -7,9 +7,12 @@ const About = () => {
   return (
     <div className='about'>
       <span id="about"></span>
-      <img className='about__mobile-img' src='kek.gif' alt='About mobile' />
+      {/*<img className='about__mobile-img' src='kek.gif' alt='About mobile' />*/}
       <div className='about__colonialist'>
-        <img src='kek.gif' alt='About colonialist 1' />
+        {/*<img src='kek.gif' alt='About colonialist 1' />*/}
+        <video width="420" height="420" autoPlay={true} loop>
+          <source src="larry-animated.webm" type="video/webm" />
+        </video>
       </div>
       <div className='about__texts'>
         <h3 className='about__heading'>Larry, The Adventurer</h3>
