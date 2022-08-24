@@ -9,7 +9,11 @@ const Team = () => {
       <h3 className='team__heading'>Team</h3>
       <div className='team__players'>
         <div className='team__player'>
-          <img className='team__player-img' src='/dio.png' alt='Dio' />
+          <picture>
+            <source srcSet='dio.webp' type='image/webp' />
+            <source srcSet='dio.png' type='image/png' />
+            <img className='team__player-img' src='dio.png' alt='Dio' />
+          </picture>
           <div className="team__player-wrapper">
             <h5 className='team__player-name'>Dio</h5>
             <p className='team__player-description'>Big Boss</p>
@@ -39,7 +43,11 @@ const Team = () => {
           </div>
         </div>
         <div className='team__player'>
-          <img className='team__player-img' src='/mary.png' alt='Mary' />
+          <picture>
+            <source srcSet='mary.webp' type='image/webp' />
+            <source srcSet='mary.png' type='image/png' />
+            <img className='team__player-img' src='mary.png' alt='Mary' />
+          </picture>
           <div className="team__player-wrapper">
             <h5 className='team__player-name'>Mary</h5>
             <p className='team__player-description'>NFT Artist</p>
@@ -69,7 +77,11 @@ const Team = () => {
           </div>
         </div>
         <div className='team__player'>
-          <img className='team__player-img' src='/ars.png' alt='Ars' />
+          <picture>
+            <source srcSet='ars.webp' type='image/webp' />
+            <source srcSet='ars.png' type='image/png' />
+            <img className='team__player-img' src='ars.png' alt='Ars' />
+          </picture>
           <div className="team__player-wrapper">
             <h5 className='team__player-name'>Ars</h5>
             <p className='team__player-description'>Top Manager</p>
@@ -99,7 +111,11 @@ const Team = () => {
           </div>
         </div>
         <div className='team__player'>
-          <img className='team__player-img' src='/gl.png' alt='GL' />
+          <picture>
+            <source srcSet='gl.webp' type='image/webp' />
+            <source srcSet='gl.png' type='image/png' />
+            <img className='team__player-img' src='gl.png' alt='GL' />
+          </picture>
           <div className="team__player-wrapper">
             <h5 className='team__player-name'>GL</h5>
             <p className='team__player-description'>System Administrator</p>

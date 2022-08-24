@@ -13,7 +13,11 @@ const Larry = () => {
             <h3 className='larry__title'>
               Season 1 “Larry In The Office”
             </h3>
-            <img className='larry__pen' src="pen.png" />
+            <picture>
+              <source srcSet='pen.webp' type='image/webp' />
+              <source srcSet='pen.png' type='image/png' />
+              <img className='larry__pen' src='pen.png' alt='Pen' />
+            </picture>
           </div>
           <p>
             First collection “Larry In The Office” tells us about the time when Larry was fully immersed and absorbed by the daily office routine working hard as an ordinary employee and gives us all the reasons how his life has been changed once and forever.
@@ -31,7 +35,11 @@ const Larry = () => {
           <p className='larry__list '>
             656 NFT`s Larry in the office daily portraits.
           </p>
-          <img className='larry__buklet' src="buklet.png" />
+          <picture>
+            <source srcSet='buklet.webp' type='image/webp' />
+            <source srcSet='buklet.png' type='image/png' />
+            <img className='larry__buklet' src='buklet.png' alt='Booklet' />
+          </picture>
         </div>
         <div className="larry__right">
           <Starfield />

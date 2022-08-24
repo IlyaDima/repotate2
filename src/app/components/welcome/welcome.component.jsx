@@ -21,11 +21,27 @@ const Welcome = ({ isMintShown }) => {
 
   return (
     <div className='welcome'>
-      <img src='welcome-1.png' alt='welcome center image' className='fade-in' />
+      <picture>
+        <source srcSet='welcome-1.webp' type='image/webp' />
+        <source srcSet='welcome-1.png' type='image/png' />
+        <img className='fade-in' src='welcome-1.png' alt='Welcome center image' />
+      </picture>
       <div className='welcome__img-container'>
-        <img src='welcome-2.png' alt='welcome image 2' className='in-left' />
-        <img src='welcome-3.png' alt='welcome image 3' className='fade-in'/>
-        <img src='welcome-4.png' alt='welcome image 4' className='in-right' />
+        <picture>
+          <source srcSet='welcome-2.webp' type='image/webp' />
+          <source srcSet='welcome-2.png' type='image/png' />
+          <img className='in-left' src='welcome-2.png' alt='Welcome image 2' />
+        </picture>
+        <picture>
+          <source srcSet='welcome-3.webp' type='image/webp' />
+          <source srcSet='welcome-3.png' type='image/png' />
+          <img className='fade-in' src='welcome-3.png' alt='Welcome image 3' />
+        </picture>
+        <picture>
+          <source srcSet='welcome-4.webp' type='image/webp' />
+          <source srcSet='welcome-4.png' type='image/png' />
+          <img className='in-right' src='welcome-4.png' alt='Welcome image 4' />
+        </picture>
       </div>
       {
         isMintShown ? (

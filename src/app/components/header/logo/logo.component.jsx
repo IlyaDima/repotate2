@@ -6,7 +6,11 @@ const Logo = () => {
   return (
     <div className='logo-wrapper'>
       <a href='/'>
-        <img src='logo.png' alt='logo larry' />
+        <picture>
+          <source srcSet="logo.webp" type="image/webp" />
+          <source srcSet="logo.png" type="image/png" />
+          <img src="logo.png" alt="Larryland Logo" />
+        </picture>
       </a>
     </div>
   );
