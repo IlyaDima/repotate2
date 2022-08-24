@@ -64,9 +64,18 @@
     padding: 20px;
     width: calc(100% - 40px);
 
-    @media (min-width: 768px) {
+    video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (min-width: 992px) {
       padding: 0 0 0 30px;
       width: auto;
+
+      video {
+        max-width: none
+      }
     }
   }
 
