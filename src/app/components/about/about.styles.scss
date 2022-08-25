@@ -146,7 +146,8 @@
 
     &:hover,
     &:focus {
-      cursor: pointer;
+      background: #34BBFF;
+      box-shadow: 0 0 10px 2px rgb(52 187 255);
     }
 
     &-title {

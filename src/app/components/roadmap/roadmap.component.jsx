@@ -35,7 +35,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -Smart-Contract and Web Development
                 </p>
-                <picture>
+                <picture className='d-flex'>
                   <source srcSet='roadmap-6.webp' type='image/webp' />
                   <source srcSet='roadmap-6.png' type='image/png' />
                   <img className='roadmap__ava roadmap__ava-l reveal' src='roadmap-6.png' alt='' />
@@ -55,7 +55,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -1st NFT collection &quot;Larry in the office&quot;
                 </p>
-                <picture>
+                <picture className='d-flex'>
                   <source srcSet='roadmap-2.webp' type='image/webp' />
                   <source srcSet='roadmap-2.png' type='image/png' />
                   <img className='roadmap__ava roadmap__ava-r reveal' src='roadmap-2.png' alt='' />
@@ -75,7 +75,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -Release 2nd NFT collection &quot;African Trip&quot;
                 </p>
-                <picture>
+                <picture className='d-flex'>
                   <source srcSet='roadmap-5.webp' type='image/webp' />
                   <source srcSet='roadmap-5.png' type='image/png' />
                   <img className='roadmap__ava roadmap__ava-l reveal' src='roadmap-5.png' alt='' />
@@ -95,7 +95,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -Release 3rd NFT collection &quot;European Trip&quot;
                 </p>
-                <picture>
+                <picture className='d-flex'>
                   <source srcSet='roadmap-3.webp' type='image/webp' />
                   <source srcSet='roadmap-3.png' type='image/png' />
                   <img className='roadmap__ava roadmap__ava-r reveal' src='roadmap-3.png' alt='' />
@@ -115,7 +115,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -Release 4th NFT collection &quot;Asian trip&quot;
                 </p>
-                <picture>
+                <picture className='d-flex'>
                   <source srcSet='roadmap-7.webp' type='image/webp' />
                   <source srcSet='roadmap-7.png' type='image/png' />
                   <img className='roadmap__ava roadmap__ava-l reveal' src='roadmap-7.png' alt='' />
@@ -135,7 +135,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -Disturbing in-game usable NFT`s to our holders
                 </p>
-                <picture>
+                <picture className='d-flex'>
                   <source srcSet='roadmap-4.webp' type='image/webp' />
                   <source srcSet='roadmap-4.png' type='image/png' />
                   <img className='roadmap__ava roadmap__ava-r reveal' src='roadmap-4.png' alt='' />
@@ -179,7 +179,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -Smart-Contract and Web Development
                 </p>
-                <picture>
+                <picture className='d-flex'>
                   <source srcSet='roadmap-2.webp' type='image/webp' />
                   <source srcSet='roadmap-2.png' type='image/png' />
                   <img className='roadmap__ava roadmap__ava-l reveal' src='roadmap-2.png' alt='' />
@@ -199,7 +199,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -Release 2nd NFT collection &quot;African Trip&quot;
                 </p>
-                <picture>
+                <picture className='d-flex'>
                   <source srcSet='roadmap-3.webp' type='image/webp' />
                   <source srcSet='roadmap-3.png' type='image/png' />
                   <img className='roadmap__ava roadmap__ava-l reveal' src='roadmap-3.png' alt='' />
@@ -219,7 +219,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -Release 4th NFT collection &quot;Asian trip&quot;
                 </p>
-                <picture>
+                <picture className='d-flex'>
                   <source srcSet='roadmap-4.webp' type='image/webp' />
                   <source srcSet='roadmap-4.png' type='image/png' />
                   <img className='roadmap__ava roadmap__ava-l reveal' src='roadmap-4.png' alt='' />
@@ -241,7 +241,7 @@ const Roadmap = () => {
                   <source srcSet='larry-3.png' type='image/png' />
                   <img className='roadmap__larry-3 reveal' src='larry-3.png' alt='' />
                 </picture>
-                <picture>
+                <picture className='d-flex'>
                   <source srcSet='roadmap-6.webp' type='image/webp' />
                   <source srcSet='roadmap-6.png' type='image/png' />
                   <img className='roadmap__ava roadmap__ava-r reveal' src='roadmap-6.png' alt='' />
@@ -261,7 +261,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -1st NFT collection &quot;Larry in the office&quot;
                 </p>
-                <picture>
+                <picture className='d-flex'>
                   <source srcSet='roadmap-5.webp' type='image/webp' />
                   <source srcSet='roadmap-5.png' type='image/png' />
                   <img className='roadmap__ava roadmap__ava-r reveal' src='roadmap-5.png' alt='' />
@@ -281,7 +281,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -Release 3rd NFT collection &quot;European Trip&quot;
                 </p>
-                <picture>
+                <picture className='d-flex'>
                   <source srcSet='roadmap-7.webp' type='image/webp' />
                   <source srcSet='roadmap-7.png' type='image/png' />
                   <img className='roadmap__ava roadmap__ava-r reveal' src='roadmap-7.png' alt='' />

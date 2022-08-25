@@ -53,8 +53,12 @@ module.exports = {
         ],
       },
       {
-        test: /\.png|svg|jpg|mp3|gif$/,
+        test: /\.png|svg|jpg|gif$/,
         use: ["file-loader"],
+      },
+      {
+        test: /\.(ogg|mp3|wav|mpe?g)$/i,
+        loader: 'file-loader',
       },
       {
         test: /\.jsx$/,

@@ -10,14 +10,6 @@
     top: -99px;
   }
 
-  @include tablet {
-    
-  }
-
-  @include mobile {
-
-  }
-
   &__heading {
     font-family: "Gloria Hallelujah";
     font-style: normal;
@@ -219,4 +211,8 @@
       display: none;
     }
   }
+}
+
+.d-flex {
+  display: flex;
 }

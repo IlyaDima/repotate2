@@ -234,10 +234,6 @@
       width: 100%;
       max-width: 20vw;
 
-      &:first-of-type {
-        
-      }
-
       @include mobile {
         max-width: 30vw;
       }
@@ -248,7 +244,7 @@
     user-select: none;
   }
   
-  & > img {
+  & > picture img {
     z-index: 2;
     position: relative;
     max-width: 60vh;
