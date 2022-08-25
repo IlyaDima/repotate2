@@ -57,7 +57,7 @@ module.exports = {
         use: ["file-loader"],
       },
       {
-        test: /\.(ogg|mp3|wav|mpe?g)$/i,
+        test: /\.(ogg|mp3|webm|wav|mpe?g)$/i,
         loader: 'file-loader',
       },
       {
