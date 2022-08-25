@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactHowler from 'react-howler';
 
-import bgSoundtrack from '../../../../assets/bg-soundtrack.webm';
+import bgSoundtrack from '../../../../assets/bg-soundtrack.mp3';
 import './bg-sound.styles.scss';
 
 const BgSound = () => {

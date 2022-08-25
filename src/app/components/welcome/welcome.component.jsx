@@ -7,6 +7,15 @@ import useCountdownHook from '../../hooks/countdown.hook';
 
 import './welcome.styles.scss';
 
+import welcome1Png from '/src/assets/welcome-1.png';
+import welcome1Webp from '/src/assets/welcome-1.webp';
+import welcome2Png from '/src/assets/welcome-2.png';
+import welcome2Webp from '/src/assets/welcome-2.webp';
+import welcome3Png from '/src/assets/welcome-3.png';
+import welcome3Webp from '/src/assets/welcome-3.webp';
+import welcome4Png from '/src/assets/welcome-4.png';
+import welcome4Webp from '/src/assets/welcome-4.webp';
+
 const Welcome = ({ isMintShown }) => {
   const { date } = useCountdownHook('Feb 08, 2022 20:00:00');
   const [, setOffsetY] = useState(0);
@@ -22,25 +31,25 @@ const Welcome = ({ isMintShown }) => {
   return (
     <div className='welcome'>
       <picture>
-        <source srcSet='welcome-1.webp' type='image/webp' />
-        <source srcSet='welcome-1.png' type='image/png' />
-        <img className='fade-in' src='welcome-1.png' alt='Welcome center image' />
+        <source srcSet={welcome1Webp} type='image/webp' />
+        <source srcSet={welcome1Png} type='image/png' />
+        <img className='fade-in' src={welcome1Png} alt='Welcome center image' />
       </picture>
       <div className='welcome__img-container'>
         <picture>
-          <source srcSet='welcome-2.webp' type='image/webp' />
-          <source srcSet='welcome-2.png' type='image/png' />
-          <img className='in-left' src='welcome-2.png' alt='Welcome image 2' />
+          <source srcSet={welcome2Webp} type='image/webp' />
+          <source srcSet={welcome2Png} type='image/png' />
+          <img className='in-left' src={welcome2Png} alt='Welcome image 2' />
         </picture>
         <picture>
-          <source srcSet='welcome-3.webp' type='image/webp' />
-          <source srcSet='welcome-3.png' type='image/png' />
-          <img className='fade-in' src='welcome-3.png' alt='Welcome image 3' />
+          <source srcSet={welcome3Webp} type='image/webp' />
+          <source srcSet={welcome3Png} type='image/png' />
+          <img className='fade-in' src={welcome3Png} alt='Welcome image 3' />
         </picture>
         <picture>
-          <source srcSet='welcome-4.webp' type='image/webp' />
-          <source srcSet='welcome-4.png' type='image/png' />
-          <img className='in-right' src='welcome-4.png' alt='Welcome image 4' />
+          <source srcSet={welcome4Webp} type='image/webp' />
+          <source srcSet={welcome4Png} type='image/png' />
+          <img className='in-right' src={welcome4Png} alt='Welcome image 4' />
         </picture>
       </div>
       {

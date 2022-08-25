@@ -2,6 +2,15 @@ import React from 'react';
 
 import './team.styles.scss';
 
+import arsPng from '/src/assets/ars.png';
+import arsWebp from '/src/assets/ars.webp';
+import dioPng from '/src/assets/dio.png';
+import dioWebp from '/src/assets/dio.webp';
+import glPng from '/src/assets/gl.png';
+import glWebp from '/src/assets/gl.webp';
+import maryPng from '/src/assets/mary.png';
+import maryWebp from '/src/assets/mary.webp';
+
 const Team = () => {
   return (
     <div className='team'>
@@ -10,9 +19,9 @@ const Team = () => {
       <div className='team__players'>
         <div className='team__player'>
           <picture>
-            <source srcSet='dio.webp' type='image/webp' />
-            <source srcSet='dio.png' type='image/png' />
-            <img className='team__player-img' src='dio.png' alt='Dio' />
+            <source srcSet={dioWebp} type='image/webp' />
+            <source srcSet={dioPng} type='image/png' />
+            <img className='team__player-img' src={dioPng} alt='Dio' />
           </picture>
           <div className="team__player-wrapper">
             <h5 className='team__player-name'>Dio</h5>
@@ -44,9 +53,9 @@ const Team = () => {
         </div>
         <div className='team__player'>
           <picture>
-            <source srcSet='mary.webp' type='image/webp' />
-            <source srcSet='mary.png' type='image/png' />
-            <img className='team__player-img' src='mary.png' alt='Mary' />
+            <source srcSet={maryWebp} type='image/webp' />
+            <source srcSet={maryPng} type='image/png' />
+            <img className='team__player-img' src={maryPng} alt='Mary' />
           </picture>
           <div className="team__player-wrapper">
             <h5 className='team__player-name'>Mary</h5>
@@ -78,9 +87,9 @@ const Team = () => {
         </div>
         <div className='team__player'>
           <picture>
-            <source srcSet='ars.webp' type='image/webp' />
-            <source srcSet='ars.png' type='image/png' />
-            <img className='team__player-img' src='ars.png' alt='Ars' />
+            <source srcSet={arsWebp} type='image/webp' />
+            <source srcSet={arsPng} type='image/png' />
+            <img className='team__player-img' src={arsPng} alt='Ars' />
           </picture>
           <div className="team__player-wrapper">
             <h5 className='team__player-name'>Ars</h5>
@@ -112,9 +121,9 @@ const Team = () => {
         </div>
         <div className='team__player'>
           <picture>
-            <source srcSet='gl.webp' type='image/webp' />
-            <source srcSet='gl.png' type='image/png' />
-            <img className='team__player-img' src='gl.png' alt='GL' />
+            <source srcSet={glWebp} type='image/webp' />
+            <source srcSet={glPng} type='image/png' />
+            <img className='team__player-img' src={glPng} alt='GL' />
           </picture>
           <div className="team__player-wrapper">
             <h5 className='team__player-name'>GL</h5>

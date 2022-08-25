@@ -53,8 +53,8 @@ module.exports = {
         ],
       },
       {
-        test: /\.png|svg|jpg|gif$/,
-        use: ["file-loader"],
+        test: /\.(webp|png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
       {
         test: /\.(ogg|mp3|webm|wav|mpe?g)$/i,

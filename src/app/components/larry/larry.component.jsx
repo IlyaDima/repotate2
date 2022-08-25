@@ -4,6 +4,11 @@ import Starfield from '../../components/starfield/starfield.component';
 
 import './larry.styles.scss';
 
+import bookletPng from '/src/assets/booklet.png';
+import bookletWebp from '/src/assets/booklet.webp';
+import penPng from '/src/assets/pen.png';
+import penWebp from '/src/assets/pen.png';
+
 const Larry = () => {
   return (
     <div className='larry' id="larry">
@@ -14,9 +19,9 @@ const Larry = () => {
               Season 1 “Larry In The Office”
             </h3>
             <picture>
-              <source srcSet='pen.webp' type='image/webp' />
-              <source srcSet='pen.png' type='image/png' />
-              <img className='larry__pen' src='pen.png' alt='Pen' />
+              <source srcSet={penWebp} type='image/webp' />
+              <source srcSet={penPng} type='image/png' />
+              <img className='larry__pen' src={penPng} alt='Pen' />
             </picture>
           </div>
           <p>
@@ -36,9 +41,9 @@ const Larry = () => {
             656 NFT`s Larry in the office daily portraits.
           </p>
           <picture>
-            <source srcSet='buklet.webp' type='image/webp' />
-            <source srcSet='buklet.png' type='image/png' />
-            <img className='larry__buklet' src='buklet.png' alt='Booklet' />
+            <source srcSet={bookletWebp} type='image/webp' />
+            <source srcSet={bookletPng} type='image/png' />
+            <img className='larry__buklet' src={bookletPng} alt='Booklet' />
           </picture>
         </div>
         <div className="larry__right">
