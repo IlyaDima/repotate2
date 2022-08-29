@@ -57,7 +57,7 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /\.(ogg|mp3|webm|wav|mpe?g)$/i,
+        test: /\.(ogg|mp3|mp4|webm|wav|mpe?g)$/i,
         loader: 'file-loader',
       },
       {

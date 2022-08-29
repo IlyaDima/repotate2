@@ -26,17 +26,114 @@ const Starfield = () => {
     <div className='starfield'>
       <div className='starfield-wrapper'>
         <div className='starfield-current'>
-          {[...Array(11)].map((x, i) =>
-            <img
-              key={i}
-              className={`
-                starfield-current-img
-                ${selectedColonialist === i ? 'starfield-current-img--visible' : ''}
-              `}
-              src={`/legendary/${i}.png`}
-              alt={`Game ${i}`}
-            />
-          )}
+          <picture
+            className={`
+            starfield-current-img
+            ${selectedColonialist === 0 ? 'starfield-current-img--visible' : ''}
+          `}>
+            <source srcSet='/legendary/0.webp' type='image/webp' />
+            <source srcSet='/legendary/0.png' type='image/png' />
+            <img src='/legendary/0.png' alt='NFT 1101' />
+          </picture>
+          <picture
+            className={`
+            starfield-current-img
+            ${selectedColonialist === 1 ? 'starfield-current-img--visible' : ''}
+          `}>
+            <source srcSet='/legendary/1.webp' type='image/webp' />
+            <source srcSet='/legendary/1.png' type='image/png' />
+            <img src='/legendary/1.png' alt='NFT 1102' />
+          </picture>
+          <picture
+            className={`
+            starfield-current-img
+            ${selectedColonialist === 2 ? 'starfield-current-img--visible' : ''}
+          `}>
+            <source srcSet='/legendary/2.webp' type='image/webp' />
+            <source srcSet='/legendary/2.png' type='image/png' />
+            <img src='/legendary/2.png' alt='NFT 1103' />
+          </picture>
+          <picture
+            className={`
+            starfield-current-img
+            ${selectedColonialist === 3 ? 'starfield-current-img--visible' : ''}
+          `}>
+            <source srcSet='/legendary/3.webp' type='image/webp' />
+            <source srcSet='/legendary/3.png' type='image/png' />
+            <img src='/legendary/3.png' alt='NFT 1104' />
+          </picture>
+          <picture
+            className={`
+            starfield-current-img
+            ${selectedColonialist === 4 ? 'starfield-current-img--visible' : ''}
+          `}>
+            <source srcSet='/legendary/4.webp' type='image/webp' />
+            <source srcSet='/legendary/4.png' type='image/png' />
+            <img src='/legendary/4.png' alt='NFT 1105' />
+          </picture>
+          <picture
+            className={`
+            starfield-current-img
+            ${selectedColonialist === 5 ? 'starfield-current-img--visible' : ''}
+          `}>
+            <source srcSet='/legendary/5.webp' type='image/webp' />
+            <source srcSet='/legendary/5.png' type='image/png' />
+            <img src='/legendary/5.png' alt='NFT 1106' />
+          </picture>
+          <picture
+            className={`
+            starfield-current-img
+            ${selectedColonialist === 6 ? 'starfield-current-img--visible' : ''}
+          `}>
+            <source srcSet='/legendary/6.webp' type='image/webp' />
+            <source srcSet='/legendary/6.png' type='image/png' />
+            <img src='/legendary/6.png' alt='NFT 1107' />
+          </picture>
+          <picture
+            className={`
+            starfield-current-img
+            ${selectedColonialist === 7 ? 'starfield-current-img--visible' : ''}
+          `}>
+            <source srcSet='/legendary/7.webp' type='image/webp' />
+            <source srcSet='/legendary/7.png' type='image/png' />
+            <img src='/legendary/7.png' alt='NFT 1108' />
+          </picture>
+          <picture
+            className={`
+            starfield-current-img
+            ${selectedColonialist === 8 ? 'starfield-current-img--visible' : ''}
+          `}>
+            <source srcSet='/legendary/8.webp' type='image/webp' />
+            <source srcSet='/legendary/8.png' type='image/png' />
+            <img src='/legendary/8.png' alt='NFT 1109' />
+          </picture>
+          <picture
+            className={`
+            starfield-current-img
+            ${selectedColonialist === 9 ? 'starfield-current-img--visible' : ''}
+          `}>
+            <source srcSet='/legendary/9.webp' type='image/webp' />
+            <source srcSet='/legendary/9.png' type='image/png' />
+            <img src='/legendary/9.png' alt='NFT 1110' />
+          </picture>
+          <picture
+            className={`
+            starfield-current-img
+            ${selectedColonialist === 10 ? 'starfield-current-img--visible' : ''}
+          `}>
+            <source srcSet='/legendary/10.webp' type='image/webp' />
+            <source srcSet='/legendary/10.png' type='image/png' />
+            <img src='/legendary/10.png' alt='NFT 1111' />
+          </picture>
+          <picture
+            className={`
+            starfield-current-img
+            ${selectedColonialist === 11 ? 'starfield-current-img--visible' : ''}
+          `}>
+            <source srcSet='/legendary/11.webp' type='image/webp' />
+            <source srcSet='/legendary/11.png' type='image/png' />
+            <img src='/legendary/11.png' alt='NFT 1112' />
+          </picture>
         </div>
       </div>
       <div className='starfield-slider'>

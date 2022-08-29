@@ -3,20 +3,19 @@ import React from 'react';
 import './about.styles.scss';
 import environment from '../../../environment/environment';
 
-import larryAnimated from '../../../assets/larry-animated.gif';
+import larryAnimatedMp4 from '../../../assets/larry-animated.mp4';
+import larryAnimatedWebm from '../../../assets/larry-animated.webm';
 
 const About = () => {
   return (
     <div className='about'>
       <span id='about'></span>
-      {/*<img className='about__mobile-img' src='kek.gif' alt='About mobile' />*/}
       <div className='about__colonialist'>
-        <img src={larryAnimated} alt='About colonialist 1' />
-        {/*
+        {/*<img src={larryAnimated} alt='About colonialist 1' />*/}
         <video width='420' height='420' autoPlay={true} playsInline muted loop>
-          <source src='larry-animated.webm' type='video/webm' />
+          <source src={larryAnimatedWebm} type='video/webm' />
+          <source src={larryAnimatedMp4} type='video/mp4' />
         </video>
-         */}
       </div>
       <div className='about__texts'>
         <h3 className='about__heading'>Larry, The Adventurer</h3>
