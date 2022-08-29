@@ -52,8 +52,8 @@ const Welcome = ({ isMintShown }) => {
           <img className='in-right' src={welcome4Png} alt='Welcome image 4' />
         </picture>
       </div>
-      {
-        isMintShown ? (
+      {isMintShown
+        ? (
           <button
             className='welcome__mint-button'
             onClick={() => navigate('/mint')}
@@ -62,7 +62,8 @@ const Welcome = ({ isMintShown }) => {
               MINT
             </h4>
           </button>
-        ) : null
+        )
+        : null
       }
     </div>
   );

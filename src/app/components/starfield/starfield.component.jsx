@@ -125,15 +125,6 @@ const Starfield = () => {
             <source srcSet='/legendary/10.png' type='image/png' />
             <img src='/legendary/10.png' alt='NFT 1111' />
           </picture>
-          <picture
-            className={`
-            starfield-current-img
-            ${selectedColonialist === 11 ? 'starfield-current-img--visible' : ''}
-          `}>
-            <source srcSet='/legendary/11.webp' type='image/webp' />
-            <source srcSet='/legendary/11.png' type='image/png' />
-            <img src='/legendary/11.png' alt='NFT 1112' />
-          </picture>
         </div>
       </div>
       <div className='starfield-slider'>

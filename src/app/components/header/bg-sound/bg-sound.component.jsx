@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import ReactHowler from 'react-howler';
 
-import bgSoundtrack from '../../../../assets/bg-soundtrack.mp3';
+import bgSoundtrackOgg from '/src/assets/bg-soundtrack.ogg';
+import bgSoundtrackMp3 from '/src/assets/bg-soundtrack.mp3';
 import './bg-sound.styles.scss';
 
 const BgSound = () => {
@@ -24,10 +25,11 @@ const BgSound = () => {
         }
       </button>
       <ReactHowler
-        src={bgSoundtrack}
+        src={[bgSoundtrackOgg, bgSoundtrackMp3]}
         playing={isPlaying}
         loop={true}
         volume={0.075}
+        html5={true}
       />
     </>
   )
