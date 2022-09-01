@@ -17,7 +17,7 @@ import HomePageComponent from './pages/home/home.component';
 import MintPageComponent from './pages/mint/mint.component';
 
 //import createStarfield from './misc/starfield';
-const createStarfield = lazy(() => import('./misc/starfield'));
+const createStarfield = () => lazy(() => import('./misc/starfield'));
 import WalletConnectProvider from '@walletconnect/web3-provider';
 import { getPresaleStatus, getPublicStatus, getRaffleStatus } from '../contract/ethereum';
 
