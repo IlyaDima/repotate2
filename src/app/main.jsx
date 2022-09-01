@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useReducer } from 'react';
+import React, { lazy, useState, useReducer } from 'react';
 import Web3 from 'web3';
 import abi from '../contract/abi';
 import axios from 'axios';
@@ -16,7 +16,8 @@ import './main.scss';
 import HomePageComponent from './pages/home/home.component';
 import MintPageComponent from './pages/mint/mint.component';
 
-import createStarfield from './misc/starfield';
+//import createStarfield from './misc/starfield';
+const createStarfield = lazy(() => import('./misc/starfield'));
 import WalletConnectProvider from '@walletconnect/web3-provider';
 import { getPresaleStatus, getPublicStatus, getRaffleStatus } from '../contract/ethereum';
 

@@ -20,7 +20,7 @@ module.exports = {
         { from: "src/assets" },
       ],
     }),
-    new NodePolyfillPlugin()
+    new NodePolyfillPlugin(),
   ],
   resolve: {
     modules: [__dirname, "src", "node_modules"],
