@@ -43,7 +43,7 @@ const Larry = () => {
           <picture>
             <source srcSet={bookletWebp} type='image/webp' />
             <source srcSet={bookletPng} type='image/png' />
-            <img className='larry__buklet' src={bookletPng} alt='Booklet' />
+            <img className='larry__booklet' src={bookletPng} alt='Booklet' />
           </picture>
         </div>
         <div className="larry__right">

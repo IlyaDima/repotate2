@@ -11,6 +11,8 @@ import larry3Png from '/src/assets/larry-3.png';
 import larry3Webp from '/src/assets/larry-3.webp';
 import roadmap1Png from '/src/assets/roadmap-1.png';
 import roadmap1Webp from '/src/assets/roadmap-1.webp';
+import roadmap1MobilePng from '/src/assets/roadmap-1-sm.png';
+import roadmap1MobileWebp from '/src/assets/roadmap-1-sm.webp';
 import roadmap2Png from '/src/assets/roadmap-2.png';
 import roadmap2Webp from '/src/assets/roadmap-2.webp';
 import roadmap3Png from '/src/assets/roadmap-3.png';
@@ -25,6 +27,8 @@ import roadmap7Png from '/src/assets/roadmap-7.png';
 import roadmap7Webp from '/src/assets/roadmap-7.webp';
 import roadmap8Png from '/src/assets/roadmap-8.png';
 import roadmap8Webp from '/src/assets/roadmap-8.webp';
+import roadmap8MobilePng from '/src/assets/roadmap-8-sm.png';
+import roadmap8MobileWebp from '/src/assets/roadmap-8-sm.webp';
 
 const Roadmap = () => {
   return (
@@ -37,9 +41,11 @@ const Roadmap = () => {
               Roadmap
             </h3>
             <picture>
-              <source srcSet={roadmap1Webp} type='image/webp' />
-              <source srcSet={roadmap1Png} type='image/png' />
-              <img className='roadmap__image-1 reveal' src={roadmap1Png} alt='' />
+              <source srcSet={roadmap1Webp} media="(min-width: 576px)" type='image/webp' />
+              <source srcSet={roadmap1MobileWebp} type='image/webp' />
+              <source srcSet={roadmap1Png} media="(min-width: 576px)" type='image/png' />
+              <source srcSet={roadmap1MobilePng} type='image/png' />
+              <img className='roadmap__image-1 reveal' src={roadmap1MobilePng} alt='' />
             </picture>
             <div className="roadmap__box">
               <div className="roadmap__box-left">
@@ -166,9 +172,11 @@ const Roadmap = () => {
               </div>
             </div>
             <picture>
-              <source srcSet={roadmap8Webp} type='image/webp' />
-              <source srcSet={roadmap8Png} type='image/png' />
-              <img className='roadmap__image-1' src={roadmap8Png} alt='' />
+              <source srcSet={roadmap8Webp} media="(min-width: 576px)" type='image/webp' />
+              <source srcSet={roadmap8MobileWebp} type='image/webp' />
+              <source srcSet={roadmap8Png} media="(min-width: 576px)" type='image/png' />
+              <source srcSet={roadmap8MobilePng} type='image/png' />
+              <img className='roadmap__image-1' src={roadmap8MobilePng} alt='' />
             </picture>
           </div>
         </div>
