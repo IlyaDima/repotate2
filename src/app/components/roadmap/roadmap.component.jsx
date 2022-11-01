@@ -116,7 +116,7 @@ const Roadmap = () => {
                   -Forming 3rd NFT collection
                 </p>
                 <p className="roadmap__text">
-                  -Announce our NFT usage in Larry`s metaverse
+                  -Announce our NFT usage in Larry&#39;s metaverse
                 </p>
                 <p className="roadmap__text">
                   -Big contest with a real-life European cruise trip as a major prize
@@ -162,7 +162,7 @@ const Roadmap = () => {
                   -TGE
                 </p>
                 <p className="roadmap__text">
-                  -Disturbing in-game usable NFT`s to our holders
+                  -Disturbing in-game usable NFT&#39;s to our holders
                 </p>
                 <picture className='d-flex'>
                   <source srcSet={roadmap4Webp} type='image/webp' />
@@ -304,7 +304,7 @@ const Roadmap = () => {
                   -Forming 3rd NFT collection
                 </p>
                 <p className="roadmap__text">
-                  -Announce our NFT usage in Larry`s metaverse
+                  -Announce our NFT usage in Larry&#39;s metaverse
                 </p>
                 <p className="roadmap__text">
                   -Big contest with a real-life European cruise trip as a major prize
@@ -321,7 +321,7 @@ const Roadmap = () => {
                   Colonizing Metaverse
                 </h4>
                 <p className="roadmap__text">
-                  -P2E Metaverse &quot;LarryLand&quot; Demo
+                  -WEB3 travel2earn app &quot;LarryLand&quot;
                 </p>
                 <p className="roadmap__text">
                   -IDO
@@ -330,7 +330,7 @@ const Roadmap = () => {
                   -TGE
                 </p>
                 <p className="roadmap__text">
-                  -Disturbing in-game usable NFT`s to our holders
+                  -Disturbing in-game usable NFT&#39;s to our holders
                 </p>
               </div>
             </div>
