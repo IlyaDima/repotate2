@@ -5,28 +5,34 @@ import './home.styles.scss';
 import './slider.css';
 
 import Header from '../../components/header/header.component';
-import Welcome from '../../components/welcome/welcome.component';
+import ParallaxWelcome from '../../components/parallax/welcome/welcome.component';
+import ParallaxAbout from '../../components/parallax/about/about.component';
+{/*import Welcome from '../../components/welcome/welcome.component';
 import About from '../../components/about/about.component';
 import Statistics from '../../components/statistics/statistics.component';
 import Larry from '../../components/larry/larry.component';
 import Footer from '../../components/footer/footer.component';
 import Team from '../../components/team/team.component';
 import Roadmap from '../../components/roadmap/roadmap.component';
-import FAQ from '../../components/faq/faq.component';
+import FAQ from '../../components/faq/faq.component';*/}
 
 const HomePageComponent = ({
   currentAccount,
   setCurrentAccount,
+  /*{
   publicActive,
   presaleActive,
   raffleStatus,
-}) => {
+}*/}) => {
   return (
     <section className='home-page'>
       <Header
         currentAccount={currentAccount}
         setCurrentAccount={setCurrentAccount}
       />
+      <ParallaxWelcome />
+      <ParallaxAbout />
+      {/*
       <Welcome
         isMintShown={publicActive || presaleActive || raffleStatus}
       />
@@ -37,6 +43,7 @@ const HomePageComponent = ({
       <Team />
       <FAQ />
       <Footer />
+      */}
     </section>
   );
 };

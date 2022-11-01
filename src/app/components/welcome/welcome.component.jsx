@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 
