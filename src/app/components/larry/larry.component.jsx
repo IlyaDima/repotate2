@@ -11,17 +11,17 @@ import penWebp from '/src/assets/pen.png';
 
 const Larry = () => {
   return (
-    <div className='larry' id="larry">
-      <div className="larry__wrapper">
-        <div className="larry__left">
-          <div className="larry__header">
-            <h3 className='larry__title'>
+    <div className="larry-section" id="larry">
+      <div className="larry-section__wrapper">
+        <div className="larry-section__left">
+          <div className="larry-section__header">
+            <h3 className="larry-section__title">
               Season 1 “Larry In The Office”
             </h3>
             <picture>
-              <source srcSet={penWebp} type='image/webp' />
-              <source srcSet={penPng} type='image/png' />
-              <img className='larry__pen' src={penPng} alt='Pen' />
+              <source srcSet={penWebp} type="image/webp" />
+              <source srcSet={penPng} type="image/png" />
+              <img className="larry-section__pen" src={penPng} alt="Pen" />
             </picture>
           </div>
           <p>
@@ -30,23 +30,23 @@ const Larry = () => {
           <p>
             Larry in the office supply is 1111 NFT`s:
           </p>
-          <p className='larry__list '>
+          <p className='larry-section__list '>
             11 Legendary NFT`s.
-          </p><p className='larry__list '>
-            111 NFT`s of #1 Larry, the adventurer comics.
-          </p><p className='larry__list '>
+          </p><p className='larry-section__list '>
+            111 NFT`s of #1 larry-section, the adventurer comics.
+          </p><p className='larry-section__list '>
             333 NFT`s with Africa/Asia/Europe guide on a table that will make you eligible for getting one of future collections NFT for free.
           </p>
-          <p className='larry__list '>
+          <p className='larry-section__list '>
             656 NFT`s Larry in the office daily portraits.
           </p>
           <picture>
             <source srcSet={bookletWebp} type='image/webp' />
             <source srcSet={bookletPng} type='image/png' />
-            <img className='larry__booklet' src={bookletPng} alt='Booklet' />
+            <img className='larry-section__booklet' src={bookletPng} alt='Booklet' />
           </picture>
         </div>
-        <div className="larry__right">
+        <div className="larry-section__right">
           <Starfield />
         </div>
       </div>
