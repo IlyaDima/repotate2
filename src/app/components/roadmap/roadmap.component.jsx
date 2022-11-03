@@ -17,8 +17,7 @@ import roadmap2Png from '/src/assets/roadmap-2.png';
 import roadmap2Webp from '/src/assets/roadmap-2.webp';
 import roadmap3Png from '/src/assets/roadmap-3.png';
 import roadmap3Webp from '/src/assets/roadmap-3.webp';
-import roadmap4Png from '/src/assets/roadmap-4.png';
-import roadmap4Webp from '/src/assets/roadmap-4.webp';
+import roadmap4Svg from '/src/assets/roadmap-4.svg';
 import roadmap5Png from '/src/assets/roadmap-5.png';
 import roadmap5Webp from '/src/assets/roadmap-5.webp';
 import roadmap6Png from '/src/assets/roadmap-6.png';
@@ -153,7 +152,7 @@ const Roadmap = () => {
                   Colonizing Metaverse
                 </h4>
                 <p className="roadmap__text">
-                  -P2E Metaverse &quot;LarryLand&quot; Demo
+                  -WEB3 travel2earn app &quot;LarryLand&quot;
                 </p>
                 <p className="roadmap__text">
                   -IDO
@@ -164,11 +163,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -Disturbing in-game usable NFT&#39;s to our holders
                 </p>
-                <picture className='d-flex'>
-                  <source srcSet={roadmap4Webp} type='image/webp' />
-                  <source srcSet={roadmap4Png} type='image/png' />
-                  <img className='roadmap__ava roadmap__ava-r reveal' src={roadmap4Png} alt='' />
-                </picture>
+                <img className='roadmap__ava roadmap__ava-r reveal' src={roadmap4Svg} alt='' />
               </div>
             </div>
             <picture>
@@ -250,11 +245,7 @@ const Roadmap = () => {
                 <p className="roadmap__text">
                   -Release 4th NFT collection &quot;Asian trip&quot;
                 </p>
-                <picture className='d-flex'>
-                  <source srcSet={roadmap4Webp} type='image/webp' />
-                  <source srcSet={roadmap4Png} type='image/png' />
-                  <img className='roadmap__ava roadmap__ava-l reveal' src={roadmap4Png} alt='' />
-                </picture>
+                <img className='roadmap__ava roadmap__ava-l reveal' src={roadmap4Svg} alt='' />
               </div>
               <div className="roadmap__box-right">
                 <picture>
