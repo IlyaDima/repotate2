@@ -26,9 +26,9 @@ const Welcome = () => {
         trigger: frameRef.current,
         pin: true,
         start: '-=25',
-        end: '+=750',
-        scrub: .25,
-        anticipatePin: 1,
+        end: 'top',
+        //markers: true,
+        //id: 'welcome-1',
       },
       ease: 'power2',
     })
@@ -55,11 +55,24 @@ const Welcome = () => {
       {
         yPercent: 0,
       }, '<25%')
-      .to(larryRef.current, {
-        rotate: -10,
-        scale: 1.4,
-        xPercent: -120,
-      }, .75)
+
+    // Second half of the animation
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: frameRef.current,
+        pin: true,
+        start: '-=24',
+        end: '+=100',
+        //markers: true,
+        //id: 'welcome-2',
+      },
+      ease: 'power2',
+    })
+    tl2.to(larryRef.current, {
+      rotate: -10,
+      scale: 1.4,
+      xPercent: -120,
+    })
       .to(tableRef.current, {
         scale: 1.5,
         xPercent: -70,
@@ -115,9 +128,9 @@ const Welcome = () => {
           src={table}
           alt=""
         />
-      </div>
-      <div className="text-bubble" ref={textBubbleRef} style={{ backgroundImage: `url(${textBubble})` }}>
-        <h2>Larryland!</h2>
+        <div className="text-bubble" ref={textBubbleRef} style={{ backgroundImage: `url(${textBubble})` }}>
+          <h2>Larryland!</h2>
+        </div>
       </div>
     </section>
   );

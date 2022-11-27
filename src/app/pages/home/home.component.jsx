@@ -5,8 +5,8 @@ import './home.styles.scss';
 import './slider.css';
 
 import Header from '../../components/header/header.component';
-import ParallaxWelcome from '../../components/parallax/welcome/welcome.component';
-import ParallaxAbout from '../../components/parallax/about/about.component';
+import AnimatedWelcome from '../../components/animated/welcome/welcome.component';
+import AnimatedAbout from '../../components/animated/about/about.component';
 //import Welcome from '../../components/welcome/welcome.component';
 //import About from '../../components/about/about.component';
 import Statistics from '../../components/statistics/statistics.component';
@@ -31,8 +31,8 @@ const HomePageComponent = ({
         currentAccount={currentAccount}
         setCurrentAccount={setCurrentAccount}
       />
-      <ParallaxWelcome />
-      <ParallaxAbout />
+      <AnimatedWelcome />
+      <AnimatedAbout />
       {/*
       <Welcome
         isMintShown={publicActive || presaleActive || raffleStatus}

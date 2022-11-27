@@ -27,9 +27,9 @@ const About = () => {
         trigger: backgroundRef.current,
         pin: true,
         start: '-=25',
-        end: '+=750',
-        scrub: .25,
-        anticipatePin: 1,
+        end: 'top',
+        //markers: true,
+        id: 'about-1',
       },
       ease: 'power2',
     })
@@ -44,9 +44,20 @@ const About = () => {
         yPercent: -15,
         scale: 1.5,
       }, '<')
-      .to(backgroundRef.current, {
-        scale: 1,
-      }, '+=50%')
+
+    // Second half of the animation
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: backgroundRef.current,
+        pin: true,
+        start: '-=24',
+        end: '+=100',
+        //markers: true,
+        id: 'about-2',
+      },
+      ease: 'power2',
+    })
+    tl2.to(backgroundRef.current, { scale: 1 })
       .to(laptopRef.current, {
         yPercent: -50,
         scale: .875,
