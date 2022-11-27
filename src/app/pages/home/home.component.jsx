@@ -31,8 +31,8 @@ const HomePageComponent = ({
         currentAccount={currentAccount}
         setCurrentAccount={setCurrentAccount}
       />
-      <AnimatedWelcome />
-      <AnimatedAbout />
+      <AnimatedWelcome/>
+      <AnimatedAbout/>
       {/*
       <Welcome
         isMintShown={publicActive || presaleActive || raffleStatus}

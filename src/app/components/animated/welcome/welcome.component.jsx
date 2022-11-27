@@ -65,6 +65,9 @@ const Welcome = () => {
         end: 'center',
         //markers: true,
         id: 'welcome-2',
+        //onLeave: () => {
+        //  aboutRef.scrollIntoView({ behavior: 'smooth', block: 'center' })
+        //},
       },
       ease: 'power2',
     })

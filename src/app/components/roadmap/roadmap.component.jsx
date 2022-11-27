@@ -33,6 +33,16 @@ import roadmap8MobileWebp from '/src/assets/roadmap-8-sm.webp';
 const Roadmap = () => {
   return (
     <>
+      <iframe
+        seamless
+        allowFullScreen
+        src="https://relayto.com/maria-m1/untitled-artwork-1-goefjmdg2aspf/flip-book?embed=1"
+        width="100%"
+        style={{
+          height: '100vh',
+          minHeight: '100vh',
+        }}
+      ></iframe>
       <MediaQuery maxWidth={1024}>
         <div className='roadmap'>
           <span id="roadmap"></span>

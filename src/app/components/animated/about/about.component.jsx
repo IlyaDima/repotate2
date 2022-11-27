@@ -13,6 +13,7 @@ import larryAnimatedWebm from '/src/assets/larry-animated.webm'
 const About = () => {
   gsap.registerPlugin(ScrollTrigger)
 
+  const aboutRef = useRef(null)
   const backgroundRef = useRef(null)
   const laptopRef = useRef(null)
   const laptopTopRef = useRef(null)
@@ -30,6 +31,7 @@ const About = () => {
         end: 'center',
         //markers: true,
         id: 'about-1',
+        //scrub: 1,
       },
       ease: 'power2',
     })
@@ -54,6 +56,7 @@ const About = () => {
         end: 'center',
         //markers: true,
         id: 'about-2',
+        //scrub: 1,
       },
       ease: 'power2',
     })
@@ -99,50 +102,52 @@ const About = () => {
   }, [])
 
   return (
-    <section className="about">
-      <div className="background" ref={backgroundRef}>
-        <div className="laptop" ref={laptopRef}>
-          <div className="laptop__top" ref={laptopTopRef}>
-            <div className="laptop-screen">
-              <div className="laptop-screen__content">
-                <h1 className="laptop-screen__heading">Larry, the adventurer</h1>
-                <p className="laptop-screen__text">
-                  The inspiring story of an unremarkable person who made his dream come true.
-                  <br />
-                  <br />
-                The first collection &#34;Larry In The Office&#34; tells us about the time when Larry was fully immersed and absorbed by the daily office routine, working hard as an ordinary employee, and gives us all the reasons why his life has changed once and for all.</p>
-                <div className="nft-placeholder">
-                  <video width='206' height='206' autoPlay={true} playsInline muted loop>
-                    <source src={larryAnimatedWebm} type='video/webm' />
-                    <source src={larryAnimatedMp4} type='video/mp4' />
-                  </video>
+    <>
+      <section className="about" ref={aboutRef}>
+        <div className="background" ref={backgroundRef}>
+          <div className="laptop" ref={laptopRef}>
+            <div className="laptop__top" ref={laptopTopRef}>
+              <div className="laptop-screen">
+                <div className="laptop-screen__content">
+                  <h1 className="laptop-screen__heading">Larry, the adventurer</h1>
+                  <p className="laptop-screen__text">
+                    The inspiring story of an unremarkable person who made his dream come true.
+                    <br />
+                    <br />
+                  The first collection &#34;Larry In The Office&#34; tells us about the time when Larry was fully immersed and absorbed by the daily office routine, working hard as an ordinary employee, and gives us all the reasons why his life has changed once and for all.</p>
+                  <div className="nft-placeholder">
+                    <video width='206' height='206' autoPlay={true} playsInline muted loop>
+                      <source src={larryAnimatedWebm} type='video/webm' />
+                      <source src={larryAnimatedMp4} type='video/mp4' />
+                    </video>
+                  </div>
                 </div>
               </div>
+              <img
+                className="laptop-lid-top"
+                ref={laptopLidTopRef}
+                src={laptopLidTop}
+                alt=""
+              />
             </div>
-            <img
-              className="laptop-lid-top"
-              ref={laptopLidTopRef}
-              src={laptopLidTop}
-              alt=""
-            />
-          </div>
-          <div className="laptop__bottom" ref={laptopBottomRef}>
-            <img
-              className="laptop-keyboard"
-              ref={laptopKeyboardRef}
-              src={laptopKeyboard}
-              alt=""
-            />
-            <img
-              className="laptop-lid-bottom"
-              ref={laptopLidBottomRef}
-              src={laptopLidBottom}
-              alt=""
-            />
+            <div className="laptop__bottom" ref={laptopBottomRef}>
+              <img
+                className="laptop-keyboard"
+                ref={laptopKeyboardRef}
+                src={laptopKeyboard}
+                alt=""
+              />
+              <img
+                className="laptop-lid-bottom"
+                ref={laptopLidBottomRef}
+                src={laptopLidBottom}
+                alt=""
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
