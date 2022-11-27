@@ -26,9 +26,9 @@ const Welcome = () => {
         trigger: frameRef.current,
         pin: true,
         start: '-=25',
-        end: 'top',
+        end: 'center',
         //markers: true,
-        //id: 'welcome-1',
+        id: 'welcome-1',
       },
       ease: 'power2',
     })
@@ -62,9 +62,9 @@ const Welcome = () => {
         trigger: frameRef.current,
         pin: true,
         start: '-=24',
-        end: '+=100',
+        end: 'center',
         //markers: true,
-        //id: 'welcome-2',
+        id: 'welcome-2',
       },
       ease: 'power2',
     })
