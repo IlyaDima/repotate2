@@ -5,8 +5,10 @@ html {
 body {
   font-family: $font, sans-serif;
   background: $body-background-color;
+}
+
+#root {
   overflow-x: hidden;
-  min-height: 200vh;
 }
 
 input,

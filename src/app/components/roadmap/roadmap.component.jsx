@@ -9,10 +9,10 @@ import larry2Png from '/src/assets/larry-2.png';
 import larry2Webp from '/src/assets/larry-2.webp';
 import larry3Png from '/src/assets/larry-3.png';
 import larry3Webp from '/src/assets/larry-3.webp';
-import roadmap1Png from '/src/assets/roadmap-1.png';
-import roadmap1Webp from '/src/assets/roadmap-1.webp';
 import roadmap1MobilePng from '/src/assets/roadmap-1-sm.png';
 import roadmap1MobileWebp from '/src/assets/roadmap-1-sm.webp';
+import roadmap1Png from '/src/assets/roadmap-1.png';
+import roadmap1Webp from '/src/assets/roadmap-1.webp';
 import roadmap2Png from '/src/assets/roadmap-2.png';
 import roadmap2Webp from '/src/assets/roadmap-2.webp';
 import roadmap3Png from '/src/assets/roadmap-3.png';
@@ -25,24 +25,14 @@ import roadmap6Png from '/src/assets/roadmap-6.png';
 import roadmap6Webp from '/src/assets/roadmap-6.webp';
 import roadmap7Png from '/src/assets/roadmap-7.png';
 import roadmap7Webp from '/src/assets/roadmap-7.webp';
-import roadmap8Png from '/src/assets/roadmap-8.png';
-import roadmap8Webp from '/src/assets/roadmap-8.webp';
 import roadmap8MobilePng from '/src/assets/roadmap-8-sm.png';
 import roadmap8MobileWebp from '/src/assets/roadmap-8-sm.webp';
+import roadmap8Png from '/src/assets/roadmap-8.png';
+import roadmap8Webp from '/src/assets/roadmap-8.webp';
 
 const Roadmap = () => {
   return (
     <>
-      <iframe
-        seamless
-        allowFullScreen
-        src="https://relayto.com/maria-m1/untitled-artwork-1-goefjmdg2aspf/flip-book?embed=1"
-        width="100%"
-        style={{
-          height: '100vh',
-          minHeight: '100vh',
-        }}
-      ></iframe>
       <MediaQuery maxWidth={1024}>
         <div className="roadmap">
           <span id="roadmap"></span>

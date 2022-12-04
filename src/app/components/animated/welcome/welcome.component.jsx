@@ -1,5 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import PropTypes from 'prop-types';
 import React, { useEffect, useRef } from 'react';
 
 import './welcome.styles.scss';
@@ -10,7 +11,11 @@ import office from '/src/assets/parallax/office.png';
 import table from '/src/assets/parallax/table.png';
 import textBubble from '/src/assets/parallax/text-bubble.png';
 
-const Welcome = () => {
+Welcome.propTypes = {
+  aboutRef: PropTypes.object,
+};
+
+export default function Welcome({ aboutRef }) {
   gsap.registerPlugin(ScrollTrigger);
 
   const armRef = useRef(null);
@@ -76,9 +81,9 @@ const Welcome = () => {
         end: 'center',
         //markers: true,
         id: 'welcome-2',
-        //onLeave: () => {
-        //  aboutRef.scrollIntoView({ behavior: 'smooth', block: 'center' })
-        //},
+        onLeave: () => {
+          window.scrollTo(0, aboutRef.current.offsetTop + 75);
+        },
       },
       ease: 'power2',
     });
@@ -149,6 +154,4 @@ const Welcome = () => {
       </div>
     </section>
   );
-};
-
-export default Welcome;
+}
