@@ -9,9 +9,13 @@ const MobileMenu = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   React.useEffect(() => {
-    document.addEventListener('kek', () => {
-      setIsOpen(false);
-    }, false);
+    document.addEventListener(
+      'kek',
+      () => {
+        setIsOpen(false);
+      },
+      false
+    );
 
     return () => document.removeEventListener('kek', () => null);
   }, []);
@@ -22,12 +26,16 @@ const MobileMenu = () => {
         className={`mobile-menu ${isOpen ? 'mobile-menu--open' : ''}`}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <div className='bar1'></div>
-        <div className='bar2' style={{ opacity: isOpen ? '0' : '1' }}></div>
-        <div className='bar3'></div>
+        <div className="bar1"></div>
+        <div className="bar2" style={{ opacity: isOpen ? '0' : '1' }}></div>
+        <div className="bar3"></div>
       </div>
-      <div className={`mobile-menu__overlay ${isOpen ? 'mobile-menu__overlay--visible' : ''}`}>
-        <div className='mobile-menu__wrapper'>
+      <div
+        className={`mobile-menu__overlay ${
+          isOpen ? 'mobile-menu__overlay--visible' : ''
+        }`}
+      >
+        <div className="mobile-menu__wrapper">
           <Menu />
           <Social />
         </div>

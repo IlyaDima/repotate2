@@ -13,8 +13,8 @@ import MobileMenu from './mobile-menu/mobile-menu.component';
 
 const Header = ({ currentAccount, setCurrentAccount }) => {
   return (
-    <header className='header'>
-      <div className='header__wrapper'>
+    <header className="header">
+      <div className="header__wrapper">
         <Logo />
         <BgSound />
         <Menu />
@@ -29,7 +29,6 @@ const Header = ({ currentAccount, setCurrentAccount }) => {
     </header>
   );
 };
-
 
 Header.propTypes = {
   currentAccount: PropTypes.string,

@@ -10,29 +10,25 @@ const useCountdownHook = (input) => {
     const distance = countDownDate - now;
 
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    const twoDigitDays = days < 10
-      ? `0${days}`
-      : days;
-    const twoDigitHours = hours < 10
-      ? `0${hours}`
-      : hours;
-    const twoDigitMinutes = minutes < 10
-      ? `0${minutes}`
-      : minutes;
-    const twoDigitSeconds = seconds < 10
-      ? `0${seconds}`
-      : seconds;
+    const twoDigitDays = days < 10 ? `0${days}` : days;
+    const twoDigitHours = hours < 10 ? `0${hours}` : hours;
+    const twoDigitMinutes = minutes < 10 ? `0${minutes}` : minutes;
+    const twoDigitSeconds = seconds < 10 ? `0${seconds}` : seconds;
 
-    setDate(`${twoDigitDays}:${twoDigitHours}:${twoDigitMinutes}:${twoDigitSeconds}`);
+    setDate(
+      `${twoDigitDays}:${twoDigitHours}:${twoDigitMinutes}:${twoDigitSeconds}`
+    );
 
     if (distance < 0) {
       clearInterval(interval);
       setDate('done');
-      console.log('Launch!')
+      console.log('Launch!');
     }
   };
 
@@ -48,7 +44,7 @@ const useCountdownHook = (input) => {
 
   return {
     date,
-  }
+  };
 };
 
 export default useCountdownHook;

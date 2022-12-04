@@ -7,7 +7,14 @@ import { useNavigate } from 'react-router-dom';
 import './mint.styles.scss';
 
 import Header from '../../components/header/header.component';
-import { getTotalSupply, mintMod, mintOG, mintPublic, mintRaffle, mintWL } from '../../../contract/ethereum';
+import {
+  getTotalSupply,
+  mintMod,
+  mintOG,
+  mintPublic,
+  mintRaffle,
+  mintWL,
+} from '../../../contract/ethereum';
 import Wallet from '../../components/header/wallet/wallet.component';
 import Social from '../../components/header/social/social.component';
 
@@ -40,7 +47,11 @@ const MintPageComponent = ({
   }, [currentAccount]);
 
   React.useEffect(() => {
-    if (publicActive !== undefined && presaleActive !== undefined && raffleActive !== undefined) {
+    if (
+      publicActive !== undefined &&
+      presaleActive !== undefined &&
+      raffleActive !== undefined
+    ) {
       if (!publicActive && !presaleActive && !raffleActive) {
         // navigate('/');
       }
@@ -53,9 +64,8 @@ const MintPageComponent = ({
   const [successTx, setSuccessTx] = useState();
 
   const getPrice = () => {
-    const num = mintType === 'ogPresaleMint'
-      ? 0.10 * selectedCount
-      : 0.10 * selectedCount;
+    const num =
+      mintType === 'ogPresaleMint' ? 0.1 * selectedCount : 0.1 * selectedCount;
 
     const numString = num.toFixed(2).replace('.', ',');
 
@@ -80,27 +90,22 @@ const MintPageComponent = ({
       setSuccessTx(null);
 
       if (publicActive) {
-        await callPublic(count)
-          .then(tx => setSuccessTx(tx));
+        await callPublic(count).then((tx) => setSuccessTx(tx));
       } else if (raffleActive && mintProof) {
         if (mintType === 'raffleMint') {
-          await callRaffle(count, mintProof)
-            .then(tx => setSuccessTx(tx));
+          await callRaffle(count, mintProof).then((tx) => setSuccessTx(tx));
         }
       } else if (presaleActive && mintProof) {
         if (mintType === 'modMint') {
-          await callMod(count, mintProof)
-            .then(tx => setSuccessTx(tx));
+          await callMod(count, mintProof).then((tx) => setSuccessTx(tx));
         }
 
         if (mintType === 'ogPresaleMint') {
-          await callOg(count, mintProof)
-            .then(tx => setSuccessTx(tx));
+          await callOg(count, mintProof).then((tx) => setSuccessTx(tx));
         }
 
         if (mintType === 'presaleMint') {
-          await callWl(count, mintProof)
-            .then(tx => setSuccessTx(tx));
+          await callWl(count, mintProof).then((tx) => setSuccessTx(tx));
         }
       }
     } catch (err) {
@@ -138,46 +143,48 @@ const MintPageComponent = ({
 
     if (presaleActive && !mintProof) {
       return (
-        <div className='mint-page__not-wl'>
-          Selected address is not eligible for presale mint. Please wait till the next mint phase.
+        <div className="mint-page__not-wl">
+          Selected address is not eligible for presale mint. Please wait till
+          the next mint phase.
         </div>
       );
     }
 
     if (raffleActive && !mintProof) {
       return (
-        <div className='mint-page__not-raffle'>
-          Selected address is not eligible for raffle mint. Please wait till the next mint phase.
+        <div className="mint-page__not-raffle">
+          Selected address is not eligible for raffle mint. Please wait till the
+          next mint phase.
         </div>
       );
     }
 
     return (
-      <div className='mint-page__actions'>
+      <div className="mint-page__actions">
         <h5>PRICE</h5>
         <p>{getPrice()}</p>
-        <div className='mint-page__num'>
+        <div className="mint-page__num">
           <div
-            className='mint-page__num-button'
+            className="mint-page__num-button"
             onClick={() => setCount(selectedCount - 1)}
           >
             -
           </div>
-          <div className='mint-page__num-button mint-page__num-button-off'>
+          <div className="mint-page__num-button mint-page__num-button-off">
             {selectedCount}
           </div>
           <div
-            className='mint-page__num-button'
+            className="mint-page__num-button"
             onClick={() => setCount(selectedCount + 1)}
           >
             +
           </div>
         </div>
         <button
-          className='mint-page__buy'
+          className="mint-page__buy"
           onClick={() => onMintClick(selectedCount)}
         >
-          <h6 className='mint-page__buy-name'>MINT</h6>
+          <h6 className="mint-page__buy-name">MINT</h6>
         </button>
       </div>
     );
@@ -187,51 +194,49 @@ const MintPageComponent = ({
     if (!raffleSuccessMessage) return null;
 
     return (
-      <div className='mint-page__raffle-added'>
-        {raffleSuccessMessage}
-      </div>
+      <div className="mint-page__raffle-added">{raffleSuccessMessage}</div>
     );
   };
 
   return (
-    <section className='mint-page'>
+    <section className="mint-page">
       <Header
         currentAccount={currentAccount}
         setCurrentAccount={setCurrentAccount}
       />
-      <div className='mint-page__wrapper'>
-        <img className='mint-page__live' src="minlive.png" />
+      <div className="mint-page__wrapper">
+        <img className="mint-page__live" src="minlive.png" />
         <div className="mint-page__box">
-          <img src="kek-1.png" className='mint-page__kek1' />
-          <img src="kek-3.png" className='mint-page__kek3' />
+          <img src="kek-1.png" className="mint-page__kek1" />
+          <img src="kek-3.png" className="mint-page__kek3" />
           <div className="mint-page__box-left">
-            <img src="kek-2.png" className='mint-page__kek2' />
-            <img src='mint-1.png' />
+            <img src="kek-2.png" className="mint-page__kek2" />
+            <img src="mint-1.png" />
           </div>
           <div className="mint-page__box-right">
-            <div className='mint-page__count'>
-              <p>{mintedCount}/<span>1111</span></p>
+            <div className="mint-page__count">
+              <p>
+                {mintedCount}/<span>1111</span>
+              </p>
             </div>
             {renderRaffleMessage()}
             {renderActions()}
-            {
-              mintError
-                ? (
-                  <div className='mint-page__error'>
-                    {mintError}
-                  </div>
-                )
-                : null
-            }
-            {
-              successTx
-                ? (
-                  <div className='mint-page__success'>
-                    Transaction in progress! Click <a href={`https://etherscan.io/tx/${successTx}`} target='_blank' rel='noreferrer'>here</a> to view on Etherscan.
-                  </div>
-                )
-                : null
-            }
+            {mintError ? (
+              <div className="mint-page__error">{mintError}</div>
+            ) : null}
+            {successTx ? (
+              <div className="mint-page__success">
+                Transaction in progress! Click{' '}
+                <a
+                  href={`https://etherscan.io/tx/${successTx}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  here
+                </a>{' '}
+                to view on Etherscan.
+              </div>
+            ) : null}
           </div>
         </div>
         <div className="mint-page__social">

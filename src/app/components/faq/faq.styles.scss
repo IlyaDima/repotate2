@@ -18,7 +18,7 @@
     font-size: 56px;
     line-height: 111px;
     text-align: center;
-    color: #34BBFF;
+    color: #34bbff;
     margin: 25px 0 30px;
 
     @include tablet {
@@ -31,7 +31,6 @@
       margin: 20px 0 40px;
     }
   }
-
 
   &__list {
     margin: 0 auto 70px;
@@ -47,8 +46,6 @@
     }
 
     &-item {
-
-      
       summary {
         font-size: 20px;
         line-height: 24px;
@@ -63,20 +60,20 @@
         &:-webkit-direct-focus {
           outline: none;
         }
-        
+
         &::marker {
           content: '';
         }
 
         &::-webkit-details-marker {
-          display:none;
+          display: none;
         }
 
         &::after {
-          transition: transform .2s ease;
-          content: " "; 
-          width: 0; 
-          height: 0; 
+          transition: transform 0.2s ease;
+          content: ' ';
+          width: 0;
+          height: 0;
           border-top: 10px solid transparent;
           border-bottom: 10px solid transparent;
           border-left: 10px solid #fff;
@@ -92,10 +89,10 @@
 
       &[open] {
         summary {
-          &::after { 
-            content: " "; 
-            width: 0; 
-            height: 0; 
+          &::after {
+            content: ' ';
+            width: 0;
+            height: 0;
             position: absolute;
             right: 20px;
             top: 25px;
@@ -116,7 +113,7 @@
         margin-top: 20px;
       }
 
-      background: #FBA41C;;
+      background: #fba41c;
 
       &-paragraph {
         font-size: 16px;

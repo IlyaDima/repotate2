@@ -11,11 +11,13 @@
     display: block;
     padding: 37px 30px;
   }
-  
-  .bar1, .bar2, .bar3 {
+
+  .bar1,
+  .bar2,
+  .bar3 {
     width: 32px;
     height: 4px;
-    background-color: #FBA41C;
+    background-color: #fba41c;
     margin: 6px 0;
     transition: 0.15s;
     border-radius: 10px;
@@ -26,7 +28,7 @@
       -webkit-transform: rotate(-45deg) translate(-6px, 6px);
       transform: rotate(-45deg) translate(-6px, 6px);
     }
-    
+
     .bar3 {
       -webkit-transform: rotate(45deg) translate(-8px, -8px);
       transform: rotate(45deg) translate(-8px, -8px);
@@ -37,7 +39,7 @@
     z-index: 50;
     opacity: 0;
     pointer-events: none;
-    transition: opacity .15s linear;
+    transition: opacity 0.15s linear;
 
     @include tablet {
       justify-content: center;
@@ -49,7 +51,7 @@
       pointer-events: all;
       opacity: 1;
     }
-    
+
     background: $body-background-color;
     width: 100%;
     height: 100vh;
@@ -70,7 +72,7 @@
         text-align: left;
         height: max-content;
       }
-  
+
       a {
         text-align: center;
         line-height: 60px;

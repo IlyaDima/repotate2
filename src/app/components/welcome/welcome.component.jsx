@@ -22,49 +22,44 @@ const Welcome = ({ isMintShown }) => {
   const handleScroll = () => setOffsetY(window.pageYOffset);
   const navigate = useNavigate();
 
-  useEffect(()=>{
+  useEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <div className='welcome'>
+    <div className="welcome">
       <picture>
-        <source srcSet={welcome1Webp} type='image/webp' />
-        <source srcSet={welcome1Png} type='image/png' />
-        <img className='fade-in' src={welcome1Png} alt='Welcome center image' />
+        <source srcSet={welcome1Webp} type="image/webp" />
+        <source srcSet={welcome1Png} type="image/png" />
+        <img className="fade-in" src={welcome1Png} alt="Welcome center image" />
       </picture>
-      <div className='welcome__img-container'>
+      <div className="welcome__img-container">
         <picture>
-          <source srcSet={welcome2Webp} type='image/webp' />
-          <source srcSet={welcome2Png} type='image/png' />
-          <img className='in-left' src={welcome2Png} alt='Welcome image 2' />
+          <source srcSet={welcome2Webp} type="image/webp" />
+          <source srcSet={welcome2Png} type="image/png" />
+          <img className="in-left" src={welcome2Png} alt="Welcome image 2" />
         </picture>
         <picture>
-          <source srcSet={welcome3Webp} type='image/webp' />
-          <source srcSet={welcome3Png} type='image/png' />
-          <img className='fade-in' src={welcome3Png} alt='Welcome image 3' />
+          <source srcSet={welcome3Webp} type="image/webp" />
+          <source srcSet={welcome3Png} type="image/png" />
+          <img className="fade-in" src={welcome3Png} alt="Welcome image 3" />
         </picture>
         <picture>
-          <source srcSet={welcome4Webp} type='image/webp' />
-          <source srcSet={welcome4Png} type='image/png' />
-          <img className='in-right' src={welcome4Png} alt='Welcome image 4' />
+          <source srcSet={welcome4Webp} type="image/webp" />
+          <source srcSet={welcome4Png} type="image/png" />
+          <img className="in-right" src={welcome4Png} alt="Welcome image 4" />
         </picture>
       </div>
-      {isMintShown
-        ? (
-          <button
-            className='welcome__mint-button'
-            onClick={() => navigate('/mint')}
-          >
-            <h4 className='welcome__mint-button-title'>
-              MINT
-            </h4>
-          </button>
-        )
-        : null
-      }
+      {isMintShown ? (
+        <button
+          className="welcome__mint-button"
+          onClick={() => navigate('/mint')}
+        >
+          <h4 className="welcome__mint-button-title">MINT</h4>
+        </button>
+      ) : null}
     </div>
   );
 };

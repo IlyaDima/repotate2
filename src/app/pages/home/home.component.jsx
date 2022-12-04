@@ -26,13 +26,13 @@ const HomePageComponent = ({
   */
 }) => {
   return (
-    <section className='home-page'>
+    <section className="home-page">
       <Header
         currentAccount={currentAccount}
         setCurrentAccount={setCurrentAccount}
       />
-      <AnimatedWelcome/>
-      <AnimatedAbout/>
+      <AnimatedWelcome />
+      <AnimatedAbout />
       {/*
       <Welcome
         isMintShown={publicActive || presaleActive || raffleStatus}
@@ -58,6 +58,6 @@ HomePageComponent.propTypes = {
   raffleStatus: PropTypes.bool,
   setMintType: PropTypes.func,
   setMintProof: PropTypes.func,
-}
+};
 
 export default HomePageComponent;

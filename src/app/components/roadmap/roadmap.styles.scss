@@ -11,13 +11,13 @@
   }
 
   &__heading {
-    font-family: "Gloria Hallelujah";
+    font-family: 'Gloria Hallelujah';
     font-style: normal;
     font-weight: 400;
     font-size: 56px;
     line-height: 111px;
     text-align: center;
-    color: #34BBFF;
+    color: #34bbff;
     margin: 25px 0 30px;
 
     @include tablet {
@@ -104,8 +104,8 @@
     font-size: 32px;
     line-height: 63px;
     text-align: center;
-    
-    color: #FBA41C;
+
+    color: #fba41c;
     margin-bottom: 30px;
 
     @include tablet {
@@ -121,9 +121,9 @@
     line-height: 25px;
     /* or 125% */
     margin: 0;
-    
+
     text-align: center;
-    
+
     color: #797979;
   }
 
@@ -164,7 +164,7 @@
     max-width: 370px;
     top: 800px;
     z-index: -1;
-    right: -370px; 
+    right: -370px;
     transition: right 0.75s;
 
     &.active {
@@ -182,7 +182,7 @@
     top: 1500px;
     z-index: -1;
 
-    left: -370px; 
+    left: -370px;
     transition: left 0.75s;
 
     &.active {
@@ -200,7 +200,7 @@
     top: 1850px;
     z-index: -1;
 
-    right: -370px; 
+    right: -370px;
     transition: right 0.75s;
 
     &.active {

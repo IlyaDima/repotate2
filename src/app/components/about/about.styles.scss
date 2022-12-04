@@ -4,7 +4,13 @@
   justify-content: center;
   // max-width: 1260px;
   z-index: 3;
-  background: linear-gradient(45deg, #1EACF4 0%, #1EACF4 56%, #34BBFF 56%, #34BBFF 100%);
+  background: linear-gradient(
+    45deg,
+    #1eacf4 0%,
+    #1eacf4 56%,
+    #34bbff 56%,
+    #34bbff 100%
+  );
   padding: 45px 0;
   position: relative;
 
@@ -22,7 +28,7 @@
     font-weight: 800;
     font-size: 32px;
     line-height: 60px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin: 0;
     font-family: 'Gloria Hallelujah';
 
@@ -36,7 +42,7 @@
       margin: 40px 0 0;
     }
   }
-  
+
   .social-wrapper {
     display: flex;
     margin: 20px auto 0 0;
@@ -76,7 +82,7 @@
 
       video,
       img {
-        max-width: none
+        max-width: none;
       }
     }
   }
@@ -132,7 +138,7 @@
     text-align: center;
     transition: all 0.1s linear;
     margin: 25px 0 0;
-    background: #FBA41C;
+    background: #fba41c;
     max-width: 200px;
     text-decoration: none;
     color: black;
@@ -148,7 +154,7 @@
 
     &:hover,
     &:focus {
-      background: #34BBFF;
+      background: #34bbff;
       box-shadow: 0 0 10px 2px rgb(52 187 255);
     }
 

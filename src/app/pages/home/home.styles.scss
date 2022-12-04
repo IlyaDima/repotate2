@@ -7,7 +7,13 @@
   align-items: center;
 
   &__roadmap {
-    background-image: linear-gradient(to right, rgba(0, 0,0, 0.8) , transparent, rgba(0, 0, 0, 0.8)), url('https://opengameart.org/sites/default/files/seamless%20space_0.PNG');
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.8),
+        transparent,
+        rgba(0, 0, 0, 0.8)
+      ),
+      url('https://opengameart.org/sites/default/files/seamless%20space_0.PNG');
     width: 100%;
 
     &-main-heading {
@@ -19,7 +25,7 @@
       @include tablet {
         font-size: 48px;
       }
-  
+
       @include mobile {
         font-size: 32px;
       }
@@ -52,7 +58,7 @@
 
     &-steps {
       margin: 0 auto;
-      max-width: 1260px;;
+      max-width: 1260px;
       width: 100%;
     }
   }

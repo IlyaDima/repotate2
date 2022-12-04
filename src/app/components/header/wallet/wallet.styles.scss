@@ -17,7 +17,7 @@
     }
 
     &__wallet {
-      color: #FBA41C;
+      color: #fba41c;
       font-weight: 600;
       width: 200px;
       text-align: right;
@@ -32,13 +32,13 @@
       width: 100%;
       text-align: center;
       transition: all 0.1s linear;
-      background: #FBA41C;
+      background: #fba41c;
       width: 200px;
-  
+
       &:hover,
       &:focus {
         cursor: pointer;
-        background: #34BBFF;
+        background: #34bbff;
         box-shadow: 0 0 10px 2px rgb(52, 187, 255);
 
         h4 {
@@ -46,7 +46,7 @@
         }
       }
     }
-  
+
     &__title {
       color: #ffffff;
       padding-right: 20px;

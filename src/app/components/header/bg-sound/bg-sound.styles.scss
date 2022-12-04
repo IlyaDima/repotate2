@@ -1,16 +1,16 @@
 button {
-    appearance: none;
-    background: none;
-    border: none;
-    cursor: pointer;
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
 
+  svg path {
+    fill: #34bbff;
+  }
+
+  &:hover {
     svg path {
-        fill: #34BBFF
+      fill: #fba41c;
     }
-
-    &:hover {
-        svg path {
-            fill: #FBA41C
-        }
-    }
+  }
 }

@@ -30,45 +30,45 @@
     &:focus {
       svg {
         transform: rotateY(360deg);
-        transition: .5s;
+        transition: 0.5s;
       }
     }
 
     &--discord {
       path {
-        fill: #34BBFF;
+        fill: #34bbff;
       }
 
       &:hover,
       &:focus {
         path {
-          fill: #FBA41C;
+          fill: #fba41c;
         }
       }
     }
 
     &--twitter {
       path {
-        fill: #34BBFF;
+        fill: #34bbff;
       }
 
       &:hover,
       &:focus {
         path {
-          fill: #FBA41C;
+          fill: #fba41c;
         }
       }
     }
 
     &--instagram {
       path {
-        fill: #34BBFF;
+        fill: #34bbff;
       }
 
       &:hover,
       &:focus {
         path {
-          fill: #FBA41C;
+          fill: #fba41c;
         }
       }
     }
@@ -81,7 +81,7 @@
       &:hover,
       &:focus {
         path {
-          fill: #FBA41C;
+          fill: #fba41c;
         }
       }
     }

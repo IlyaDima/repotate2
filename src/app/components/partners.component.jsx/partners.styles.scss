@@ -27,7 +27,7 @@
     text-align: center;
     margin: 50px 0;
     text-transform: uppercase;
-    
+
     @include tablet {
       font-size: 36px;
     }
@@ -89,7 +89,7 @@
     & > svg {
       border-radius: 50%;
       height: auto;
-      
+
       @include mobile {
         margin-bottom: 20px;
       }

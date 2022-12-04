@@ -1,5 +1,5 @@
 import React from 'react';
-import MediaQuery from 'react-responsive'
+import MediaQuery from 'react-responsive';
 
 import './footer.styles.scss';
 
@@ -11,24 +11,22 @@ const Footer = () => {
   return (
     <>
       <MediaQuery maxWidth={1024}>
-        <footer className='footer'>
-          <div className='footer__wrapper'>
+        <footer className="footer">
+          <div className="footer__wrapper">
             <Logo />
-            <div className='footer__socials'>
+            <div className="footer__socials">
               <Social />
               <a
                 href={environment.discord}
-                className='footer__button'
-                target='_blank'
-                rel='noreferrer'
+                className="footer__button"
+                target="_blank"
+                rel="noreferrer"
               >
-                <h4 className='footer__button-title'>
-                  Join discord
-                </h4>
+                <h4 className="footer__button-title">Join discord</h4>
               </a>
             </div>
-            <div className='footer__legal'>
-              <p className='footer__legal-rights'>
+            <div className="footer__legal">
+              <p className="footer__legal-rights">
                 2022 Larry. All rights reserved
               </p>
             </div>
@@ -36,15 +34,15 @@ const Footer = () => {
         </footer>
       </MediaQuery>
       <MediaQuery minWidth={1025}>
-        <footer className='footer'>
-          <div className='footer__wrapper'>
-            <div className='footer__legal'>
+        <footer className="footer">
+          <div className="footer__wrapper">
+            <div className="footer__legal">
               <Logo />
-              <p className='footer__legal-rights'>
+              <p className="footer__legal-rights">
                 2022 Larry, The Adventurer. All rights reserved
               </p>
             </div>
-            <div className='footer__socials'>
+            <div className="footer__socials">
               <Social />
             </div>
           </div>

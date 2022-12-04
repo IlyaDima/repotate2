@@ -6,7 +6,7 @@
   text-align: center;
   width: 100%;
   z-index: 1;
-  background-color: #34BBFF;
+  background-color: #34bbff;
   background-image: url(space.png);
   padding-bottom: 100px;
   position: relative;
@@ -22,7 +22,7 @@
     font-weight: 400;
     font-size: 56px;
     line-height: 111px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin: 25px 0 30px;
 
     @include tablet {
@@ -47,7 +47,7 @@
   &__player {
     display: flex;
     height: 300px;
-    background: #1EACF4;
+    background: #1eacf4;
     padding: 50px;
 
     &:nth-child(odd) {
@@ -64,7 +64,7 @@
       font-weight: 400;
       font-size: 13.5px;
       line-height: 25px;
-      color: #FFFFFF;
+      color: #ffffff;
       text-align: left;
       margin: 0 0 15px;
     }
@@ -87,7 +87,6 @@
     }
 
     @include mobile {
-      
     }
 
     &-img {
@@ -109,7 +108,7 @@
       line-height: 63px;
       text-align: center;
       margin: 0;
-      color: #FFFFFF;
+      color: #ffffff;
     }
 
     &-description {
@@ -120,8 +119,7 @@
       line-height: 24px;
       /* identical to box height, or 150% */
 
-
-      color: #FFFFFF;
+      color: #ffffff;
       margin: 0;
     }
 
@@ -147,7 +145,7 @@
         svg {
           width: 24px;
         }
-    
+
         &--discord {
           &:hover,
           &:focus {
@@ -156,7 +154,7 @@
             }
           }
         }
-    
+
         &--twitter {
           &:hover,
           &:focus {
@@ -165,7 +163,7 @@
             }
           }
         }
-    
+
         &--instagram {
           &:hover,
           &:focus {

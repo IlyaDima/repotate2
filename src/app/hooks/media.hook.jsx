@@ -1,4 +1,4 @@
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from 'react-responsive';
 
 const useMediaHook = () => {
   const isAvgDesktop = useMediaQuery({ query: '(max-width: 1260px)' });
@@ -9,7 +9,7 @@ const useMediaHook = () => {
     isAvgDesktop,
     isTablet,
     isMobile,
-  }
+  };
 };
 
 export default useMediaHook;
