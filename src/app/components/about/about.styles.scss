@@ -1,177 +1,150 @@
+@font-face {
+  font-family: 'Gaelleingsletter';
+  src: local('Gaelleingsletter'),
+    url(./fonts/Gaelleingsletter.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'JoanneDeoxyribose';
+  src: local('JoanneDeoxyribose'),
+    url(./fonts/JoanneDeoxyribose.woff2) format('woff2');
+}
+
 .about {
-  display: flex;
+  padding-top: 6rem;
   width: 100%;
-  justify-content: center;
-  // max-width: 1260px;
-  z-index: 3;
-  background: linear-gradient(
-    45deg,
-    #1eacf4 0%,
-    #1eacf4 56%,
-    #34bbff 56%,
-    #34bbff 100%
-  );
-  padding: 45px 0;
+}
+
+.background {
   position: relative;
+  background-color: #34bbff;
+  border: 12px solid #000000;
+  border-radius: 85px;
+  height: calc(100vh - 75px);
+  margin: 0 auto;
+  max-height: 760px;
+  max-width: 1584px;
+  width: calc(100vw - 10%);
+}
 
-  & > span {
-    position: absolute;
-    top: -99px;
-  }
+.laptop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: 932px;
+  max-height: 728px;
+  perspective: 100em;
 
-  @include mobile {
-    flex-direction: column;
-    padding: 0px 0 40px;
-  }
-
-  &__heading {
-    font-weight: 800;
-    font-size: 32px;
-    line-height: 60px;
-    color: #ffffff;
-    margin: 0;
-    font-family: 'Gloria Hallelujah';
-
-    @include tablet {
-      font-size: 32px;
-    }
-
-    @include mobile {
-      font-size: 26px;
-      line-height: 32px;
-      margin: 40px 0 0;
-    }
-  }
-
-  .social-wrapper {
-    display: flex;
-    margin: 20px auto 0 0;
-    flex-basis: content;
-    justify-content: space-between;
-
-    @include mobile {
-      margin: 12px auto 0 0;
-    }
-  }
-
-  .social-icon {
-    margin-left: -10px;
-    padding: 0 10px;
-
-    &:not(:first-of-type) {
-      padding: 0 10px;
-    }
-  }
-
-  &__colonialist {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    width: calc(100% - 40px);
-
-    video,
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    @media (min-width: 992px) {
-      padding: 0 0 0 30px;
-      width: auto;
-
-      video,
-      img {
-        max-width: none;
-      }
-    }
-  }
-
-  &__texts {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 60px;
-    color: white;
-    max-width: 660px;
-    padding-right: 30px;
-
-    @include mobile {
-      margin: 0 auto;
-      padding: 0 20px;
-      width: calc(100% - 40px);
-    }
-  }
-
-  h5 {
-    font-weight: 800;
-    font-size: 24px;
-    margin: 20px 0 0;
-
-    @include mobile {
-      font-size: 18px;
-    }
-  }
-
-  p {
-    text-align: justify;
-    font-size: 14px;
-    line-height: 24px;
-    margin: 10px 0;
-
-    @include mobile {
-      margin: 10px 0;
-
-      &:last-of-type {
-        margin: 10px 0 20px;
-      }
-    }
-  }
-
-  &__button {
-    display: flex;
-    border: 0;
-    height: auto;
-    align-items: center;
-    padding: 0;
+  .laptop__top {
+    flex-shrink: 0;
+    height: 100%;
     width: 100%;
-    text-align: center;
-    transition: all 0.1s linear;
-    margin: 25px 0 0;
-    background: #fba41c;
-    max-width: 200px;
-    text-decoration: none;
-    color: black;
+    max-height: 424px;
+    max-width: 718px;
+    transform-origin: bottom;
+    transform-style: preserve-3d;
 
-    &:visited {
-      color: black;
-    }
-
-    @include tablet {
-      max-width: none;
-      margin: 30px 0 0;
-    }
-
-    &:hover,
-    &:focus {
-      background: #34bbff;
-      box-shadow: 0 0 10px 2px rgb(52 187 255);
-    }
-
-    &-title {
-      color: #ffffff;
-      margin: 0;
+    .laptop-screen {
+      position: absolute;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background-image: url(./parallax/laptop-screen-cropped.png),
+        url(./parallax/laptop-screen-background.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain, 90%;
+      height: 100%;
       width: 100%;
-      text-transform: uppercase;
-      font-size: 16px;
-      line-height: 25px;
-      font-weight: 800;
-      padding: 8px 30px;
 
-      @include tablet {
-        padding: 16px 8px;
-        font-size: 16px;
+      .laptop-screen__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 1rem;
+        width: calc(100% - 120px);
+        aspect-ratio: 16/9;
+
+        .laptop-screen__heading {
+          align-self: end;
+          color: #fff;
+          font-family: 'JoanneDeoxyribose';
+          font-size: 3rem;
+          letter-spacing: 0.1em;
+          line-height: 1.1;
+          text-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+          text-transform: capitalize;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        .laptop-screen__text {
+          color: #fff;
+          font-family: 'Gaelleingsletter';
+          font-size: 0.875rem;
+          line-height: 1.3;
+          text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+          text-transform: capitalize;
+          margin: 0;
+        }
+
+        .nft-placeholder {
+          position: relative;
+          grid-column: 2;
+          grid-row: 1 / span 2;
+          align-self: center;
+          justify-self: center;
+          aspect-ratio: 1;
+          background-color: #287fa9;
+          border: 3px solid #287fa9;
+          border-radius: 30px;
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
+          max-width: 200px;
+          overflow: hidden;
+          width: 100%;
+        }
       }
+    }
+
+    .laptop-lid-top {
+      position: absolute;
+      top: 0;
+      object-fit: fill;
+      transform-origin: bottom;
+      width: 100%;
+    }
+  }
+
+  .laptop__bottom {
+    flex-shrink: 0;
+    transform-origin: top;
+    transform-style: preserve-3d;
+    height: 100%;
+    width: 100%;
+    max-height: 306px;
+
+    .laptop-keyboard {
+      position: absolute;
+      bottom: 0;
+      object-fit: contain;
+      width: 100%;
+      pointer-events: none;
+    }
+
+    .laptop-lid-bottom {
+      position: absolute;
+      bottom: 0;
+      object-fit: fill;
+      transform-origin: top;
+      width: 100%;
     }
   }
 }

@@ -1,0 +1,13 @@
+.flipbook {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  min-height: 400px;
+  padding: 3rem 0;
+  scroll-snap-align: start;
+
+  > * {
+    height: 100%;
+  }
+}

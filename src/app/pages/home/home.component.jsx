@@ -1,17 +1,18 @@
 import PropTypes from 'prop-types';
 import React, { useRef } from 'react';
 
-import AnimatedAbout from '../../components/animated/about/about.component';
-import AnimatedWelcome from '../../components/animated/welcome/welcome.component';
-import Header from '../../components/header/header.component';
-//import Welcome from '../../components/welcome/welcome.component';
-//import About from '../../components/about/about.component';
-import Statistics from '../../components/statistics/statistics.component';
-//import Larry from '../../components/larry/larry.component';
-import FAQ from '../../components/faq/faq.component';
-import Footer from '../../components/footer/footer.component';
-import Roadmap from '../../components/roadmap/roadmap.component';
-import Team from '../../components/team/team.component';
+import About from '/src/app/components/about/about.component';
+import Flipbook from '/src/app/components/flipbook/flipbook.component';
+import Header from '/src/app/components/header/header.component';
+import Welcome from '/src/app/components/welcome/welcome.component';
+//import Welcome from '/src/app/components/welcome/welcome.component';
+//import About from '/src/app/components/about/about.component';
+import Statistics from '/src/app/components/statistics/statistics.component';
+//import Larry from '/src/app/components/larry/larry.component';
+import FAQ from '/src/app/components/faq/faq.component';
+import Footer from '/src/app/components/footer/footer.component';
+import Roadmap from '/src/app/components/roadmap/roadmap.component';
+import Team from '/src/app/components/team/team.component';
 
 HomePageComponent.propTypes = {
   network: PropTypes.string,
@@ -41,8 +42,8 @@ export default function HomePageComponent({
         currentAccount={currentAccount}
         setCurrentAccount={setCurrentAccount}
       />
-      <AnimatedWelcome aboutRef={aboutRef} />
-      <AnimatedAbout ref={aboutRef} />
+      <Welcome aboutRef={aboutRef} />
+      <About ref={aboutRef} />
       {/*
       <Welcome
         isMintShown={publicActive || presaleActive || raffleStatus}
@@ -51,6 +52,7 @@ export default function HomePageComponent({
       <Larry />
       */}
       <Statistics />
+      <Flipbook />
       <Roadmap />
       <Team />
       <FAQ />

@@ -1,8 +1,5 @@
 import React from 'react';
-import environment from '../../../environment/environment';
-
-// import environment from '../../../environment/environment';
-
+import environment from '/src/environment/environment';
 import './statistics.styles.scss';
 
 const Statistics = () => {

@@ -4,11 +4,13 @@ html {
 
 body {
   font-family: $font, sans-serif;
-  background: $body-background-color;
+  background-color: $body-background-color;
+  background-image: url('bg.png');
 }
 
 #root {
   overflow-x: hidden;
+  scroll-snap-type: y mandatory;
 }
 
 input,

@@ -1,71 +1,157 @@
-/* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import PropTypes from 'prop-types';
-import { useNavigate } from 'react-router-dom';
-
-import useCountdownHook from '../../hooks/countdown.hook';
+import React, { useEffect, useRef } from 'react';
 
 import './welcome.styles.scss';
 
-import welcome1Png from '/src/assets/welcome-1.png';
-import welcome1Webp from '/src/assets/welcome-1.webp';
-import welcome2Png from '/src/assets/welcome-2.png';
-import welcome2Webp from '/src/assets/welcome-2.webp';
-import welcome3Png from '/src/assets/welcome-3.png';
-import welcome3Webp from '/src/assets/welcome-3.webp';
-import welcome4Png from '/src/assets/welcome-4.png';
-import welcome4Webp from '/src/assets/welcome-4.webp';
+import arm from '/src/assets/parallax/arm.png';
+import larry from '/src/assets/parallax/larry.png';
+import office from '/src/assets/parallax/office.png';
+import table from '/src/assets/parallax/table.png';
+import textBubble from '/src/assets/parallax/text-bubble.png';
 
-const Welcome = ({ isMintShown }) => {
-  const { date } = useCountdownHook('Feb 08, 2022 20:00:00');
-  const [, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
-  const navigate = useNavigate();
+Welcome.propTypes = {
+  aboutRef: PropTypes.object,
+};
+
+export default function Welcome({ aboutRef }) {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const armRef = useRef(null);
+  const frameRef = useRef(null);
+  const larryRef = useRef(null);
+  const officeRef = useRef(null);
+  const tableRef = useRef(null);
+  const textBubbleRef = useRef(null);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: frameRef.current,
+        pin: true,
+        start: '-=25',
+        end: 'center',
+        //markers: true,
+        id: 'welcome-1',
+      },
+      ease: 'power2',
+    });
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    tl.fromTo(
+      officeRef.current,
+      {
+        scale: 2,
+        filter: 'brightness(.5)',
+      },
+      {
+        scale: 1,
+        filter: 'brightness(1)',
+      }
+    )
+      .fromTo(
+        tableRef.current,
+        {
+          xPercent: -50,
+          yPercent: 100,
+        },
+        {
+          yPercent: 5,
+        },
+        '<'
+      )
+      .fromTo(
+        larryRef.current,
+        {
+          yPercent: 108,
+          xPercent: -50,
+        },
+        {
+          yPercent: 0,
+        },
+        '<25%'
+      );
+
+    // Second half of the animation
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: frameRef.current,
+        pin: true,
+        start: '-=24',
+        end: 'center',
+        //markers: true,
+        id: 'welcome-2',
+        onLeave: () => {
+          window.scrollTo(0, aboutRef.current.offsetTop + 75);
+        },
+      },
+      ease: 'power2',
+    });
+    tl2
+      .to(larryRef.current, {
+        rotate: -10,
+        scale: 1.4,
+        xPercent: -120,
+      })
+      .to(
+        tableRef.current,
+        {
+          scale: 1.5,
+          xPercent: -70,
+          yPercent: 0,
+        },
+        '<'
+      )
+      .to(
+        officeRef.current,
+        {
+          scale: 1.5,
+          filter: 'blur(1px)',
+        },
+        '<'
+      )
+      .fromTo(
+        armRef.current,
+        {
+          rotate: 45,
+          xPercent: 70,
+          yPercent: 100,
+        },
+        {
+          rotate: 0,
+          yPercent: 20,
+        },
+        '<+=25%'
+      )
+      .fromTo(
+        textBubbleRef.current,
+        {
+          opacity: 0,
+          scale: 0,
+        },
+        {
+          opacity: 1,
+          scale: 1,
+        },
+        '<'
+      );
   }, []);
 
   return (
-    <div className="welcome">
-      <picture>
-        <source srcSet={welcome1Webp} type="image/webp" />
-        <source srcSet={welcome1Png} type="image/png" />
-        <img className="fade-in" src={welcome1Png} alt="Welcome center image" />
-      </picture>
-      <div className="welcome__img-container">
-        <picture>
-          <source srcSet={welcome2Webp} type="image/webp" />
-          <source srcSet={welcome2Png} type="image/png" />
-          <img className="in-left" src={welcome2Png} alt="Welcome image 2" />
-        </picture>
-        <picture>
-          <source srcSet={welcome3Webp} type="image/webp" />
-          <source srcSet={welcome3Png} type="image/png" />
-          <img className="fade-in" src={welcome3Png} alt="Welcome image 3" />
-        </picture>
-        <picture>
-          <source srcSet={welcome4Webp} type="image/webp" />
-          <source srcSet={welcome4Png} type="image/png" />
-          <img className="in-right" src={welcome4Png} alt="Welcome image 4" />
-        </picture>
-      </div>
-      {isMintShown ? (
-        <button
-          className="welcome__mint-button"
-          onClick={() => navigate('/mint')}
+    <section className="welcome">
+      <div className="frame" ref={frameRef}>
+        <img className="office" ref={officeRef} src={office} alt="" />
+        <img className="larry" ref={larryRef} src={larry} alt="" />
+        <img className="arm" ref={armRef} src={arm} alt="" />
+        <img className="table" ref={tableRef} src={table} alt="" />
+        <div
+          className="text-bubble"
+          ref={textBubbleRef}
+          style={{ backgroundImage: `url(${textBubble})` }}
         >
-          <h4 className="welcome__mint-button-title">MINT</h4>
-        </button>
-      ) : null}
-    </div>
+          <h2>Larryland!</h2>
+        </div>
+      </div>
+    </section>
   );
-};
-
-Welcome.propTypes = {
-  isMintShown: PropTypes.bool,
-};
-
-export default Welcome;
+}
