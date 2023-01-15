@@ -39,7 +39,7 @@ const Footer = () => {
             <div className="footer__legal">
               <Logo />
               <p className="footer__legal-rights">
-                2022 Larry, The Adventurer. All rights reserved
+                © 2023 Larry, The Adventurer. All rights reserved
               </p>
             </div>
             <div className="footer__socials">
