@@ -12,20 +12,12 @@ import flipbookPage5 from '/src/assets/flipbook/page-5.webp';
 import flipbookPage6 from '/src/assets/flipbook/page-6.webp';
 import flipbookPage7 from '/src/assets/flipbook/page-7.webp';
 import flipbookPage8 from '/src/assets/flipbook/page-8.webp';
+import flipbookPage9 from '/src/assets/flipbook/page-9.webp';
 
 export default function Flipbook() {
   return (
     <section className="flipbook">
-      <HTMLFlipBook
-        width={560}
-        height={800}
-        minWidth={245}
-        minHeight={350}
-        maxWidth={560}
-        maxHeight={800}
-        size="stretch"
-        showCover={true}
-      >
+      <HTMLFlipBook width={490} height={700} showCover={true}>
         <img src={flipbookPageCover} />
         <img src={flipbookPage1} />
         <img src={flipbookPage2} />
@@ -35,6 +27,7 @@ export default function Flipbook() {
         <img src={flipbookPage6} />
         <img src={flipbookPage7} />
         <img src={flipbookPage8} />
+        <img src={flipbookPage9} />
       </HTMLFlipBook>
     </section>
   );

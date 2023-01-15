@@ -12,10 +12,10 @@ import table from '/src/assets/parallax/table.png';
 import textBubble from '/src/assets/parallax/text-bubble.png';
 
 Welcome.propTypes = {
-  aboutRef: PropTypes.object,
+  coffeeRef: PropTypes.object,
 };
 
-export default function Welcome({ aboutRef }) {
+export default function Welcome({ coffeeRef }) {
   gsap.registerPlugin(ScrollTrigger);
 
   const armRef = useRef(null);
@@ -82,7 +82,7 @@ export default function Welcome({ aboutRef }) {
         //markers: true,
         id: 'welcome-2',
         onLeave: () => {
-          window.scrollTo(0, aboutRef.current.offsetTop + 75);
+          window.scrollTo(0, coffeeRef.current.offsetTop + 75);
         },
       },
       ease: 'power2',

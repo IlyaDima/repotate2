@@ -1,16 +1,18 @@
 .coffee {
   position: relative;
+  display: flex;
+  justify-content: center;
+  background-image: url('/coffee/coffee-bg.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
   max-width: 1920px;
-  padding-top: 10rem;
   margin: 0 auto;
+  height: 100vh;
+  pointer-events: none;
 
-  .coffee__bg {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    z-index: -1;
+  @media (max-height: 1300px) {
+    padding-top: 10rem;
   }
 
   .nft-animation {
@@ -20,7 +22,13 @@
     aspect-ratio: 1;
     height: auto;
     width: 15vw;
-    z-index: -1;
+
+    @media (max-height: 720px) {
+      width: 25vh;
+      bottom: 29vh;
+      right: 50%;
+      transform: translateX(186%);
+    }
 
     @media (min-width: 1920px) {
       right: 430px;
@@ -31,6 +39,7 @@
 
   .coffee__smoke {
     position: absolute;
+    bottom: 36vw;
     right: 20vw;
     width: 20vw;
 
@@ -41,8 +50,10 @@
   }
 
   .coffee__img {
+    position: relative;
     max-height: 100%;
     max-width: 100%;
     object-fit: contain;
+    margin-top: auto;
   }
 }

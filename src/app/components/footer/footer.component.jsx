@@ -3,9 +3,9 @@ import MediaQuery from 'react-responsive';
 
 import './footer.styles.scss';
 
-import Social from '../header/social/social.component';
-import Logo from '../header/logo/logo.component';
 import environment from '../../../environment/environment';
+import Logo from '../header/logo/logo.component';
+import Social from '../header/social/social.component';
 
 const Footer = () => {
   return (
@@ -27,7 +27,7 @@ const Footer = () => {
             </div>
             <div className="footer__legal">
               <p className="footer__legal-rights">
-                2022 Larry. All rights reserved
+                2023 Larry. All rights reserved
               </p>
             </div>
           </div>

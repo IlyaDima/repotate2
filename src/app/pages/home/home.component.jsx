@@ -35,7 +35,7 @@ export default function HomePageComponent({
   raffleStatus,
   */
 }) {
-  const aboutRef = useRef(null);
+  const coffeeRef = useRef(null);
 
   return (
     <>
@@ -43,8 +43,15 @@ export default function HomePageComponent({
         currentAccount={currentAccount}
         setCurrentAccount={setCurrentAccount}
       />
-      <Welcome aboutRef={aboutRef} />
-      <About ref={aboutRef} />
+      <Welcome coffeeRef={coffeeRef} />
+      <Coffee ref={coffeeRef} />
+      <Flipbook />
+      <About />
+      <Roadmap />
+      <Statistics />
+      <Team />
+      <FAQ />
+      <Footer />
       {/*
       <Welcome
         isMintShown={publicActive || presaleActive || raffleStatus}
@@ -52,13 +59,6 @@ export default function HomePageComponent({
       <About />
       <Larry />
       */}
-      <Statistics />
-      <Flipbook />
-      <Coffee />
-      <Roadmap />
-      <Team />
-      <FAQ />
-      <Footer />
     </>
   );
 }

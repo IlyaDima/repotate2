@@ -1,16 +1,14 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import './coffee.styles.scss';
 
-import coffeeBg from '/src/assets/coffee/coffee-bg.webp';
 import coffeeSmokeAnimation from '/src/assets/coffee/coffee-smoke.gif';
 import coffeeImg from '/src/assets/coffee/coffee.webp';
 import larryAnimatedMp4 from '/src/assets/larry-animated.mp4';
 import larryAnimatedWebm from '/src/assets/larry-animated.webm';
 
-export default function Coffee() {
+const Coffee = forwardRef((props, coffeeRef) => {
   return (
-    <section className="coffee">
-      <img className="coffee__bg" src={coffeeBg} alt="Office background" />
+    <section ref={coffeeRef} className="coffee">
       <img
         src={coffeeSmokeAnimation}
         className="coffee__smoke"
@@ -27,4 +25,7 @@ export default function Coffee() {
       />
     </section>
   );
-}
+});
+
+Coffee.displayName = 'Coffee';
+export default Coffee;

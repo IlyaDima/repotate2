@@ -1,0 +1,217 @@
+.roadmap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  & > span {
+    position: absolute;
+    top: -99px;
+  }
+
+  &__heading {
+    font-family: 'Gloria Hallelujah';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 111px;
+    text-align: center;
+    color: #34bbff;
+    margin: 25px 0 30px;
+
+    @include tablet {
+      font-size: 32px;
+    }
+
+    @include mobile {
+      font-size: 26px;
+      line-height: 32px;
+      margin: 20px 0 40px;
+    }
+  }
+
+  &__wrapper {
+    max-width: 1000px;
+    width: calc(100% - 60px);
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  &__image {
+    &-1 {
+      width: 100%;
+    }
+  }
+
+  &__box {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    &-left {
+      z-index: 1;
+      padding-right: 49px;
+      padding-top: 70px;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      border-right: 1px solid #797979;
+
+      @include tablet {
+        z-index: 1;
+        padding-right: 0;
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: 0;
+      }
+
+      .roadmap__ava {
+        margin: 80px auto 60px;
+
+        @include tablet {
+          margin: 30px auto 50px;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-right {
+      padding-left: 50px;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      z-index: 1;
+
+      .roadmap__ava {
+        margin: 80px auto 60px;
+
+        &:first-of-type {
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-family: 'Gloria Hallelujah';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 63px;
+    text-align: center;
+
+    color: #fba41c;
+    margin-bottom: 30px;
+
+    @include tablet {
+      margin: 20px 0;
+    }
+  }
+
+  &__text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    /* or 125% */
+    margin: 0;
+
+    text-align: center;
+
+    color: #797979;
+  }
+
+  &__ava {
+    max-width: 320px;
+
+    &-l {
+      position: relative;
+      left: -400px;
+      opacity: 0;
+      transition: all 0.5s;
+
+      &.active {
+        left: 0;
+        opacity: 1;
+      }
+    }
+
+    &-r {
+      position: relative;
+      right: -400px;
+      opacity: 0;
+      transition: all 0.5s;
+
+      &.active {
+        right: 0;
+        opacity: 1;
+      }
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__larry-1 {
+    position: absolute;
+    max-width: 370px;
+    top: 800px;
+    z-index: -1;
+    right: -370px;
+    transition: right 0.75s;
+
+    &.active {
+      right: 0;
+    }
+
+    @media (max-width: 1333px) {
+      display: none;
+    }
+  }
+
+  &__larry-2 {
+    position: absolute;
+    max-width: 370px;
+    top: 1500px;
+    z-index: -1;
+
+    left: -370px;
+    transition: left 0.75s;
+
+    &.active {
+      left: 0;
+    }
+
+    @media (max-width: 1333px) {
+      display: none;
+    }
+  }
+
+  &__larry-3 {
+    position: absolute;
+    max-width: 370px;
+    top: 1850px;
+    z-index: -1;
+
+    right: -370px;
+    transition: right 0.75s;
+
+    &.active {
+      right: 0;
+    }
+
+    @media (max-width: 1333px) {
+      display: none;
+    }
+  }
+}
+
+.d-flex {
+  display: flex;
+}
