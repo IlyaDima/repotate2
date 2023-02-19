@@ -1,0 +1,72 @@
+.welcome {
+  position: relative;
+}
+
+.frame {
+  background-color: #000;
+  border: 11px solid #000;
+  border-radius: 85px;
+  height: calc(100vh - 75px);
+  margin: auto;
+  max-height: 775px;
+  overflow: hidden;
+  width: calc(100vw - 10%);
+  max-width: 1710px;
+  pointer-events: none;
+}
+
+.office {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.larry {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  object-fit: contain;
+  width: 100%;
+  max-width: 500px;
+  z-index: 2;
+}
+
+.arm {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  object-fit: contain;
+  width: 100%;
+  z-index: 2;
+  max-width: 240px;
+}
+
+.table {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  object-fit: none;
+  width: 100%;
+  z-index: 3;
+}
+
+.text-bubble {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  font-size: 2rem;
+  height: 100%;
+  width: 100%;
+  max-height: 400px;
+  max-width: 525px;
+  pointer-events: none;
+  text-align: center;
+  z-index: 1001;
+}

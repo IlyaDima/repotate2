@@ -7,8 +7,6 @@ import Flipbook from '/src/app/components/flipbook/flipbook.component';
 import Header from '/src/app/components/header/header.component';
 import Welcome from '/src/app/components/welcome/welcome.component';
 //import Welcome from '/src/app/components/welcome/welcome.component';
-//import About from '/src/app/components/about/about.component';
-import Statistics from '/src/app/components/statistics/statistics.component';
 //import Larry from '/src/app/components/larry/larry.component';
 import FAQ from '/src/app/components/faq/faq.component';
 import Footer from '/src/app/components/footer/footer.component';
@@ -46,9 +44,9 @@ export default function HomePageComponent({
       <Welcome coffeeRef={coffeeRef} />
       <Coffee ref={coffeeRef} />
       <Flipbook />
-      <About />
       <Roadmap />
-      <Statistics />
+      <About />
+      {/*<Statistics />*/}
       <Team />
       <FAQ />
       <Footer />

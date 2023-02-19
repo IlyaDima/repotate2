@@ -1,59 +1,42 @@
 .coffee {
   position: relative;
-  display: flex;
-  justify-content: center;
-  background-image: url('/coffee/coffee-bg.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-  max-width: 1920px;
-  margin: 0 auto;
-  height: 100vh;
-  pointer-events: none;
+  padding-top: 40px;
+  z-index: 1;
 
-  @media (max-height: 1300px) {
-    padding-top: 10rem;
+  .coffee__bg {
+    width: 85.83vw;
+    margin: 0 auto;
   }
 
-  .nft-animation {
+  .coffee__content {
     position: absolute;
-    right: 22vw;
-    bottom: 17vw;
-    aspect-ratio: 1;
-    height: auto;
-    width: 15vw;
-
-    @media (max-height: 720px) {
-      width: 25vh;
-      bottom: 29vh;
-      right: 50%;
-      transform: translateX(186%);
-    }
-
-    @media (min-width: 1920px) {
-      right: 430px;
-      bottom: 330px;
-      width: 284px;
-    }
+    top: 10vw;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    justify-items: center;
+    align-items: end;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80vw;
   }
 
-  .coffee__smoke {
-    position: absolute;
-    bottom: 36vw;
-    right: 20vw;
-    width: 20vw;
-
-    @media (min-width: 1920px) {
-      right: 370px;
-      width: 400px;
-    }
+  .coffee__bar {
+    aspect-ratio: 568/157;
+    grid-row: 2;
+    justify-self: center;
+    width: 29.5835vw;
   }
 
-  .coffee__img {
-    position: relative;
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-    margin-top: auto;
+  .coffee__animation {
+    aspect-ratio: 634/1024;
+    grid-row: span 2;
+    justify-self: end;
+    width: 33.021vw;
+  }
+
+  .coffee__sheet {
+    aspect-ratio: 600/778;
+    justify-self: end;
+    width: 31.25vw;
   }
 }

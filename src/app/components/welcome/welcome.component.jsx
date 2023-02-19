@@ -15,7 +15,7 @@ Welcome.propTypes = {
   coffeeRef: PropTypes.object,
 };
 
-export default function Welcome({ coffeeRef }) {
+export default function Welcome() {
   gsap.registerPlugin(ScrollTrigger);
 
   const armRef = useRef(null);
@@ -26,115 +26,118 @@ export default function Welcome({ coffeeRef }) {
   const textBubbleRef = useRef(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: frameRef.current,
-        pin: true,
-        start: '-=25',
-        end: 'center',
-        //markers: true,
-        id: 'welcome-1',
-      },
-      ease: 'power2',
-    });
+    let ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: frameRef.current,
+          pin: true,
+          start: '-=25',
+          end: 'center',
+          //markers: true,
+          id: 'welcome-1',
+        },
+        ease: 'power2',
+      });
 
-    tl.fromTo(
-      officeRef.current,
-      {
-        scale: 2,
-        filter: 'brightness(.5)',
-      },
-      {
-        scale: 1,
-        filter: 'brightness(1)',
-      }
-    )
-      .fromTo(
-        tableRef.current,
-        {
-          xPercent: -50,
-          yPercent: 100,
-        },
-        {
-          yPercent: 5,
-        },
-        '<'
-      )
-      .fromTo(
-        larryRef.current,
-        {
-          yPercent: 108,
-          xPercent: -50,
-        },
-        {
-          yPercent: 0,
-        },
-        '<25%'
-      );
-
-    // Second half of the animation
-    const tl2 = gsap.timeline({
-      scrollTrigger: {
-        trigger: frameRef.current,
-        pin: true,
-        start: '-=24',
-        end: 'center',
-        //markers: true,
-        id: 'welcome-2',
-        onLeave: () => {
-          window.scrollTo(0, coffeeRef.current.offsetTop + 75);
-        },
-      },
-      ease: 'power2',
-    });
-    tl2
-      .to(larryRef.current, {
-        rotate: -10,
-        scale: 1.4,
-        xPercent: -120,
-      })
-      .to(
-        tableRef.current,
-        {
-          scale: 1.5,
-          xPercent: -70,
-          yPercent: 0,
-        },
-        '<'
-      )
-      .to(
+      tl.fromTo(
         officeRef.current,
         {
-          scale: 1.5,
-          filter: 'blur(1px)',
-        },
-        '<'
-      )
-      .fromTo(
-        armRef.current,
-        {
-          rotate: 45,
-          xPercent: 70,
-          yPercent: 100,
+          scale: 2,
+          filter: 'brightness(.5)',
         },
         {
-          rotate: 0,
-          yPercent: 20,
-        },
-        '<+=25%'
-      )
-      .fromTo(
-        textBubbleRef.current,
-        {
-          opacity: 0,
-          scale: 0,
-        },
-        {
-          opacity: 1,
           scale: 1,
+          filter: 'brightness(1)',
+        }
+      )
+        .fromTo(
+          tableRef.current,
+          {
+            yPercent: 100,
+          },
+          {
+            yPercent: 5,
+          },
+          '<'
+        )
+        .fromTo(
+          larryRef.current,
+          {
+            yPercent: 150,
+          },
+          {
+            yPercent: 10,
+          },
+          '<25%'
+        );
+
+      // Second half of the animation
+      const tl2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: frameRef.current,
+          pin: true,
+          start: '-=24',
+          end: 'center',
+          //markers: true,
+          id: 'welcome-2',
+          onLeave: () => {
+            //window.scrollTo(0, coffeeRef.current.offsetTop + 75);
+          },
         },
-        '<'
-      );
+        ease: 'power2',
+      });
+      tl2
+        .to(larryRef.current, {
+          rotate: -10,
+          scale: 1.4,
+          xPercent: -60,
+          yPercent: 20,
+        })
+        .to(
+          tableRef.current,
+          {
+            scale: 1.5,
+            xPercent: -20,
+            yPercent: 0,
+          },
+          '<'
+        )
+        .to(
+          officeRef.current,
+          {
+            scale: 1.5,
+            filter: 'blur(1px)',
+          },
+          '<'
+        )
+        .fromTo(
+          armRef.current,
+          {
+            rotate: 45,
+            xPercent: 70,
+            yPercent: 100,
+          },
+          {
+            rotate: 0,
+            yPercent: 20,
+          },
+          '<+=25%'
+        )
+        .fromTo(
+          textBubbleRef.current,
+          {
+            opacity: 0,
+            scale: 0,
+          },
+          {
+            opacity: 1,
+            scale: 1,
+          },
+          '<'
+        );
+    });
+
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -149,7 +152,13 @@ export default function Welcome({ coffeeRef }) {
           ref={textBubbleRef}
           style={{ backgroundImage: `url(${textBubble})` }}
         >
-          <h2>Larryland!</h2>
+          <p>
+            Good day.
+            <br />
+            My name is Larry!
+            <br />
+            How are you?
+          </p>
         </div>
       </div>
     </section>

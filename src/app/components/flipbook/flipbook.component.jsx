@@ -17,18 +17,33 @@ import flipbookPage9 from '/src/assets/flipbook/page-9.webp';
 export default function Flipbook() {
   return (
     <section className="flipbook">
-      <HTMLFlipBook width={490} height={700} showCover={true}>
-        <img src={flipbookPageCover} />
-        <img src={flipbookPage1} />
-        <img src={flipbookPage2} />
-        <img src={flipbookPage3} />
-        <img src={flipbookPage4} />
-        <img src={flipbookPage5} />
-        <img src={flipbookPage6} />
-        <img src={flipbookPage7} />
-        <img src={flipbookPage8} />
-        <img src={flipbookPage9} />
-      </HTMLFlipBook>
+      <svg
+        className="flipbook__table"
+        viewBox="0 0 1920 1783"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M-86.5 1774.5V36.7987L1975.5 8.61697V1774.5H-86.5Z"
+          fill="#C27D3D"
+          stroke="black"
+          strokeWidth="17"
+        />
+      </svg>
+      <div className="flipbook__container">
+        <HTMLFlipBook width={490} height={700} showCover={true}>
+          <img src={flipbookPageCover} />
+          <img src={flipbookPage1} />
+          <img src={flipbookPage2} />
+          <img src={flipbookPage3} />
+          <img src={flipbookPage4} />
+          <img src={flipbookPage5} />
+          <img src={flipbookPage6} />
+          <img src={flipbookPage7} />
+          <img src={flipbookPage8} />
+          <img src={flipbookPage9} />
+        </HTMLFlipBook>
+      </div>
     </section>
   );
 }

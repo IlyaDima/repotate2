@@ -1,7 +1,22 @@
 .flipbook {
+  position: relative;
+  top: -20px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
-  min-height: 400px;
+  margin-bottom: -20px;
+
+  .flipbook__container {
+    position: absolute;
+    bottom: 0;
+    aspect-ratio: 980/700;
+    width: 85.83vw;
+
+    .stf__parent {
+      margin: 0 auto;
+
+      .stf__item {
+        outline: 7px solid #000;
+      }
+    }
+  }
 }
