@@ -11,7 +11,6 @@ import Welcome from '/src/app/components/welcome/welcome.component';
 import FAQ from '/src/app/components/faq/faq.component';
 import Footer from '/src/app/components/footer/footer.component';
 import Roadmap from '/src/app/components/roadmap/roadmap.component';
-import Team from '/src/app/components/team/team.component';
 
 HomePageComponent.propTypes = {
   network: PropTypes.string,
@@ -46,8 +45,8 @@ export default function HomePageComponent({
       <Flipbook />
       <Roadmap />
       <About />
-      {/*<Statistics />*/}
-      <Team />
+      {/* <Statistics /> */}
+      {/* <Team /> */}
       <FAQ />
       <Footer />
       {/*
