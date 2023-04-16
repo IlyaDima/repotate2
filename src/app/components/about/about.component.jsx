@@ -20,120 +20,174 @@ const About = forwardRef((props, aboutRef) => {
   const laptopKeyboardRef = useRef(null);
   const laptopLidTopRef = useRef(null);
   const laptopLidBottomRef = useRef(null);
+  const laptopScreenRef = useRef(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: backgroundRef.current,
-        pin: true,
-        start: '-=25',
-        //end: 'center',
-        //markers: true,
-        id: 'about-1',
-        scrub: true,
-      },
-      ease: 'power2',
-    });
+    let ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: backgroundRef.current,
+          pin: true,
+          start: '-=25',
+          //end: 'center',
+          //markers: true,
+          id: 'about-1',
+          scrub: true, // true ONLY FOR TESTING
+          /* DISABLED FOR TESTING ONLY
+          snap: {
+            snapTo: 'labelsDirectional',
+            duration: 0,
+            delay: 0,
+            inertia: false,
+          },
+          */
+        },
+      });
 
-    tl.to(backgroundRef.current, {
-      scale: 1.5,
-    }).fromTo(
-      laptopRef.current,
-      {
-        scale: 0.875,
-      },
-      {
-        yPercent: -15,
+      tl.set(laptopLidTopRef.current, { autoAlpha: 0 })
+        .to(backgroundRef.current, {
+          scale: 1.5,
+        })
+        .fromTo(
+          laptopRef.current,
+          { scale: 0.875 },
+          {
+            scale: 1.25,
+            yPercent: -4,
+          },
+          '<'
+        )
+        .addLabel('zoomed')
+        .to(backgroundRef.current, {
+          scale: 1,
+        })
+        .to(laptopRef.current, { scale: 0.875, yPercent: -50 }, '<')
+        // Start closing the top
+        .to(
+          laptopTopRef.current,
+          {
+            rotateX: -90,
+          },
+          '<'
+        )
+        .to(
+          laptopScreenRef.current,
+          {
+            autoAlpha: 0,
+          },
+          '<'
+        )
+        .to(
+          laptopLidTopRef.current,
+          {
+            autoAlpha: 1,
+            rotateX: 90,
+          },
+          '<'
+        )
+        // Top closed, start closing the bottom
+        .to(
+          laptopBottomRef.current,
+          {
+            rotateX: 90,
+            //scale: 1.05,
+            //yPercent: -40,
+          },
+          '<'
+        )
+        .to(laptopLidBottomRef.current, { rotateX: -90, yPercent: -115 }, '<')
+        .to(laptopKeyboardRef.current, { autoAlpha: 0 }, '<')
+        .to(laptopRef.current, { yPercent: -60 }, '<');
+
+      /*
+      tl.to(backgroundRef.current, {
         scale: 1.5,
-      },
-      '<'
-    );
+      })
+        .fromTo(
+          laptopRef.current,
+          {
+            scale: 0.875,
+          },
+          {
+            yPercent: -20,
+            scale: 1.25,
+          },
+          '<'
+        )
+        .addLabel('zoomed')
+        .to(backgroundRef.current, { scale: 1 })
+        .to(
+          laptopRef.current,
+          {
+            yPercent: -55,
+            scale: 0.875,
+          },
+          '<'
+        )
+        .to(
+          laptopTopRef.current,
+          {
+            rotationX: -90,
+          },
+          '<+=50%'
+        )
+        .to(
+          laptopBottomRef.current,
+          {
+            rotationX: 90,
+            ease: 'power3.out',
+          },
+          '<'
+        )
+        .fromTo(
+          laptopLidTopRef.current,
+          {
+            height: 0,
+          },
+          {
+            height: 'auto',
+            rotationX: 90,
+            scale: 1.1,
+            yPercent: 21,
+          },
+          '<'
+        )
+        .fromTo(
+          laptopLidBottomRef.current,
+          {
+            autoAlpha: 0,
+            height: 0,
+          },
+          {
+            autoAlpha: 1,
+            height: 'auto',
+            rotationX: -90,
+            scale: 0.95,
+            yPercent: -100,
+          },
+          '<'
+        )
+        .to(
+          laptopKeyboardRef.current,
+          {
+            scale: 0.9,
+            ease: 'power3.out',
+          },
+          '<+=25%'
+        )
+        .to(
+          laptopKeyboardRef.current,
+          {
+            autoAlpha: 0,
+          },
+          '<'
+        )
+        .addLabel('end');
 
-    // Second half of the animation
-    const tl2 = gsap.timeline({
-      scrollTrigger: {
-        trigger: backgroundRef.current,
-        pin: true,
-        start: '-=24',
-        //end: 'center',
-        //markers: true,
-        id: 'about-2',
-        scrub: true,
-      },
-      ease: 'power2',
+        */
     });
-    tl2
-      .to(backgroundRef.current, { scale: 1 })
-      .to(
-        laptopRef.current,
-        {
-          yPercent: -50,
-          scale: 0.875,
-        },
-        '<'
-      )
-      .to(
-        laptopTopRef.current,
-        {
-          rotationX: -90,
-        },
-        '<+=50%'
-      )
-      .to(
-        laptopBottomRef.current,
-        {
-          rotationX: 90,
-          ease: 'power3.out',
-        },
-        '<'
-      )
-      .fromTo(
-        laptopLidTopRef.current,
-        {
-          height: 0,
-        },
-        {
-          height: 'auto',
-          rotationX: 90,
-          scale: 1.05,
-        },
-        '<'
-      )
-      .fromTo(
-        laptopLidBottomRef.current,
-        {
-          height: 0,
-        },
-        {
-          height: 'auto',
-          rotationX: -90,
-          scale: 0.95,
-          yPercent: -100,
-        },
-        '<'
-      )
-      .to(
-        laptopBottomRef.current,
-        {
-          yPercent: -4,
-        },
-        '<'
-      )
-      .to(
-        laptopKeyboardRef.current,
-        {
-          scale: 0.9,
-          ease: 'power3.out',
-        },
-        '<+=25%'
-      )
-      .to(
-        laptopKeyboardRef.current,
-        {
-          autoAlpha: 0,
-        },
-        '<'
-      );
+
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -141,7 +195,7 @@ const About = forwardRef((props, aboutRef) => {
       <div className="background" ref={backgroundRef}>
         <div className="laptop" ref={laptopRef}>
           <div className="laptop__top" ref={laptopTopRef}>
-            <div className="laptop-screen">
+            <div className="laptop-screen" ref={laptopScreenRef}>
               <div className="laptop-screen__content">
                 <h1 className="laptop-screen__heading">
                   Larry, the adventurer

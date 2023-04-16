@@ -1,7 +1,5 @@
 .faq {
-  display: flex;
-  justify-content: center;
-  align-items: end;
+  position: relative;
   aspect-ratio: 1935/1298;
   background-color: #e5dac7;
   background-image: url('faq/bg.webp');
@@ -9,8 +7,66 @@
   background-size: 100vw;
 }
 
-.faq__img {
+.faq__questions {
+  position: absolute;
+  right: 13vw;
+  bottom: 5vw;
   aspect-ratio: 576/917;
+  width: 26.75vw;
+}
+
+.faq__img {
+  width: 100%;
   height: auto;
-  width: 30vw;
+}
+
+.faq__question {
+  position: absolute;
+  left: 0;
+  font-size: 2vw;
+  line-height: 1;
+  text-align: left;
+  padding-left: 2vw;
+  padding-right: 4vw;
+
+  &.faq__question--first {
+    top: 2.875vw;
+  }
+
+  &.faq__question--second {
+    top: 8.5vw;
+  }
+
+  &.faq__question--third {
+    top: 16.25vw;
+  }
+
+  &.faq__question--fourth {
+    top: 21.625vw;
+  }
+
+  &.faq__question--fifth {
+    top: 27.75vw;
+  }
+}
+
+.faq__answer {
+  position: absolute;
+  top: 15.75vw;
+  left: 27.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/faq/faq-bubble.webp');
+  background-size: cover;
+  aspect-ratio: 510/394;
+  width: 26vw;
+
+  .faq__answer-text {
+    font-size: 2vw;
+    line-height: 1;
+    text-align: center;
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
 }

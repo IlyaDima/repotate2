@@ -1,9 +1,27 @@
+@font-face {
+  font-family: 'Gaelleingsletter';
+  src: local('Gaelleingsletter'),
+    url(./fonts/Gaelleingsletter.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'JoanneDeoxyribose';
+  src: local('JoanneDeoxyribose'),
+    url(./fonts/JoanneDeoxyribose.woff2) format('woff2');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: $font, sans-serif;
+  font-family: 'JoanneDeoxyribose', sans-serif;
   background-color: $body-background-color;
   background-image: url('bg.png');
 }

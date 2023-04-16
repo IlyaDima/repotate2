@@ -60,12 +60,12 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  font-size: 2rem;
   pointer-events: none;
   text-align: center;
   z-index: 1001;
 
   p {
-    font-size: 1.5vw;
+    font-size: 3vw;
+    line-height: 1;
   }
 }
