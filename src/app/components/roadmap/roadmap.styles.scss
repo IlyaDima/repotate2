@@ -1,13 +1,115 @@
 .roadmap {
-  background-color: #1eacf4;
-  height: 100vh;
-  min-height: 400px;
-  padding-top: 5rem;
+  position: relative;
+  width: 100vw;
 
-  .roadmap__img {
-    display: block;
-    margin: 0 auto;
-    max-height: 100%;
-    max-width: 100%;
+  .roadmap-bg {
+    height: auto;
+    width: 100%;
   }
+
+  .roadmap-img-1 {
+    position: absolute;
+    top: 5.5vw;
+    z-index: 1000;
+    left: 7vw;
+    width: 25.75vw;
+  }
+
+  .roadmap-img-2 {
+    position: absolute;
+    top: 41.5vw;
+    right: 9vw;
+    width: 26.5vw;
+  }
+
+  .roadmap-img-3 {
+    position: absolute;
+    top: 77vw;
+    left: 6.25vw;
+    width: 26.5vw;
+  }
+
+  .roadmap-img-4 {
+    position: absolute;
+    top: 113vw;
+    right: 8.5vw;
+    width: 26.75vw;
+  }
+
+  .roadmap-text-1 {
+    position: absolute;
+    top: 7vw;
+    right: 9vw;
+    width: 25.75vw;
+
+    .roadmap-text-1-content {
+      position: absolute;
+      top: 0.5vw;
+      left: 1vw;
+    }
+  }
+
+  .roadmap-text-2 {
+    position: absolute;
+    top: 44.5vw;
+    left: 6.5vw;
+    width: 25.5vw;
+
+    .roadmap-text-2-content {
+      position: absolute;
+      top: 0.75vw;
+      left: 1.5vw;
+
+      .roadmap-text {
+        line-height: 1;
+      }
+    }
+  }
+
+  .roadmap-text-3 {
+    position: absolute;
+    right: 9.5vw;
+    top: 81vw;
+    width: 25.5vw;
+
+    .roadmap-text-3-content {
+      position: absolute;
+      top: 1vw;
+      left: 1.25vw;
+
+      .roadmap-text {
+        line-height: 1;
+      }
+    }
+  }
+
+  .roadmap-text-4 {
+    position: absolute;
+    top: 116vw;
+    left: 6.5vw;
+    width: 25.5vw;
+
+    .roadmap-text-4-content {
+      position: absolute;
+      top: 1vw;
+      left: 1.25vw;
+    }
+  }
+}
+
+.roadmap-text-bg {
+  height: auto;
+  width: 100%;
+}
+
+.roadmap-heading {
+  color: #fff;
+  font-size: 3.25vw;
+  font-weight: 500;
+  margin-bottom: 1.5vw;
+}
+
+.roadmap-text {
+  color: #fff;
+  font-size: 1.75vw;
 }
