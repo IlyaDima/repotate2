@@ -1,5 +1,6 @@
 .roadmap {
   position: relative;
+  border-bottom: 0.75vw solid #000;
   width: 100vw;
 
   .roadmap-bg {
@@ -112,4 +113,39 @@
 .roadmap-text {
   color: #fff;
   font-size: 1.75vw;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: 0.4s ease;
+
+  &.show {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: 0.5s ease;
+  transition-delay: 150ms;
+
+  &.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: 0.5s ease;
+  transition-delay: 150ms;
+
+  &.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

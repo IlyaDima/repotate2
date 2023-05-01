@@ -1,4 +1,7 @@
+import clsx from 'clsx';
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
+
 import './roadmap.styles.scss';
 
 import roadmapBg from 'src/assets/roadmap/roadmap-bg.webp';
@@ -12,11 +15,44 @@ import roadmapText3Bg from 'src/assets/roadmap/roadmap-text-3-bg.webp';
 import roadmapText4Bg from 'src/assets/roadmap/roadmap-text-4-bg.webp';
 
 export default function Roadmap() {
+  const { ref: roadmapImg1Ref, inView: roadmapImg1InView } = useInView({
+    rootMargin: '0px 0px -40% 0px',
+    threshold: 0,
+    triggerOnce: true,
+  });
+
+  const { ref: roadmapImg2Ref, inView: roadmapImg2InView } = useInView({
+    rootMargin: '0px 0px -40% 0px',
+    threshold: 0,
+    triggerOnce: true,
+  });
+
+  const { ref: roadmapImg3Ref, inView: roadmapImg3InView } = useInView({
+    rootMargin: '0px 0px -40% 0px',
+    threshold: 0,
+    triggerOnce: true,
+  });
+
+  const { ref: roadmapImg4Ref, inView: roadmapImg4InView } = useInView({
+    rootMargin: '0px 0px -40% 0px',
+    threshold: 0,
+    triggerOnce: true,
+  });
+
   return (
     <section className="roadmap">
       <img className="roadmap-bg" src={roadmapBg} alt="Roadmap" />
-      <img className="roadmap-img-1" src={roadmapImg1} alt="Roadmap image 1" />
-      <div className="roadmap-text-1">
+      <img
+        ref={roadmapImg1Ref}
+        className={clsx('roadmap-img-1 fade-in', { show: roadmapImg1InView })}
+        src={roadmapImg1}
+        alt="Roadmap image 1"
+      />
+      <div
+        className={clsx('roadmap-text-1 fade-in-left', {
+          show: roadmapImg1InView,
+        })}
+      >
         <img
           className="roadmap-text-bg"
           src={roadmapText1Bg}
@@ -35,8 +71,17 @@ export default function Roadmap() {
           </p>
         </div>
       </div>
-      <img className="roadmap-img-2" src={roadmapImg2} alt="Roadmap image 2" />
-      <div className="roadmap-text-2">
+      <img
+        ref={roadmapImg2Ref}
+        className={clsx('roadmap-img-2 fade-in', { show: roadmapImg2InView })}
+        src={roadmapImg2}
+        alt="Roadmap image 2"
+      />
+      <div
+        className={clsx('roadmap-text-2 fade-in-right', {
+          show: roadmapImg2InView,
+        })}
+      >
         <img
           className="roadmap-text-bg"
           src={roadmapText2Bg}
@@ -55,8 +100,17 @@ export default function Roadmap() {
           </p>
         </div>
       </div>
-      <img className="roadmap-img-3" src={roadmapImg3} alt="Roadmap image 3" />
-      <div className="roadmap-text-3">
+      <img
+        ref={roadmapImg3Ref}
+        className={clsx('roadmap-img-3 fade-in', { show: roadmapImg3InView })}
+        src={roadmapImg3}
+        alt="Roadmap image 3"
+      />
+      <div
+        className={clsx('roadmap-text-3 fade-in-left', {
+          show: roadmapImg3InView,
+        })}
+      >
         <img
           className="roadmap-text-bg"
           src={roadmapText3Bg}
@@ -75,8 +129,17 @@ export default function Roadmap() {
           </p>
         </div>
       </div>
-      <img className="roadmap-img-4" src={roadmapImg4} alt="Roadmap image 4" />
-      <div className="roadmap-text-4">
+      <img
+        ref={roadmapImg4Ref}
+        className={clsx('roadmap-img-4 fade-in', { show: roadmapImg4InView })}
+        src={roadmapImg4}
+        alt="Roadmap image 4"
+      />
+      <div
+        className={clsx('roadmap-text-4 fade-in-right', {
+          show: roadmapImg4InView,
+        })}
+      >
         <img
           className="roadmap-text-bg"
           src={roadmapText4Bg}
