@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 import './wallet.styles.scss';
 
@@ -25,7 +25,7 @@ const Wallet = ({
           className="wallet-wrapper__button"
           onClick={() => setCurrentAccount()}
         >
-          <h4 className="wallet-wrapper__title">Loading...</h4>
+          Loading...
         </button>
       </div>
     );
@@ -38,7 +38,7 @@ const Wallet = ({
           className="wallet-wrapper__button"
           onClick={() => setCurrentAccount()}
         >
-          <h4 className="wallet-wrapper__title">Connect Wallet</h4>
+          Connect Wallet
         </button>
       )}
       {currentAccount && (

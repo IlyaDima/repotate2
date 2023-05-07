@@ -1,11 +1,20 @@
-button {
+.bg-sound {
+  display: grid;
+  place-content: center;
   appearance: none;
   background: none;
   border: none;
   cursor: pointer;
+  margin-left: 1.5vw;
+  width: 2.292vw;
 
-  svg path {
-    fill: #34bbff;
+  svg {
+    height: auto;
+    width: 100%;
+
+    path {
+      fill: #34bbff;
+    }
   }
 
   &:hover {

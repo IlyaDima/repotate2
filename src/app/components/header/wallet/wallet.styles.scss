@@ -1,60 +1,22 @@
-.wallet {
-  &-wrapper {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    justify-content: flex-end;
-    max-width: 200px;
-    min-width: 160px;
-    height: 40px;
-    margin: 0 0 0 40px;
+.wallet-wrapper {
+  margin-left: 4.75vw;
+}
 
-    @include tablet {
-      margin-right: auto;
-      justify-content: center;
-      margin: 0 auto 0 0;
-      display: none;
-    }
+.wallet-wrapper__button {
+  appearance: none;
+  background-color: #fba41c;
+  border: none;
+  border-radius: 1.625vw;
+  box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.575vw;
+  line-height: 1;
+  padding: 0.78vw 1.765vw;
+  text-align: center;
+  text-transform: uppercase;
 
-    &__wallet {
-      color: #fba41c;
-      font-weight: 600;
-      width: 200px;
-      text-align: right;
-    }
-
-    &__button {
-      display: flex;
-      border: 0;
-      height: 100%;
-      align-items: center;
-      padding: 0;
-      width: 100%;
-      text-align: center;
-      transition: all 0.1s linear;
-      background: #fba41c;
-      width: 200px;
-
-      &:hover,
-      &:focus {
-        cursor: pointer;
-        background: #34bbff;
-        box-shadow: 0 0 10px 2px rgb(52, 187, 255);
-
-        h4 {
-          color: white;
-        }
-      }
-    }
-
-    &__title {
-      color: #ffffff;
-      padding-right: 20px;
-      padding-left: 20px;
-      margin: 0;
-      width: 100%;
-      text-transform: uppercase;
-      user-select: none;
-    }
+  &:hover {
+    background-color: #34bbff;
   }
 }

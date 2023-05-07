@@ -1,81 +1,20 @@
-.social {
-  &-wrapper {
-    height: max-content;
-    margin: 0;
-    display: flex;
-    align-items: center;
+.social-wrapper {
+  display: flex;
+  gap: 1.25vw;
+  margin-left: auto;
 
-    @include tablet {
-      display: none;
-    }
-  }
-
-  &-icon {
-    background: transparent;
-    border: 0;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding-right: 30px;
-
-    &:last-of-type {
-      padding: 0;
-    }
+  .social-icon {
+    display: grid;
+    place-content: center;
+    aspect-ratio: 1;
+    width: 2.292vw;
 
     svg {
-      width: 24px;
-    }
+      height: auto;
+      width: 100%;
 
-    &:hover,
-    &:focus {
-      svg {
-        transform: rotateY(360deg);
-        transition: 0.5s;
-      }
-    }
-
-    &--discord {
       path {
         fill: #34bbff;
-      }
-
-      &:hover,
-      &:focus {
-        path {
-          fill: #fba41c;
-        }
-      }
-    }
-
-    &--twitter {
-      path {
-        fill: #34bbff;
-      }
-
-      &:hover,
-      &:focus {
-        path {
-          fill: #fba41c;
-        }
-      }
-    }
-
-    &--instagram {
-      path {
-        fill: #34bbff;
-      }
-
-      &:hover,
-      &:focus {
-        path {
-          fill: #fba41c;
-        }
-      }
-    }
-
-    &--opensea {
-      path {
-        fill: white;
       }
 
       &:hover,

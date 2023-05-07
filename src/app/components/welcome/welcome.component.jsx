@@ -50,23 +50,20 @@ export default function Welcome() {
           filter: 'brightness(1)',
         }
       )
-        .fromTo(
+        .to(
           tableRef.current,
           {
-            yPercent: 100,
-          },
-          {
-            yPercent: 5,
+            y: '-31.5vw',
           },
           '<'
         )
         .fromTo(
           larryRef.current,
           {
-            yPercent: 150,
+            x: '30.5vw',
           },
           {
-            yPercent: 10,
+            y: '-39vw',
           },
           '<25%'
         );
@@ -80,9 +77,6 @@ export default function Welcome() {
           end: 'center',
           //markers: true,
           id: 'welcome-2',
-          onLeave: () => {
-            //window.scrollTo(0, coffeeRef.current.offsetTop + 75);
-          },
         },
         ease: 'power2',
       });
@@ -90,23 +84,23 @@ export default function Welcome() {
         .to(larryRef.current, {
           rotate: -10,
           scale: 1.4,
-          xPercent: -60,
-          yPercent: 20,
+          x: '6vw',
+          y: '-37vw',
         })
         .to(
           tableRef.current,
           {
             scale: 1.5,
-            xPercent: -20,
-            yPercent: 0,
+            x: '-25.25vw',
+            y: '-34vw',
           },
           '<'
         )
         .to(
           officeRef.current,
           {
-            scale: 1.5,
-            filter: 'blur(1px)',
+            scale: 1.375,
+            filter: 'blur(2px)',
           },
           '<'
         )
@@ -114,12 +108,11 @@ export default function Welcome() {
           armRef.current,
           {
             rotate: 45,
-            xPercent: 70,
-            yPercent: 100,
           },
           {
             rotate: 0,
-            yPercent: 20,
+            x: '-44vw',
+            y: '-34.5vw',
           },
           '<+=25%'
         )

@@ -1,31 +1,28 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 import './header.styles.scss';
 
-import Logo from './logo/logo.component';
 import BgSound from './bg-sound/bg-sound.component';
-import Menu from './menu/menu.component';
+import Logo from './logo/logo.component';
+import MobileMenu from './mobile-menu/mobile-menu.component';
 import Social from './social/social.component';
 import Wallet from './wallet/wallet.component';
-import MobileMenu from './mobile-menu/mobile-menu.component';
 
 const Header = ({ currentAccount, setCurrentAccount }) => {
   return (
     <header className="header">
-      <div className="header__wrapper">
-        <Logo />
-        <BgSound />
-        <Menu />
-        <Social />
-        <Wallet
-          // onlyAddress
-          currentAccount={currentAccount}
-          setCurrentAccount={setCurrentAccount}
-        />
-        <MobileMenu />
-      </div>
+      <Logo />
+      <BgSound />
+      {/*<Menu />*/}
+      <Social />
+      <Wallet
+        // onlyAddress
+        currentAccount={currentAccount}
+        setCurrentAccount={setCurrentAccount}
+      />
+      <MobileMenu />
     </header>
   );
 };

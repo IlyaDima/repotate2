@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import ReactHowler from 'react-howler';
 
-import bgSoundtrackOgg from '/src/assets/bg-soundtrack.ogg';
-import bgSoundtrackMp3 from '/src/assets/bg-soundtrack.mp3';
 import './bg-sound.styles.scss';
+import bgSoundtrackMp3 from '/src/assets/bg-soundtrack.mp3';
+import bgSoundtrackOgg from '/src/assets/bg-soundtrack.ogg';
 
 const BgSound = () => {
   const [isPlaying, setIsPlaying] = useState(true);
 
   return (
     <>
-      <button onClick={() => setIsPlaying(!isPlaying)}>
+      <button className="bg-sound" onClick={() => setIsPlaying(!isPlaying)}>
         {!isPlaying ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
+            width="44"
+            height="44"
             fill="currentColor"
             viewBox="0 0 16 16"
           >
@@ -24,8 +24,8 @@ const BgSound = () => {
         ) : (
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
+            width="44"
+            height="44"
             fill="currentColor"
             viewBox="0 0 16 16"
           >

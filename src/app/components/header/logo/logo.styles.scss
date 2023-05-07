@@ -1,19 +1,7 @@
 .logo {
-  &-wrapper {
-    display: flex;
-    align-items: center;
-    // max-width: 370px;
-    // min-width: 270px;
-
-    @include tablet {
-      padding: 0;
-      min-height: 70px;
-      min-width: initial;
-      width: 80%;
-    }
-
-    img {
-      height: 80px;
-    }
+  img {
+    aspect-ratio: 224/142;
+    height: auto;
+    width: 11.675vw;
   }
 }
