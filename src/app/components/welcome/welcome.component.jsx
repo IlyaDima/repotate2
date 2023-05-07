@@ -26,14 +26,14 @@ export default function Welcome() {
   const textBubbleRef = useRef(null);
 
   useEffect(() => {
-    let ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: frameRef.current,
           pin: true,
           start: '-=25',
           end: 'center',
-          //markers: true,
+          // markers: true,
           id: 'welcome-1',
         },
         ease: 'power2',

@@ -3,7 +3,8 @@ import HTMLFlipBook from 'react-pageflip';
 
 import './flipbook.styles.scss';
 
-import flipbookPageCover from '/src/assets/flipbook/cover.webp';
+import flipbookBackCover from '/src/assets/flipbook/back-cover.webp';
+import flipbookFrontCover from '/src/assets/flipbook/front-cover.webp';
 import flipbookPage1 from '/src/assets/flipbook/page-1.webp';
 import flipbookPage2 from '/src/assets/flipbook/page-2.webp';
 import flipbookPage3 from '/src/assets/flipbook/page-3.webp';
@@ -11,8 +12,6 @@ import flipbookPage4 from '/src/assets/flipbook/page-4.webp';
 import flipbookPage5 from '/src/assets/flipbook/page-5.webp';
 import flipbookPage6 from '/src/assets/flipbook/page-6.webp';
 import flipbookPage7 from '/src/assets/flipbook/page-7.webp';
-import flipbookPage8 from '/src/assets/flipbook/page-8.webp';
-import flipbookPage9 from '/src/assets/flipbook/page-9.webp';
 
 export default function Flipbook() {
   return (
@@ -32,7 +31,7 @@ export default function Flipbook() {
       </svg>
       <div className="flipbook__container">
         <HTMLFlipBook width={490} height={700} showCover={true}>
-          <img src={flipbookPageCover} />
+          <img src={flipbookFrontCover} />
           <img src={flipbookPage1} />
           <img src={flipbookPage2} />
           <img src={flipbookPage3} />
@@ -40,8 +39,7 @@ export default function Flipbook() {
           <img src={flipbookPage5} />
           <img src={flipbookPage6} />
           <img src={flipbookPage7} />
-          <img src={flipbookPage8} />
-          <img src={flipbookPage9} />
+          <img src={flipbookBackCover} />
         </HTMLFlipBook>
       </div>
     </section>

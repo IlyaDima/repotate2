@@ -18,7 +18,7 @@ export default function Footer() {
             Terms & Conditions
           </a>
         </div>
-        <Logo />
+        <Logo footer />
         <p className="footer__copyright">© 2023 Larry. All rights reserved</p>
         <div className="footer__right">
           <a href="#" className="footer__link">
