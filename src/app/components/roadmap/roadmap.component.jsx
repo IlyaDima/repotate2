@@ -1,5 +1,7 @@
 import clsx from 'clsx';
-import React from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 import './roadmap.styles.scss';
@@ -9,10 +11,13 @@ import roadmapImg1 from 'src/assets/roadmap/roadmap-img-1.webp';
 import roadmapImg2 from 'src/assets/roadmap/roadmap-img-2.webp';
 import roadmapImg3 from 'src/assets/roadmap/roadmap-img-3.webp';
 import roadmapImg4 from 'src/assets/roadmap/roadmap-img-4.webp';
+import roadmapMovingObject from 'src/assets/roadmap/roadmap-moving-object.webp';
 import roadmapText1Bg from 'src/assets/roadmap/roadmap-text-1-bg.webp';
 import roadmapText2Bg from 'src/assets/roadmap/roadmap-text-2-bg.webp';
 import roadmapText3Bg from 'src/assets/roadmap/roadmap-text-3-bg.webp';
 import roadmapText4Bg from 'src/assets/roadmap/roadmap-text-4-bg.webp';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Roadmap() {
   const { ref: roadmapImg1Ref, inView: roadmapImg1InView } = useInView({
@@ -39,9 +44,36 @@ export default function Roadmap() {
     triggerOnce: true,
   });
 
+  const movingObjectRef = useRef(null);
+  const roadmapRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.to(movingObjectRef.current, {
+        scrollTrigger: {
+          trigger: roadmapRef.current,
+          start: 'top top',
+          end: 'bottom 100%',
+          pin: movingObjectRef.current,
+          markers: true,
+          id: 'roadmap',
+        },
+        ease: 'power2',
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="roadmap">
+    <section ref={roadmapRef} className="roadmap">
       <img className="roadmap-bg" src={roadmapBg} alt="Roadmap" />
+      <img
+        ref={movingObjectRef}
+        className="roadmap-moving-object"
+        src={roadmapMovingObject}
+        alt="Roadmap moving object"
+      />
       <img
         ref={roadmapImg1Ref}
         className={clsx('roadmap-img-1 fade-in', { show: roadmapImg1InView })}

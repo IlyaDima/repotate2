@@ -14,7 +14,7 @@ const Logo = ({ footer }) => {
 };
 
 Logo.propTypes = {
-  footer: PropTypes.boolean,
+  footer: PropTypes.bool,
 };
 
 export default Logo;

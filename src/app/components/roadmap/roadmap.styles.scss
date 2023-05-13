@@ -8,6 +8,14 @@
     width: 100%;
   }
 
+  .roadmap-moving-object {
+    position: absolute;
+    top: 14vw;
+    left: 50%;
+    transform: translateX(-63%);
+    width: 15vw;
+  }
+
   .roadmap-img-1 {
     position: absolute;
     top: 5.5vw;
