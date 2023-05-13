@@ -30,7 +30,7 @@ export default function About() {
             ease: 'power2',
             inertia: false,
           },
-          markers: true,
+          // markers: true,
           id: 'sectionRef',
         },
         ease: 'power2',

@@ -20,4 +20,44 @@
     width: 13.5vw;
     height: auto;
   }
+
+  .team__link {
+    position: absolute;
+    display: block;
+    height: 27vw;
+
+    &.team__link--first {
+      top: 9vw;
+      left: 8vw;
+      transform: rotate(-4deg);
+      width: 17vw;
+    }
+
+    &.team__link--second {
+      top: 18vw;
+      left: 27vw;
+      transform: rotate(5deg);
+      width: 14vw;
+    }
+
+    &.team__link--third {
+      top: 8.5vw;
+      left: 42vw;
+      transform: rotate(4deg);
+      width: 15vw;
+    }
+
+    &.team__link--fourth {
+      top: 19.5vw;
+      left: 57vw;
+      width: 16vw;
+    }
+
+    &.team__link--fifth {
+      top: 7vw;
+      left: 74vw;
+      transform: rotate(6deg);
+      width: 18.5vw;
+    }
+  }
 }

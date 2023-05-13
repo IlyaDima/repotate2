@@ -52,6 +52,11 @@ export default function Team() {
         height={987}
         alt="Board of team members"
       />
+      <a href="#dio" className="team__link team__link--first"></a>
+      <a href="#ars" className="team__link team__link--second"></a>
+      <a href="#id" className="team__link team__link--third"></a>
+      <a href="#mary" className="team__link team__link--fourth"></a>
+      <a href="#alice" className="team__link team__link--fifth"></a>
     </section>
   );
 }
