@@ -1,12 +1,8 @@
 import React, { forwardRef } from 'react';
 import './coffee.styles.scss';
 
-//import coffeeSmokeAnimation from '/src/assets/coffee/coffee-smoke.gif';
-//import coffeeImg from '/src/assets/coffee/coffee.webp';
 import coffeeAnimation from '/src/assets/coffee/coffee-animation.gif';
 import coffeeBar from '/src/assets/coffee/coffee-bar.png';
-//import larryAnimatedMp4 from '/src/assets/larry-animated.mp4';
-//import larryAnimatedWebm from '/src/assets/larry-animated.webm';
 
 const Coffee = forwardRef((props, coffeeRef) => {
   return (
