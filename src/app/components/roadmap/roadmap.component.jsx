@@ -55,7 +55,7 @@ export default function Roadmap() {
           start: 'top top',
           end: 'bottom 100%',
           pin: movingObjectRef.current,
-          markers: true,
+          // markers: true,
           id: 'roadmap',
         },
         ease: 'power2',

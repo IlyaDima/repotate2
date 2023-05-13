@@ -23,30 +23,37 @@
 .faq__question {
   position: absolute;
   left: 0;
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
   font-size: 2vw;
   line-height: 1;
   text-align: left;
   padding-left: 2vw;
-  padding-right: 4vw;
+  padding-right: 2vw;
+  height: 14%;
+  width: 90%;
+  touch-action: manipulation;
 
   &.faq__question--first {
-    top: 2.875vw;
+    top: 1vw;
   }
 
   &.faq__question--second {
-    top: 8.5vw;
+    top: 7.5vw;
   }
 
   &.faq__question--third {
-    top: 16.25vw;
+    top: 14vw;
   }
 
   &.faq__question--fourth {
-    top: 21.625vw;
+    top: 20.5vw;
   }
 
   &.faq__question--fifth {
-    top: 27.75vw;
+    top: 26.5vw;
   }
 }
 
