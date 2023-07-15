@@ -5,8 +5,14 @@
   background: none;
   border: none;
   cursor: pointer;
-  margin-left: 1.5vw;
-  width: 2.292vw;
+  flex-shrink: 0;
+  margin-left: 16px;
+  width: 32px;
+
+  @media (min-width: 768px) {
+    margin-left: 1.5vw;
+    width: 2.292vw;
+  }
 
   svg {
     height: auto;

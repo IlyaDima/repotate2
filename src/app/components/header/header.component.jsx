@@ -6,7 +6,6 @@ import './header.styles.scss';
 
 import BgSound from './bg-sound/bg-sound.component';
 import Logo from './logo/logo.component';
-import MobileMenu from './mobile-menu/mobile-menu.component';
 import Social from './social/social.component';
 import Wallet from './wallet/wallet.component';
 
@@ -22,7 +21,7 @@ const Header = ({ currentAccount, setCurrentAccount }) => {
         currentAccount={currentAccount}
         setCurrentAccount={setCurrentAccount}
       />
-      <MobileMenu />
+      {/*<MobileMenu />*/}
     </header>
   );
 };

@@ -1,6 +1,11 @@
 .header {
   display: flex;
   align-items: center;
-  margin: 0 auto 0.75vw;
-  width: 89.075vw;
+  padding: 0 16px;
+
+  @media (min-width: 768px) {
+    margin: 0 auto 0.75vw;
+    padding: 0;
+    width: 89.075vw;
+  }
 }

@@ -2,19 +2,29 @@
   img {
     aspect-ratio: 224/142;
     height: auto;
-    width: 11.675vw;
+    width: 120px;
+
+    @media (min-width: 768px) {
+      width: 11.675vw;
+    }
   }
 
   &.logo--footer {
     position: absolute;
     left: 50%;
-    bottom: 1vw;
     transform: translateX(-50%);
 
+    @media (min-width: 768px) {
+      bottom: 1vw;
+    }
+
     img {
-      width: 21vw;
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
         drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+      @media (min-width: 768px) {
+        width: 21vw;
+      }
     }
   }
 }

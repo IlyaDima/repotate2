@@ -1,17 +1,27 @@
 .social-wrapper {
   display: flex;
-  gap: 1.25vw;
   margin-left: auto;
+  gap: 16px;
+
+  @media (min-width: 768px) {
+    gap: 1.25vw;
+  }
 
   .social-icon {
     display: grid;
     place-content: center;
+    flex-shrink: 0;
     aspect-ratio: 1;
-    width: 2.292vw;
+    width: 24px;
+
+    @media (min-width: 768px) {
+      width: 2.292vw;
+    }
 
     svg {
+      display: block;
       height: auto;
-      width: 100%;
+      max-width: 100%;
 
       path {
         fill: #34bbff;
