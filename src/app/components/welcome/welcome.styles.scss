@@ -1,57 +1,89 @@
 .welcome {
   position: relative;
+  padding: 0 8px;
 }
 
 .frame {
   position: relative;
-  aspect-ratio: 1710/775;
   background-color: #000;
-  border: 0.6vw solid #000;
-  border-radius: 4.5vw;
+  border: 6px solid #000;
+  border-radius: 40px;
+  height: 726px;
   margin: auto;
   overflow: hidden;
   pointer-events: none;
-  width: 89.075vw;
+
+  @media (min-width: 768px) {
+    aspect-ratio: 1650/947;
+    border-radius: 4.5vw;
+    border-width: 0.6vw;
+    height: auto;
+    width: 89.075vw;
+  }
 }
 
 .office {
   object-fit: cover;
-  object-position: 0 -3vw;
+  object-position: 53% 50%;
   height: 100%;
   width: 100%;
   z-index: 1;
+
+  @media (min-width: 768px) {
+    object-position: 0 -3vw;
+  }
 }
 
 .larry {
   position: absolute;
-  width: 25vw;
-  left: 0;
-  bottom: -100%;
+  bottom: 72px;
+  left: 50%;
+  transform: translateX(-42%);
+  width: 250px;
   z-index: 2;
+
+  @media (min-width: 768px) {
+    bottom: 10vw;
+    transform: translateX(-79%);
+    width: 30vw;
+  }
 }
 
 .arm {
   position: absolute;
   bottom: -100%;
   object-fit: contain;
-  width: 13vw;
   z-index: 2;
+
+  @media (min-width: 768px) {
+    left: 50%;
+    bottom: 9vw;
+    transform: translateX(50%);
+    width: 13vw;
+  }
 }
 
 .table {
   position: absolute;
-  left: 0;
-  bottom: -100%;
-  width: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 850px;
   z-index: 3;
+
+  @media (min-width: 768px) {
+    transform: translateX(-57%);
+    width: 140%;
+  }
 }
 
 .text-bubble {
   position: absolute;
-  top: -1vw;
-  right: 4vw;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-44%);
+  width: 240px;
   aspect-ratio: 878/670;
-  width: 40vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,8 +93,20 @@
   pointer-events: none;
   text-align: center;
 
+  @media (min-width: 768px) {
+    top: -1vw;
+    right: 2vw;
+    left: auto;
+    transform: none;
+    width: 41vw;
+  }
+
   p {
-    font-size: 3vw;
+    font-size: 1.5rem;
     line-height: 1;
+
+    @media (min-width: 768px) {
+      font-size: 3.5vw;
+    }
   }
 }
