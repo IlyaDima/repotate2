@@ -2,7 +2,7 @@
   img {
     aspect-ratio: 224/142;
     height: auto;
-    width: 120px;
+    width: 30vw;
 
     @media (min-width: 768px) {
       width: 11.675vw;
@@ -11,11 +11,14 @@
 
   &.logo--footer {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 3vw;
+    left: 0;
 
     @media (min-width: 768px) {
+      top: auto;
       bottom: 1vw;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     img {
