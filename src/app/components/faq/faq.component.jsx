@@ -19,6 +19,7 @@ export default function FAQ() {
 
   return (
     <section className="faq">
+      <div className="faq__bg"></div>
       <div className="faq__questions">
         <img
           className="faq__img"
