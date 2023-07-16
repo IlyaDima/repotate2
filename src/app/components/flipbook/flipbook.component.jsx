@@ -1,5 +1,6 @@
 import React from 'react';
 import HTMLFlipBook from 'react-pageflip';
+import { useMediaQuery } from 'react-responsive';
 
 import './flipbook.styles.scss';
 
@@ -14,6 +15,10 @@ import flipbookPage6 from '/src/assets/flipbook/page-6.webp';
 import flipbookPage7 from '/src/assets/flipbook/page-7.webp';
 
 export default function Flipbook() {
+  const isMobile = useMediaQuery({
+    query: '(max-width: 767.98px)',
+  });
+
   return (
     <section className="flipbook">
       <svg
@@ -21,6 +26,7 @@ export default function Flipbook() {
         viewBox="0 0 1920 1783"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio={isMobile ? 'xMidYMid slice' : undefined}
       >
         <path
           d="M-86.5 1774.5V36.7987L1975.5 8.61697V1774.5H-86.5Z"
@@ -30,7 +36,11 @@ export default function Flipbook() {
         />
       </svg>
       <div className="flipbook__container">
-        <HTMLFlipBook width={490} height={700} showCover={true}>
+        <HTMLFlipBook
+          width={isMobile ? 320 : 490}
+          height={isMobile ? 457 : 700}
+          showCover={true}
+        >
           <img src={flipbookFrontCover} />
           <img src={flipbookPage1} />
           <img src={flipbookPage2} />
