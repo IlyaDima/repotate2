@@ -26,11 +26,6 @@ body {
   background-image: url('bg.png');
 }
 
-#root {
-  overflow-x: hidden;
-  scroll-snap-type: y mandatory;
-}
-
 input,
 textarea,
 button,
