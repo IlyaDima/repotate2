@@ -1,61 +1,156 @@
 .coffee {
   position: relative;
-  padding-top: 40px;
+  padding-top: 20px;
   z-index: 1;
 
   .coffee__bg {
-    width: 85.83vw;
+    position: relative;
+    height: 290px;
     margin: 0 auto;
+    transform: rotate(-4deg);
+
+    @media (min-width: 768px) {
+      height: auto;
+      padding-top: 40px;
+      transform: none;
+      width: 85.83vw;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 290px;
+
+      @media (min-width: 768px) {
+        position: static;
+        left: auto;
+        transform: none;
+        height: auto;
+      }
+
+      path {
+        stroke-width: 16px;
+
+        @media (min-width: 768px) {
+          stroke-width: 11px;
+        }
+      }
+    }
   }
 
   .coffee__content {
     position: absolute;
-    top: 10vw;
+    top: 60px;
     left: 50%;
     transform: translateX(-50%);
     display: grid;
-    justify-items: center;
-    align-items: end;
-    grid-template-columns: repeat(2, 1fr);
-    width: 80vw;
+    max-width: 390px;
+    padding: 0 8px;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      top: 10vw;
+      align-items: end;
+      justify-items: center;
+      grid-template-columns: repeat(2, 1fr);
+      max-width: none;
+      padding: 0;
+      width: 80vw;
+    }
   }
 
   .coffee__bar {
+    position: absolute;
+    bottom: -80px;
+    left: 10px;
     aspect-ratio: 568/157;
     grid-row: 2;
     justify-self: center;
-    width: 29.5835vw;
+    width: 150px;
+
+    @media (min-width: 768px) {
+      position: static;
+      bottom: auto;
+      left: auto;
+      width: 29.5835vw;
+    }
   }
 
   .coffee__animation {
+    position: absolute;
+    top: 90px;
+    right: -30px;
     aspect-ratio: 634/1024;
     grid-row: span 2;
     justify-self: end;
-    width: 33.021vw;
+    width: 240px;
+
+    @media (min-width: 768px) {
+      position: static;
+      top: auto;
+      right: auto;
+      width: 33.021vw;
+    }
   }
 
   .coffee__sheet {
-    background-image: url('coffee/sheet.png');
-    background-size: cover;
     aspect-ratio: 600/778;
-    justify-self: end;
-    width: 31.25vw;
+    background-image: url('coffee/sheet.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 28px;
+    width: 285px;
+
+    @media (min-width: 768px) {
+      background-size: cover;
+      justify-self: end;
+      padding: 0;
+      width: 31.25vw;
+    }
 
     .coffee__sheet-content {
-      padding-top: 3.5vw;
-      padding-right: 3vw;
-      padding-left: 3vw;
+      @media (min-width: 768px) {
+        padding-top: 3.5vw;
+        padding-right: 3vw;
+        padding-left: 3vw;
+      }
 
       .coffee__sheet-content-heading {
-        font-size: 3.5vw;
+        font-size: 2.25rem;
         font-weight: 500;
         line-height: 0.75;
-        margin-bottom: 2vw;
+        margin-bottom: 28px;
+        padding-top: 10px;
+        padding-right: 80px;
+
+        @media (min-width: 768px) {
+          font-size: 6vw;
+          margin-bottom: 2vw;
+          padding-left: 1.5vw;
+          padding-right: 6vw;
+        }
       }
 
       .coffee__sheet-content-text {
-        font-size: 1.7vw;
+        font-size: 1.25rem;
         line-height: 1;
+
+        &.second-block {
+          margin-top: 10px;
+          padding-right: 80px;
+
+          @media (min-width: 768px) {
+            margin-top: 2vw;
+            padding-left: 1vw;
+            padding-right: 0;
+          }
+        }
+
+        @media (min-width: 768px) {
+          font-size: 2vw;
+        }
       }
     }
   }

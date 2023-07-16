@@ -25,25 +25,18 @@ const Coffee = forwardRef((props, coffeeRef) => {
         <div className="coffee__sheet">
           <div className="coffee__sheet-content">
             <h2 className="coffee__sheet-content-heading">
-              Prepare your <br />
-              cup of coffee...
+              Larry&apos;s story
             </h2>
             <p className="coffee__sheet-content-text">
               I was just an ordinary guy:
               <br />
               Graduated from school, then university and then a five-by-two job,
               with my own workplace, health insurance and an office mug gifted
-              by my colleagues (You can see it standing there -&gt;)
-              <br />
-              <br />
+              by my colleagues
+            </p>
+            <p className="coffee__sheet-content-text second-block">
               It seemed that people all over the world were suffering from
               poverty and lack of opportunity, so why should I complain?
-              <br />
-              Yeah, that&apos;s what I believed during my 5 year career in a
-              simple estate insurance agency. on my first
-              &quot;anniversary&quot; I realized it was all bullshit and decided
-              to go on a world trip because that&apos;s what I wished for since
-              I was a kid.{' '}
             </p>
           </div>
         </div>
