@@ -1,7 +1,16 @@
 .coffee {
   position: relative;
+  height: 540px;
+  margin-bottom: -230px;
+  overflow: hidden;
   padding-top: 20px;
   z-index: 1;
+
+  @media (min-width: 768px) {
+    height: auto;
+    overflow: visible;
+    margin-bottom: 0;
+  }
 
   .coffee__bg {
     position: relative;

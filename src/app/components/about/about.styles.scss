@@ -1,40 +1,69 @@
 .about {
-  padding-top: 12.75vw;
-  padding-bottom: 12.75vw;
   width: 100%;
   background-color: #e5dac7;
   overflow: hidden;
+  padding: 16px 8px;
+
+  @media (min-width: 768px) {
+    padding-top: 12.75vw;
+    padding-right: 0;
+    padding-bottom: 12.75vw;
+    padding-left: 0;
+  }
 }
 
 .background {
   position: relative;
-  aspect-ratio: 1373/762;
   background-color: #b07949;
-  border: 0.6vw solid #000;
-  border-radius: 4.5vw;
+  border: 6px solid #000;
+  border-radius: 40px;
   margin: 0 auto;
-  width: 71.5vw;
+  padding: 44px 0;
+
+  @media (min-width: 768px) {
+    aspect-ratio: 1373/762;
+    border-radius: 4.5vw;
+    border-width: 0.6vw;
+    padding: 0;
+    width: 71.5vw;
+  }
+}
+
+.phone {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .laptop-wrapper {
-  position: absolute;
-  top: -6vw;
-  left: 2.5vw;
-  width: 65vw;
+  display: none;
 
-  .laptop {
+  @media (min-width: 768px) {
     display: block;
-    max-width: 100%;
-  }
-
-  .browser {
     position: absolute;
-    top: 5.5%;
-    left: 50%;
-    display: block;
-    max-width: 100%;
-    transform: translateX(-49%);
-    width: 71%;
-    z-index: -1;
+    top: -6vw;
+    left: 2.5vw;
+    width: 65vw;
+
+    .laptop {
+      display: block;
+      max-width: 100%;
+    }
+
+    .browser {
+      position: absolute;
+      top: 5.5%;
+      left: 50%;
+      display: block;
+      max-width: 100%;
+      transform: translateX(-49%);
+      width: 71%;
+      z-index: -1;
+    }
   }
 }
