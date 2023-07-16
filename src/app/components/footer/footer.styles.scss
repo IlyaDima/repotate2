@@ -6,11 +6,14 @@
   background-size: cover;
   margin-top: -10vw;
   padding-top: 10vw;
+  height: 36vw;
+  width: 100vw;
 
   @media (min-width: 768px) {
     aspect-ratio: 1950/325;
     background-size: 100vw;
     margin-top: -8vw;
+    height: 17vw;
     padding-top: 0;
   }
 }

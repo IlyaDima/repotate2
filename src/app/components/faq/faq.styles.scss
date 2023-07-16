@@ -44,11 +44,13 @@
 }
 
 .faq__question {
+  appearance: none;
   position: absolute;
   left: 0;
   appearance: none;
   background: none;
   border: none;
+  color: black;
   cursor: pointer;
   font-size: 5vw;
   line-height: 1;
