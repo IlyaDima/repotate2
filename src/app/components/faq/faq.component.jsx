@@ -11,7 +11,7 @@ const FAQ = () => {
         <details className="faq__list-item">
           <summary>Where Can I Purchase an NFT?</summary>
           <p className="faq__list-item-paragraph">
-            You will be able to mint directly from our website in 2023.
+            You will be able to mint directly from our website in 2024.
           </p>
         </details>
         <details className="faq__list-item">
